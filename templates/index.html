@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}New Web App | SF Chronicle{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<main class="container">
+  {% include 'components/_social.html' %}
+  <div class="row">
+    <div class="large-8 large-offset-2 columns">
+    
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(document).ready(function() {
+    App.init();
+  });
+</script>
+{% endblock %}
