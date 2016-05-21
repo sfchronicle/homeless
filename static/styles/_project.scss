@@ -5,3 +5,77 @@
   }
 }
 // END DEBUG
+
+header {
+  background: lighten($gray-blue,40%);
+  opacity: 0.95;
+  padding: 0 10px;
+  position: relative;
+  z-index: 99;
+  font-family: $bold-graphics;
+  .special-head {
+    color: darken($gray-blue,30%);
+    text-align: right;
+    font-family: $banner;
+    text-transform: uppercase;
+    width: 200px;
+    float: right;
+    vertical-align: bottom;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .logo {
+    float: left;
+    margin-right: 10px;
+    img {
+      margin-top: 10px;
+      height: 20px;
+    }
+    // @media ($mobile) {
+    //   display: none;
+    // }
+  }
+  .mobile-logo {
+    display: none;
+    // @media ($mobile) {
+    //   display: inline;
+    // }
+    img {
+      margin-top: 10px;
+      height: 18px;
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
+footer {
+  background: $df-charcoal;
+  opacity: 0.95;
+  padding: 0 10px;
+  position: relative;
+  z-index: 99;
+  margin-top: 10px;
+
+  .logo {
+    float: left;
+    margin-right: 10px;
+
+    img {
+      margin-top: 10px;
+      height: 20px;
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
