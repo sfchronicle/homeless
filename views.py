@@ -6,4 +6,10 @@ from models import *
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='index')
+    return render_template('index.html',
+    	slug='',
+    	social_img='',
+    	social_title='',
+    	description='',
+    	twitter_text='',
+    	email_text='')
