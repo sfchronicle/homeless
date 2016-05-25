@@ -12,4 +12,4 @@ def index():
     	social_title='',
     	description='',
     	twitter_text='',
-    	email_text='')
+    	email_text='mailto:?subject=Subject&body=Body')

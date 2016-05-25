@@ -1,15 +1,15 @@
-// DEBUG STYLES
-.debug {
-  .header-branding a.logo-link {
-    height: 38px;
-  }
+
+#story1 {
+  max-width: 900px;
+  margin: auto;
 }
-// END DEBUG
+
 
 header {
   background: lighten($gray-blue,40%);
   opacity: 0.95;
-  padding: 0 10px;
+  padding: 10px;
+  padding-top: 3px;
   position: relative;
   z-index: 99;
   font-family: $bold-graphics;
@@ -79,4 +79,123 @@ footer {
     content: " ";
     display: block;
   }
+}
+
+.title-container {
+  background: white;
+  padding: 0;
+
+  .title {
+    font-family: $title;
+    font-weight: 400;
+    font-size: 60px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .byline {
+    padding-top: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-family: $body;
+    &.lower {
+      padding-top: 0;
+    }
+  }
+
+  // .credit, .caption {
+  //   @media @mobile {
+  //     color: @light-gray !important;
+  //   }
+  // }
+}
+
+#social {
+  text-align: center;
+  a {
+    font-size: 30px;
+    padding: 0 8px;
+    color: $share-gray;
+    cursor: pointer;
+    &:hover {
+      color: $light-gray;
+      cursor: pointer;
+    }
+  }
+}
+
+.text {
+  padding: 0 20px;
+  font-size: 18px;
+  font-family: $body;
+  // @media @tablet {
+  //   font-size: 15px;
+  //   // padding: 20px 10px;
+  // }
+  // @media @mobile {
+  //   padding: 10px 10px;
+  // }
+}
+
+.dont-miss {
+  // .display-flex;
+  // .flex-wrap(wrap);
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-family: $block-graphics;
+
+  .story {
+    flex: 0 0 25%;
+    // .flex(0 0 25%);
+
+    // @media @mobile {
+    //   .flex(1 1 50%)
+    // }
+  }
+  .padded {
+    padding: 10px;
+  }
+  .small {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.divider-text {
+  z-index: 100;
+  width: 200px;
+  margin: 20px auto;
+  margin-bottom: -15px;
+  padding: 0 10px;
+  background: white;
+  font-family: $banner;
+  text-align: center;
+}
+
+.divider {
+  border-bottom: 1px black solid;
+  height: 2px;
+  width: 60%;
+  margin: 20px auto;
+  margin-top: 0;
+}
+
+.credits {
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+  font-family: $body;
+  // @media @mobile {
+  //   font-size: 12px;
+  // }
 }
