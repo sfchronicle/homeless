@@ -16,7 +16,8 @@ $tablet: (max-width: 768px);
 // Colors
 // =============================
 $inset-color: #151414;
-$bg-color: #000;
+$black: #333;
+$bg-color: #fff;
 $background-color: rgba(#000, 0.65);
 $gray-blue: #6C85A5;
 $dark-gray: #696969;
@@ -28,9 +29,9 @@ $link: #C12020;
 
 // Type
 // ==============================
-$serif: 'FarnhamText', 'Merriweather', Georgia, 'Times New Roman', Times, serif;
-$sans-serif: 'AantennaReg', 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-$sans-serif-light: 'AntennaExtraLight', 'Lato', 'Helvetica Neue', sans-serif;
+$serif: 'FarnhamText', Georgia, serif;
+$sans-serif: 'AantennaReg', Helvetica, sans-serif;
+$sans-serif-light: 'AntennaExtraLight', 'Helvetica Neue', sans-serif;
 $base-font: 21px;
 $line-height: 1.58;
 $margin-top: 29px;

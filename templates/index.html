@@ -7,40 +7,42 @@
 
 {% block content %}
 <main class="container">
-  {% include 'components/_social.html' %}
-  {% include 'components/_header.html' %}
+	{% include 'components/_social.html' %}
+	{% include 'components/_header.html' %}
 
-  <header class="title-container">
-    <div class="title">Title title
-      <div class="byline">By Author Author</div>
-      <div class="byline lower">June 2016</div>
-      {% include 'components/_social_links.html' %}
+	<header class="title-container">
+		<div class="title">Title title
+			<div class="byline">By Author Author</div>
+			<div class="byline lower">June 2016</div>
+			{% include 'components/_social_links.html' %}
+		</div>
+	</header>
 
-    </div>
-  </header>
+	<div id="story1">
+		{% include 'components/_story1_text.html' %}
+		<hr> 
+		<div class="credits">
+			<div class="entry">Reporter:  John King &bull; <a href="mailto:jking@sfchronicle.com">jking@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/johnkingsfchron" target="_blank">@johnkingsfchron</a>
+			</div>
+			<div class="entry">Interactive producer:  Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a>
+			</div>
+			<div class="entry">Illustrations:  John Blanchard &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a>
+			</div>
+			<div class="entry">Photographer:  Michael Macor &bull; <a href="mailto:mmacor@sfchronicle.com">mmacor@sfchronicle.com</a>   &bull; <a href = "https://www.instagram.com/mmacor/" target="_blank">@mmacor</a>
+			</div>
+		</div> 
+	</div>
 
-  <div id="story1">
-    {% include 'components/_story1_text.html' %}
-  </div>
 
-  <div class="credits">
-    <div class="divider"></div>
-    <div class="entry">Reporter:  John King &bull; <a href="mailto:jking@sfchronicle.com">jking@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/johnkingsfchron" target="_blank">@johnkingsfchron</a></div>
-    <div class="entry">Videographer and producer: Erin Brethauer  &bull; <a href="mailto:ebrethauer@sfchronicle.com">ebrethauer@sfchronicle.com</a>   &bull; <a href = "https://www.instagram.com/erinbrethauer/" target="_blank">@erinbrethauer</a></div>
-    <div class="entry">Interactive producer:  Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
-    <div class="entry">Illustrations:  John Blanchard &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
-    <div class="entry">Photographer:  Michael Macor &bull; <a href="mailto:mmacor@sfchronicle.com">mmacor@sfchronicle.com</a>   &bull; <a href = "https://www.instagram.com/mmacor/" target="_blank">@mmacor</a></div>
-  </div>
-
-  {% include 'components/_related_stories.html' %}
-  {% include 'components/_footer.html' %}
+	{% include 'components/_related_stories.html' %}
+	{% include 'components/_footer.html' %}
 </main>
 {% endblock %}
 
 {% block javascript %}
 <script>
-  $(document).ready(function() {
-    App.init();
-  });
+	$(document).ready(function() {
+		App.init();
+	});
 </script>
 {% endblock %}

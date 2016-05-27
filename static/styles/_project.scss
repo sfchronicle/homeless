@@ -1,7 +1,22 @@
+body {
+  background-color: $bg-color;
+  font-size: $base-font;
+  line-height:$line-height;
+  color: $black;
+  font-family: $serif;
+}
+
+.max{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 12px;
+}
 
 #story1 {
-  max-width: 900px;
+  max-width: 730px;
   margin: auto;
+  padding: 0 15px;
+  margin-bottom: 60px;
 }
 
 
@@ -21,7 +36,7 @@ header {
     width: 200px;
     float: right;
     vertical-align: bottom;
-    padding-top: 10px;
+    padding-top:4px;
     font-weight: bold;
     font-size: 16px;
   }
@@ -29,13 +44,12 @@ header {
   .logo {
     float: left;
     margin-right: 10px;
-    img {
-      margin-top: 10px;
-      height: 20px;
-    }
-    // @media ($mobile) {
-    //   display: none;
-    // }
+      img {
+       height: 20px;
+      }
+      @include media (max-widh $small-breakpoint) {
+      display: none;
+      }
   }
   .mobile-logo {
     display: none;
@@ -126,9 +140,8 @@ footer {
 }
 
 .text {
-  padding: 0 20px;
-  font-size: 18px;
-  font-family: $body;
+  font-size: 0.9em;
+  font-family: $serif;
   // @media @tablet {
   //   font-size: 15px;
   //   // padding: 20px 10px;
@@ -170,14 +183,8 @@ footer {
 }
 
 .divider-text {
-  z-index: 100;
-  width: 200px;
-  margin: 20px auto;
-  margin-bottom: -15px;
-  padding: 0 10px;
-  background: white;
-  font-family: $banner;
-  text-align: center;
+  margin: 0 auto 1em;
+  font-family: $sans-serif;
 }
 
 .divider {
@@ -190,12 +197,15 @@ footer {
 
 .credits {
   margin: 30px auto;
-  padding: 20px;
-  text-align: center;
-  font-style: italic;
-  font-size: 16px;
-  font-family: $body;
+  font-size: 15px;
+  font-family: $sans-serif;
   // @media @mobile {
   //   font-size: 12px;
   // }
+}
+
+hr{
+  margin-top:2em;
+  border-top: 1px solid #ccc;
+  border-bottom: none;
 }
