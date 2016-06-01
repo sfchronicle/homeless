@@ -1,0 +1,36 @@
+===== FULL WIDTH IMAGE ====
+
+<div class="full-width-img">
+    <img src="....jpg">
+    <p class="caption">A man walks past an Alexander Calder mobile.
+    <span class="byline"> Photo: Tim Hussin, The Chronicle</span></p>
+</div>
+
+
+===== INLINE CENTER IMAGE ====
+
+<div class="inline-img">
+    <img src="....jpg">
+    <p class="caption">A man walks past an Alexander Calder mobile.
+    <span class="byline"> Photo: Tim Hussin, The Chronicle</span></p>
+</div>
+
+
+===== FLOAT LEFT IMAGE ====
+<div class="sm-img-cont">
+	<div class="float-left-img">
+	    <img src="....jpg">
+	    <p class="caption">A man walks past an Alexander Calder mobile.
+	    <span class="byline"> Photo: Tim Hussin, The Chronicle</span></p>
+	</div>
+</div>
+
+
+===== FLOAT RIGHT IMAGE ====
+<div class="sm-img-cont">
+	<div class="float-right-img">
+	    <img src="....jpg">
+	    <p class="caption">A man walks past an Alexander Calder mobile.
+	    <span class="byline"> Photo: Tim Hussin, The Chronicle</span></p>
+	</div>
+</div>

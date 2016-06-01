@@ -4,14 +4,14 @@
 // Breakpoints
 // =============================
 
-$small-breakpoint:  em(640)  !default;
-$sm-md-breakpoint:  em(768)  !default;
-$medium-breakpoint: em(1024) !default;
-$large-breakpoint:  em(1440) !default;
-$xlarge-breakpoint: em(1920) !default;
+$mobile: 	 "(max-width: 480px)";
+$tablet: 	 "(max-width: 768px)";
+$text-width: "(max-width: 730px)";
+$medium-breakpoint: 1024px !default;
+$large-breakpoint:  1440px !default;
+$xlarge-breakpoint: 1920px !default;
 
-$mobile: (max-width: 480px);
-$tablet: (max-width: 768px);
+
 
 // Colors
 // =============================

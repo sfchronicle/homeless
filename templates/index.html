@@ -1,25 +1,29 @@
 {% extends 'base.html' %}
 
-{% block title %}New Web App | SF Chronicle{% endblock %}
+{% block title %}Homeless Project | SF Chronicle{% endblock %}
 
 {% block head %}
+{% include 'components/_social.html' %}
 {% endblock %}
 
 {% block content %}
 <main class="container">
-	{% include 'components/_social.html' %}
+	
 	{% include 'components/_header.html' %}
 
-	<header class="title-container">
-		<div class="title">Title title
-			<div class="byline">By Author Author</div>
-			<div class="byline lower">June 2016</div>
+	<div class="title-container">
+		<div>
+			<h1 class="title">Title title</h1>
 			{% include 'components/_social_links.html' %}
+			<p class="author">By Author Author</p>
+			<p class="date">June 26, 2016</p>
+			
 		</div>
-	</header>
+	</div>
 
-	<div id="story1">
-		{% include 'components/_story1_text.html' %}
+	{% include 'components/_story1_text.html' %}
+		
+	<div class="row">
 		<hr> 
 		<div class="credits">
 			<div class="entry">Reporter:  John King &bull; <a href="mailto:jking@sfchronicle.com">jking@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/johnkingsfchron" target="_blank">@johnkingsfchron</a>
@@ -31,7 +35,7 @@
 			<div class="entry">Photographer:  Michael Macor &bull; <a href="mailto:mmacor@sfchronicle.com">mmacor@sfchronicle.com</a>   &bull; <a href = "https://www.instagram.com/mmacor/" target="_blank">@mmacor</a>
 			</div>
 		</div> 
-	</div>
+	</div>	
 
 
 	{% include 'components/_related_stories.html' %}
