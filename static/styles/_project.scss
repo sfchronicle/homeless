@@ -28,6 +28,11 @@ p {
   padding: 0 15px;
 }
 
+.full-width-img {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .inline-img{
   max-width: 730px;
   margin: 2em auto;
@@ -81,10 +86,11 @@ p {
 }
 
 .sm-img-cont{
-    max-width: 735px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 735px;
+  width: 100%;
+  margin: 0 auto;
 }
+
 header {
   padding: 6px 10px 0;
   background:lighten($gray-blue,30%);
@@ -259,7 +265,9 @@ hr{
   border-top: 1px solid #ccc;
   border-bottom: none;
 }
-.full-width-img {
-    margin: 0 auto;
-    width: 100%;
+
+.interactive{
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 0 12px;
 }

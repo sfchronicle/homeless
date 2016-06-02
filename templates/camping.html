@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Homeless Project | SF Chronicle{% endblock %}
+{% block title %}{{title}}{% endblock %}
 
 {% block head %}
 {% include '_components/_social.html' %}
@@ -22,25 +22,32 @@
 	</div>
 
 	{% include '_text/camping.html' %}
-		
+
 	<div class="row">
 		<hr> 
 		<div class="credits">
-			<div class="entry">Reporter:  Kurtis Alexander &bull; <a href="mailto:kalexander@sfchronicle.com">kalexander@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/kurtisalexander" target="_blank">@kurtisalexander</a>
-			</div>
-			<div class="entry">Interactive producer:  Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a>
-			</div>
-			<div class="entry">Interactive producer: Lucio Villa  &bull; <a href="mailto:lvilla@sfchronicle.com">lvilla@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/luciovilla" target="_blank">@luciovilla</a>
-			</div>
-			<div class="entry">Illustrations:  John Blanchard &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a>
-			</div>
-			<div class="entry">Photographer:  Michael Macor &bull; <a href="mailto:mmacor@sfchronicle.com">mmacor@sfchronicle.com</a>   &bull; <a href = "https://www.instagram.com/mmacor/" target="_blank">@mmacor</a>
-			</div>
+			{% import '_components/_credits.html' as credit %}
+			<!-- Variables are name, email slug and twitter handle -->
+			{{ credit.info('Reporter: Kurtis Alexander', 'kalexander', 'kurtisalexander' ) }}
+			{{ credit.info("Interactive producer: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			{{ credit.info('Interactive producer: Lucio Villa', 'lvilla', 'luciovilla' ) }}
 		</div> 
 	</div>	
 
+	{% import '_components/_related_stories.html' as related %}
+	<div class="max">
+		<hr>
+		<div  class="divider-text">Read related stories</div>
+		<div class="dont-miss">
+		<!-- Variables are title, url and image url -->
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+		</div>
+	</div>
 
-	{% include '_components/_related_stories.html' %}
+
 	{% include '_components/_footer.html' %}
 </main>
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Homeless Project | SF Chronicle{% endblock %}
+{% block title %}{{title}}{% endblock %}
 
 {% block head %}
 {% include '_components/_social.html' %}
@@ -15,7 +15,7 @@
 		<div>
 			<h1 class="title">Homeless Setup</h1>
 			{% include '_components/_social_links.html' %}
-			<p class="author">By Kevin Fragan</p>
+			<p class="author">By Kevin Fagan</p>
 			<p class="date">June 26, 2016</p>
 			
 		</div>
@@ -26,29 +26,40 @@
 	<div class="row">
 		<hr> 
 		<div class="credits">
-			<div class="entry">Reporter: Kevin Fagan &bull; <a href="mailto:kfagan@sfchronicle.com">kfagan@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/KevinChron" target="_blank">@KevinChron</a>
-			</div>
-			<div class="entry">Interactive producer:  Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a>
-			</div>
-			<div class="entry">Interactive producer: Lucio Villa  &bull; <a href="mailto:lvilla@sfchronicle.com">lvilla@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/luciovilla" target="_blank">@luciovilla</a>
-			</div>
-			<div class="entry">Illustrations:  John Blanchard &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a>
-			</div>
-			<div class="entry">Photographer:  Michael Macor &bull; <a href="mailto:mmacor@sfchronicle.com">mmacor@sfchronicle.com</a>   &bull; <a href = "https://www.instagram.com/mmacor/" target="_blank">@mmacor</a>
-			</div>
+			{% import '_components/_credits.html' as credit %}
+			<!-- Variables are name, email slug and twitter handle -->
+			{{ credit.info('Reporter: Kevin Fagan', 'kfagan', 'KevinChron' ) }}
+			{{ credit.info("Interactive producer: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			{{ credit.info('Interactive producer: Lucio Villa', 'lvilla', 'luciovilla' ) }}
 		</div> 
 	</div>	
 
+	{% import '_components/_related_stories.html' as related %}
+	<div class="max">
+		<hr>
+		<div  class="divider-text">Read related stories</div>
+		<div class="dont-miss">
+		<!-- Variables are title, url and image url -->
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+		</div>
+	</div>
 
-	{% include '_components/_related_stories.html' %}
+
 	{% include '_components/_footer.html' %}
 </main>
 {% endblock %}
 
 {% block javascript %}
+<script src="{{ url_for('static', filename='bower_components/pym.js/dist/pym.min.js') }}"></script>
 <script>
 	$(document).ready(function() {
 		App.init();
+		var pymParent = new pym.Parent('graphic-1', 'http://projects.sfchronicle.com/2015/graphic-opd-useofforce/index.html', {});
 	});
+
 </script>
+
 {% endblock %}
