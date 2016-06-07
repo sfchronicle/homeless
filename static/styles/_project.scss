@@ -39,7 +39,7 @@ p {
 
   .caption{
   padding:0;
-    
+
     @media #{$text-width}{
     padding:0 10px;
     }
@@ -59,7 +59,7 @@ p {
 
     .caption{
     padding:0;
-    
+
     @media #{$text-width}{
     padding:0 10px;
     }
@@ -78,7 +78,7 @@ p {
 
     .caption{
     padding:0;
-    
+
     @media #{$text-width}{
     padding:0 10px;
     }
@@ -94,7 +94,7 @@ p {
 header {
   padding: 6px 10px 0;
   background:lighten($gray-blue,30%);
-  
+
   .special-head {
     color: darken($gray-blue,30%);
     font-family: $banner;
@@ -168,7 +168,7 @@ footer {
   font-size: 60px;
   padding: 0 10px;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .caption {
@@ -190,7 +190,7 @@ footer {
   a {
     font-size: 25px;
     padding: 8px;
-    color: $black;
+    color: $share-gray;
     cursor: pointer;
     &:hover {
       color: $light-gray;
@@ -200,6 +200,7 @@ footer {
 }
 
 .author {
+    margin-top: 10px;
     font-size: 15px;
     text-align: center;
     margin-bottom:0;
@@ -207,6 +208,7 @@ footer {
 .date {
     font-size: 15px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 
@@ -257,7 +259,8 @@ footer {
 .credits {
   margin: 30px auto;
   font-size: 15px;
-  font-family: $sans-serif;
+  font-family: $body;
+  text-align: center;
 }
 
 hr{
