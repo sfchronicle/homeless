@@ -23,21 +23,21 @@
 
 	{% include '_text/setup.html' %}
 		
-	<div class="row">
+	<div class="max">
 		<hr> 
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
 			{{ credit.info('Reporter: Kevin Fagan', 'kfagan', 'KevinChron' ) }}
-			{{ credit.info("Interactive producer: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
-			{{ credit.info('Interactive producer: Lucio Villa', 'lvilla', 'luciovilla' ) }}
+			{{ credit.info("Interactive producers: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
 		</div> 
 	</div>	
 
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
 		<hr>
-		<div  class="divider-text">Read related stories</div>
+		<!-- <div  class="divider-text">Read related stories</div> -->
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
