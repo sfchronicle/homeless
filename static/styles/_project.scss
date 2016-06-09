@@ -77,15 +77,19 @@ p {
 
 header {
   padding: 6px 10px 0;
-  background:lighten($gray-blue,30%);
+  -webkit-box-shadow: 0 8px 6px -6px $dark-gray;
+   -moz-box-shadow: 0 8px 6px -6px $dark-gray;
+        box-shadow: 0 8px 6px -6px $dark-gray;
+  // background:lighten($gray-blue,30%);
 
   .special-head {
-    color: darken($gray-blue,30%);
+    color: $red;
+    // color: darken($gray-blue,30%);
     font-family: $banner;
     text-transform: uppercase;
     float: right;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px; //16px;
   }
 
   .logo {
@@ -117,6 +121,15 @@ header {
     display: block;
   }
 }
+
+// .homeless-title {
+//   color: $red;
+//   font-family: $banner;
+//   text-transform: uppercase;
+//   text-align: center;
+//   padding-top: 10px;
+//   font-weight: 600;
+// }
 
 footer {
   background: $df-charcoal;
