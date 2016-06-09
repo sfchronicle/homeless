@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block head %}
+{% include '_components/_social.html' %}
+{% endblock %}
+
+{% block content %}
+<main class="container">
+
+	{% include '_components/_header.html' %}
+
+  <div class="project-logo">
+    <a  href="http://www.sfchronicle.com/homeless/" target="_blank"><img src="../static/logos/SFHomeless_long_02.png"></img></a>
+  </div>
+
+	<div class="title-container">
+		<div>
+			<h1 class="title long">Unified front in search for answers</h1>
+			{% include '_components/_social_links.html' %}
+			<p class="date">June 26, 2016</p>
+
+		</div>
+	</div>
+
+  <div class="letter-begin">To the city and people of San Francisco:</div>
+	{% include '_text/letter_of_intent.html' %}
+
+  <div class="max">
+		<hr>
+		<div class="social-section">
+      Follow the project on Twitter at <a href="https://twitter.com/bayareahomeless" target="_blank">@bayareahomeless</a> or on Facebook at <a href="https://www.facebook.com/sfhomelessproject/" target="_blank">facebook.com/sfhomelessproject</a>. Stories from all media organizations will also be curated on <a href="www.sfgate.com" target="_blank">SFGATE.com</a>, <a href="www.sfchronicle.com" target="_blank">SFChronicle.com</a>, <a href="www.medium.com" target="_blank">Medium.com</a> and other project participants.
+    </div>
+  </div>
+
+  <div class="max">
+    <hr>
+    <div class="partners">
+      {% import '_components/_partners.html' as partner %}
+      <!-- Variables are name, link -->
+      {{ partner.info("San Francisco Chronicle", "www.sfchronicle.com" ) }} &bull;
+      {{ partner.info("SFGATE", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KQED", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("The California Sunday Magazine", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Pop-Up Magazine", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KRON4-TV", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("The Potrero View", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("San Francisco Examiner", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("San Francisco Public Press", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Renaissance Journalism", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Hoodline", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("San Francisco Business Times", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Sing Tao Daily", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Medium", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Marina Times", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("The Castro Courier", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Mid-Market News", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KALW", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Mission Local", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KGO-TV/ABC7", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Bay Area Reporter", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KTVU-TV", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("San Francisco magazine", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("BuzzFeed News", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Mother Jones", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Timeline", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("CityLab", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KKSF Talk 910", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("SFist", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Mashable", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("World Journal", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Central City Extra", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Golden Gate Xpress", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KPIX-TV", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("The Mercury News", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("East Bay Times", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("48 Hills", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("New America Media", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("El Tecolote", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Wear Your Voice", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Castro Valley Matters", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Youth Radio", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Fortune", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("AJ+", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Ingleside-Excelsior Light", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Commonwealth Club", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("CALmatters", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Laney Tower", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Inc.", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Richmond Review", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Sunset Beacon", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Univision 14 KDTV", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("West Portal Monthly", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("HATCH Beat", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("AlterNet.org", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("ITVS/OVEE OVEE/ITVS", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Ripple News", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KNTV", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Telemundo 48 KSTS", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("KGO 810", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Business Insider", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("TechCrunch", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Fusion", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("San Francisco Neighborhood Newspaper Association", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Google News Lab", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Cor Media", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Stories Behind the Fog", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("Micro-documentaries", "www.sfgate.com" ) }} &bull;
+      {{ partner.info("SF Weekly", "www.sfgate.com" ) }}
+    </div>
+	</div>
+
+	<div class="max">
+		<hr>
+		<div class="credits">
+			{% import '_components/_credits.html' as credit %}
+			<!-- Variables are name, email slug and twitter handle -->
+			{{ credit.info("Interactive producers: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
+		</div>
+	</div>
+
+	{% import '_components/_related_stories.html' as related %}
+	<div class="max">
+		<hr>
+		<!-- <div  class="divider-text">Read related stories</div> -->
+		<div class="dont-miss">
+		<!-- Variables are title, url and image url -->
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+		</div>
+	</div>
+
+
+	{% include '_components/_footer.html' %}
+</main>
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+	$(document).ready(function() {
+		App.init();
+	});
+
+</script>
+
+{% endblock %}

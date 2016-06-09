@@ -3,20 +3,20 @@ from flask import render_template, redirect, url_for
 from app import app, db, freezer
 from models import *
 
-""" 
-slug completes: 
+"""
+slug completes:
 - twitter:url
 - og:image/Facebook image preview
 - Twitter/Facebook share url
 - url for email body
 
-title: 
+title:
 - Page title
 - og:title/Facebook headline
 - email subject
 - twitter:title
 
-description: 
+description:
 - meta description
 - og:description/Facebook description
 
@@ -105,3 +105,10 @@ def opinion():
     	description='',
     	twitter_text='')
 
+@app.route('/letter_of_intent/')
+def letter_of_intent():
+    return render_template('letter_of_intent.html',
+    	slug='',
+    	title='',
+    	description='',
+    	twitter_text='')

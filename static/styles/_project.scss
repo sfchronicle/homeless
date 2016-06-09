@@ -12,6 +12,17 @@ body {
   padding:0 12px;
 }
 
+.letter-begin {
+  max-width: 730px;
+  margin: auto;
+  padding: 0 15px;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  @media #{$mobile} {
+      font-size: 1.0em;
+  }
+}
+
 p {
   max-width: 730px;
   margin: auto;
@@ -21,6 +32,7 @@ p {
   @media #{$mobile} {
       font-size: 0.8em;
   }
+
 }
 
 .row{
@@ -92,6 +104,10 @@ header {
     font-size: 18px; //16px;
   }
 
+  a {
+    text-decoration:none;
+  }
+
   .logo {
     float: left;
     margin-right: 10px;
@@ -119,6 +135,43 @@ header {
     clear: both;
     content: " ";
     display: block;
+  }
+}
+
+.project-logo {
+  max-width: 730px;
+  margin: 10px auto;
+  img {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+}
+
+.social-section {
+  text-align: center;
+  font-style: italic;
+  font-size: 17px;
+  padding-top: 20px;
+  a {
+    text-decoration:none;
+    color: $red;
+  }
+}
+
+.partners {
+  text-align: center;
+  display: inline-block;
+  font-family: $banner;
+  .partner-name {
+    display: inline-block;
+    padding: 0 20px;
+    // width: 200px;
+    a {
+      text-decoration:none;
+      color: $red;
+    }
   }
 }
 
@@ -276,6 +329,10 @@ footer {
   font-size: 15px;
   font-family: $body;
   text-align: center;
+  a {
+    text-decoration:none;
+    color: $red;
+  }
 }
 
 hr{
