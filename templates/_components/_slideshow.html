@@ -1,0 +1,10 @@
+{% macro info(gallery_num = 'num', img_location='img_url', class='active', caption='This is a caption', photographer='Author author') -%}
+
+  <div class="photoG{{ gallery_num }} {{ class }}" id="photoG{{ gallery_num }}0"><img src="{{ img_url }}">
+    {{img_url}}
+    <div class="caption">{{ caption }}</div>
+    <div class="credit">Photo: {{ photographer }}, The Chronicle</div>
+  </div>
+</div>
+
+{%- endmacro %}

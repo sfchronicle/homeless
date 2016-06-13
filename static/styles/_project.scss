@@ -85,6 +85,101 @@ p {
     }
 }
 
+// navigation ---------------------------------------------------------
+
+.navigation {
+  width: 100%;
+  font-family: $banner;
+}
+
+.jump-navigation {
+  background: darken($gray-blue, 25%);
+  // padding: 5px 0;
+  text-align: center;
+  margin: auto;
+  width: inherit;
+  height: 40px;
+  margin-top: 5px;
+  &.clicked {
+    display: none;
+  }
+}
+
+.jump-links {
+  a {
+    color: white;
+    text-decoration:none;
+  }
+  color: white;
+  @media #{$mobile} {
+    font-size: 20px;
+  }
+}
+.jump-navigation {
+  display: none;
+  &.sticky {
+    display: inline;
+  }
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.link {
+  margin: 0 20px;
+  vertical-align: top;
+  cursor: pointer;
+  padding-top: 3px;
+}
+.logo-link {
+  cursor: pointer;
+  padding-top: 0;
+  img {
+    opacity: 1;
+    height: 20px;
+    @media #{$mobile} {
+      height: 16px;
+      padding-left: 5px;
+    }
+  }
+}
+.subscribe {
+  float: right;
+  // margin-right: 10px;
+}
+
+.link, .logo-link {
+  display: inline-block;
+  @media #{$mobile} {
+    display: inline-block;
+    // padding: 5px;
+    font-size: 14px;
+    // padding-top: 5px;
+    margin: 5px;
+    &.subscribe {
+      margin-right: 5px;
+    }
+  }
+}
+
+#sticky-element.sticky {
+  // width: 100%;
+  // width: inherit;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  opacity: 0.9;
+  margin-top: 0px;
+  text-align: left;
+  @media #{$mobile} {
+    top: unset;
+    bottom: 0;
+    font-size: 14px;
+    vertical-align: bottom;
+  }
+
+}
+
+//////////////////////////////////
 
 
 header {
@@ -99,6 +194,9 @@ header {
     text-transform: uppercase;
     float: right;
     font-size: 18px; //16px;
+    @media #{$mobile} {
+      font-size: 16px;
+    }
   }
 
   a {
@@ -229,7 +327,7 @@ footer {
     }
   }
 
-  
+
 
 }
 
