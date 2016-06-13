@@ -93,7 +93,7 @@ p {
 }
 
 .jump-navigation {
-  background: darken($gray-blue, 25%);
+  background: darken($light-gray, 0%);
   // padding: 5px 0;
   text-align: center;
   margin: auto;
@@ -115,6 +115,7 @@ p {
     font-size: 20px;
   }
 }
+
 .jump-navigation {
   display: none;
   &.sticky {
@@ -129,6 +130,11 @@ p {
   vertical-align: top;
   cursor: pointer;
   padding-top: 3px;
+  &.special {
+    a {
+      color: $red;
+    }
+  }
 }
 .logo-link {
   cursor: pointer;
@@ -167,7 +173,7 @@ p {
   z-index: 100;
   position: fixed;
   top: 0;
-  opacity: 0.9;
+  opacity: 0.95;
   margin-top: 0px;
   text-align: left;
   @media #{$mobile} {
@@ -194,8 +200,10 @@ header {
     text-transform: uppercase;
     float: right;
     font-size: 18px; //16px;
+    padding-top: 1px;
     @media #{$mobile} {
       font-size: 16px;
+      padding-top: 3px;
     }
   }
 
@@ -476,9 +484,62 @@ hr{
     @media (max-width: 890px){
       max-width: 730px;
     }
-
-
   }
+}
 
+// styles for photo galleries --------------------------------------------------
 
+.photoGallery1 {
+  max-width: 900px;
+  position: relative;
+  margin: 30px auto;
+  @media #{$mobile} {
+    margin: 20px auto;
+  }
+  .photoG1 {
+    display: none;
+    width: 80%;
+    @media #{$mobile} {
+      width: 100%;
+    }
+    margin: auto;
+    &.active {
+      display: inherit;
+    }
+  }
+}
+
+.scrollRight-Gallery1, .scrollLeft-Gallery1 {
+  position: absolute;
+  cursor: pointer;
+  z-index: 50;
+  font-size: 50px;
+  width: 8%;
+  color: black;
+  height: 100%;
+  .fa {
+    margin-top: 200px;
+    @media #{$mobile} {
+      margin-top: 60px;
+    }
+  }
+}
+.scrollRight-Gallery1 {
+  left: 92%;
+  &.last {
+    display: none;
+  }
+}
+.scrollLeft-Gallery1 {
+  left: 5%;
+  @media #{$mobile} {
+    left: 2%;
+  }
+  &.first {
+    display: none;
+  }
+}
+
+.photoG1 {
+  width: 80% !important;
 }

@@ -8,7 +8,7 @@
 
 {% block content %}
 <main class="container">
-	
+
 	{% include '_components/_header.html' %}
 
 	<div class="title-container">
@@ -17,21 +17,21 @@
 			{% include '_components/_social_links.html' %}
 			<p class="author">By Photographers</p>
 			<p class="date">June 28, 2016</p>
-			
+
 		</div>
 	</div>
 
-	
+
 	<div class="row">
-		<hr> 
+		<hr>
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
 			{{ credit.info('Reporter: Joaquin Palomino', 'jpalomino', 'JoaquinPalomino' ) }}
 			{{ credit.info("Interactive producer: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
 			{{ credit.info('Interactive producer: Lucio Villa', 'lvilla', 'luciovilla' ) }}
-		</div> 
-	</div>	
+		</div>
+	</div>
 
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
@@ -47,7 +47,7 @@
 	</div>
 
 	{% include '_components/_footer.html' %}
-	
+
 </main>
 {% endblock %}
 
@@ -56,5 +56,20 @@
 	$(document).ready(function() {
 		App.init();
 	});
+	// function sticky_relocate() {
+	// 	var window_top = $(window).scrollTop();
+	// 	var div_top = $('#sticky-anchor').offset().top - 40;
+	// 	if (window_top > div_top) {
+	// 			$('#sticky-element').addClass('sticky');
+	// 			$('.menu-navigation').addClass('sticky');
+	// 	} else {
+	// 			$('#sticky-element').removeClass('sticky');
+	// 			$('.menu-navigation').removeClass('sticky');
+	// 	}
+	// }
+	// $(function() {
+	// 		$(window).scroll(sticky_relocate);
+	// 		sticky_relocate();
+	// });
 </script>
 {% endblock %}
