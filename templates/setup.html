@@ -8,7 +8,7 @@
 
 {% block content %}
 <main class="container">
-	
+
 	{% include '_components/_header.html' %}
 
 	<div class="title-container">
@@ -25,17 +25,17 @@
 	</div>
 
 	{% include '_text/setup.html' %}
-		
+
 	<div class="max">
-		<hr> 
+		<hr>
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
 			{{ credit.info('Reporter: Kevin Fagan', 'kfagan', 'KevinChron' ) }}
 			{{ credit.info("Interactive producers: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
 			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-		</div> 
-	</div>	
+		</div>
+	</div>
 
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
@@ -60,6 +60,22 @@
 <script>
 	$(document).ready(function() {
 		App.init();
+	});
+	function sticky_relocate() {
+		console.log("here we are");
+		var window_top = $(window).scrollTop();
+		var div_top = $('#sticky-anchor').offset().top - 40;
+		if (window_top > div_top) {
+				$('#sticky-element').addClass('sticky');
+				$('.menu-navigation').addClass('sticky');
+		} else {
+				$('#sticky-element').removeClass('sticky');
+				$('.menu-navigation').removeClass('sticky');
+		}
+	}
+	$(function() {
+			$(window).scroll(sticky_relocate);
+			sticky_relocate();
 	});
 
 </script>
