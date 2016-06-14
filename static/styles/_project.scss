@@ -135,6 +135,9 @@ p {
       color: $red;
     }
   }
+  &.social {
+    float: right;
+  }
 }
 .logo-link {
   cursor: pointer;
@@ -195,7 +198,7 @@ header {
   box-shadow: 0 0 6px 0 $dark-gray;
 
   .special-head {
-    color: $red;
+    color: $red !important;
     font-family: $banner;
     text-transform: uppercase;
     float: right;
@@ -372,6 +375,27 @@ footer {
   a {
     font-size: 25px;
     padding: 8px;
+    color: $share-gray;
+    cursor: pointer;
+    &:hover {
+      color: $light-gray;
+      cursor: pointer;
+    }
+  }
+}
+
+#social-inline {
+  // display: inline-block;
+  .social {
+    // float: right;
+    display: inline-block;
+    padding: 0 10px;
+    float: left;
+  }
+  // text-align: center;
+  a {
+    font-size: 25px;
+    // padding: 8px;
     color: $share-gray;
     cursor: pointer;
     &:hover {
