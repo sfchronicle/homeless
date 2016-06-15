@@ -37,6 +37,11 @@ p {
   padding: 0 15px;
   margin-bottom: 1em;
 
+  a {
+    text-decoration: none;
+    color: #FF0000;
+  }
+
   @media #{$mobile} {
       font-size: 0.8em;
   }
@@ -569,6 +574,38 @@ hr{
       max-width: 730px;
     }
   }
+}
+
+// insight page styling ----------------------------------------
+
+.mayor-photo {
+  width: calc(100%/6.25);
+  float: left;
+  display: inline-block;
+  text-align: center;
+  margin-right: calc(20%/4);
+}
+
+.mayor-container {
+  overflow: auto;
+  width: 70%;
+  margin: 0 auto;
+
+  @media #{$mobile} {
+    width: 95%;
+  }
+}
+
+#mayorFive {
+  margin-right: 0;
+  }
+
+#mayor-one, #mayor-two, #mayor-three, #mayor-four, #mayor-five {
+  display: none;
+}
+
+.active {
+  opacity: 0.5;
 }
 
 // styles for photo galleries --------------------------------------------------
