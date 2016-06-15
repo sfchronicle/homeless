@@ -37,6 +37,11 @@ p {
   padding: 0 15px;
   margin-bottom: 1em;
 
+  a {
+    text-decoration: none;
+    color: #FF0000;
+  }
+
   @media #{$mobile} {
       font-size: 0.8em;
   }
