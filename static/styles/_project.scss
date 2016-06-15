@@ -84,7 +84,7 @@ p {
     .caption{
       padding:0;
     }
-    
+
     @media #{$text-width}{
       padding:0 10px;
     }
@@ -269,7 +269,7 @@ header {
 }
 
 .project-logo {
-  max-width: 730px;
+  max-width: 220px;
   margin: 10px auto;
   img {
     width: 100%;
