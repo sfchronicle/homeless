@@ -293,6 +293,11 @@ header {
     margin: 10px auto;
     text-align: center;
   }
+  &.small {
+    max-width: 100px;
+    float: right;
+    margin: 0;
+  }
 
 }
 
