@@ -114,6 +114,18 @@ p {
 .navigation {
   width: 100%;
   font-family: $banner;
+  // text-transform: uppercase;
+  font-size: 18px;
+}
+
+header {
+  background: darken($light-gray, 0%);
+  a {
+    color: white;
+  }
+  .logo {
+    height: 30px;
+  }
 }
 
 .jump-navigation {
@@ -157,6 +169,10 @@ p {
   &.special {
     a {
       color: $red;
+    }
+    padding-top: 4px;
+    @media #{$mobile} {
+      margin-top: 1px;
     }
   }
   &.social {
@@ -224,13 +240,14 @@ header {
   .special-head {
     color: $red !important;
     font-family: $banner;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     float: right;
     font-size: 18px; //16px;
     padding-top: 1px;
     @media #{$mobile} {
-      font-size: 16px;
-      padding-top: 3px;
+      font-size: 14px;
+      margin-top: 0;
+      vertical-align: top;
     }
   }
 
@@ -255,7 +272,7 @@ header {
        display: inline;
      }
     img {
-      width: 20px;
+      height: 16px;
       vertical-align: baseline;
 
     }
