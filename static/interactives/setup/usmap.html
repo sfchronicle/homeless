@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body align="center">
+<script src="js/d3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="js/datamaps.usa.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
+<div class="row">
+    <div class="large-8 large-offset-2 columns">
+        <h3>Homelessness Distribution the United States</h3>
+            <h6>This map will show the different demographics of homeless people, including the number of veterans, unaccompanied youth, and chronically homeless persons.</h6>        
+    </div>
+</div>
+<div class="row">
+    <div class="large-12 columns" align="center">
+        <button id="total" class="secondary button">Total Homeless</button>
+        <button id="youth" class="secondary button">Unaccompanied Youth</button>
+        <button id="veteran" class="secondary button">Veteran Homeless</button>
+        <button id="chronic" class="secondary button">Chronic Homeless</button>
+    </div>    
+</div>
+<div class="row">   
+    <div class="large-12 columns">    
+        <div id="map" style="position: relative; height: 550px;"></div>
+    </div>   
+</div>
+<div class="row">
+    <div class="large-12 columns small-12 columns credits"> 
+        <p class="creditline">Rahul Mukherjee • <a href="mailto: rmukherjee@sfchronicle.com">rmukherjee@sfchronicle.com</a> • <a href="https://twitter.com/ruhlmuk">@ruhlmuk</a></p>
+        <p>Source: <a href="http://www.sfmayor.org/modules/showdocument.aspx?documentid=455">Homeless data</a> is recorded by the city of San Francisco.</p>
+    </div>
+</div>
+<script src="js/totalhomeless.js"></script>
+<script>
+document.getElementById('total').focus();    
+$("#youth").click(function(){
+    $('#map').fadeOut(100, function() {
+          $(this).empty();
+          $.getScript("js/homelessyouth.js");
+    });
+    $('#map').fadeIn(100);
+});
+$("#veteran").click(function(){
+  $('#map').fadeOut(100, function() {
+    $(this).empty();
+    $.getScript("js/veteranhomeless.js");  
+  });          
+    $('#map').fadeIn(100);
+});
+$("#chronic").click(function(){
+$('#map').fadeOut(100, function() {    
+  $(this).empty();
+  $.getScript("js/chronichomeless.js");
+});     
+    $('#map').fadeIn(100);
+});
+$("#total").click(function(){
+$('#map').fadeOut(250, function() {     
+  $(this).empty();
+  $.getScript("js/totalhomeless.js");
+});    
+    $('#map').fadeIn(100);
+});
+var pymChild = new pym.Child();        
+</script>
+
+</body></html>
