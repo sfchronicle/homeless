@@ -1,4 +1,8 @@
-var rsr = Raphael('map', '434.671', '364.324'); 
+var w = 440;
+var h = 375;
+var rsr = Raphael('map'); 
+rsr.setViewBox(0,0,w,h,true);
+rsr.setSize('100%', '100%');
 
 var districts = [];
 
