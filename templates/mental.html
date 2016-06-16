@@ -52,6 +52,9 @@
 {% endblock %}
 
 {% block javascript %}
+
+<script src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
+
 <script>
 	$(document).ready(function() {
 		App.init();
@@ -71,5 +74,7 @@
 			$(window).scroll(sticky_relocate);
 			sticky_relocate();
 	});
+	var pymParentIllnessMental = new pym.Parent('illness_mental', 'http://projects.sfchronicle.com/2016/homelessness/illness/index.html', {});
+	var pymParentCostsMental = new pym.Parent('costs_mental', 'http://projects.sfchronicle.com/2016/homelessness/costs/index.html', {});
 </script>
 {% endblock %}
