@@ -7,47 +7,292 @@
 {% endblock %}
 
 {% block content %}
-<main class="container">
 
-	{% include '_components/_header.html' %}
 
-	<div class="title-container">
-		<div>
-			<h1 class="title">Homeless Setup</h1>
-			{% include '_components/_social_links.html' %}
-			<p class="author">By Kevin Fagan</p>
-			<p class="date">June 26, 2016</p>
+<div class="intro">
+        <h1 class="headline">The SF Homeless Project</h1>
 
-		</div>
-	</div>
-
-	{% include '_text/setup.html' %}
-
-	<div class="row">
-		<hr>
-		<div class="credits">
-			{% import '_components/_credits.html' as credit %}
-			<!-- Variables are name, email slug and twitter handle -->
-			{{ credit.info("Interactive producer: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
-			{{ credit.info('Interactive producer: Lucio Villa', 'lvilla', 'luciovilla' ) }}
-		</div>
-	</div>
-
-	{% import '_components/_related_stories.html' as related %}
-	<div class="max">
-		<hr>
-		<div  class="divider-text"></div>
-		<div class="dont-miss">
-		<!-- Variables are title, url and image url -->
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-		</div>
-	</div>
-
-	{% include '_components/_footer.html' %}
-</main>
+        <p class="subhead">
+        This week, the San Francisco Chronicle has joined a group of more than 70 organizations as part of The SF Homeless Project to focus on San Francisco’s attention on the seemingly intractable problem of homelessness.</p>
+    
+        <img src="http://placehold.it/2000x1200" width="100%">
+        </div>
+        
+        
+        <!-- <div class="stories">
+            <div class="off-canvas-wrapper">
+	           <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+		          <div class="off-canvas-content" data-off-canvas-content="">
+                        <div class="row small-up-1 medium-up-2 large-up-2">
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_INSIGHT</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_SETUP</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>Letter of Intent</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_PORTRAITS</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_DATA</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_SHELTERS</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_MENTAL</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_CAMPING</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_SUPPORTIVE</h5></a>
+                            </div>
+                            <div class="column">
+                                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
+                                <a href="#"><h5>HOMELESS_OPINION</h5></a>
+                            </div>
+                        </div>
+                        <div class="js-off-canvas-exit"></div>
+		          </div>
+	           </div>
+            </div>
+        </div>  -->
+       
+        <!-- <div class="contributors">
+            <h2>Contributors</h2>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+            <div class="contrib-item">
+                <p class="contrib-name">Organization</p> 
+                <p class="contrib-link"><a href="#" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div> 
+        </div> -->
+        
+        <!-- <div class="archives">
+            <h2>Previous SFChronicle.com coverage</h2> -->
+<!--
+            <div class="archive-item">
+                <p class="archive-date">DATE</p>
+                <p class="archive-headline">HEADLINE</p> 
+                <a href="#" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+-->
+            <!-- <div class="archive-item">
+                <p class="archive-date">April 8, 2016</p>
+                <p class="archive-headline">Myths, like homeless problem, not going away</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/Myths-like-homeless-problem-not-going-away-7238304.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">April 1, 2016</p>
+                <p class="archive-headline">What San Franciscans know about homeless isn’t necessarily true</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/What-San-Franciscans-know-about-homeless-isn-t-7224018.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">March 4, 2016</p>
+                <p class="archive-headline">Fast-aging homeless population may lead to public health crisis</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/Fast-aging-homeless-population-may-lead-to-public-6871865.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">March 6, 2016</p>
+                <p class="archive-headline">With tent city cleared, no shortage of ideas &mdash; or homeless</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/With-tent-city-cleared-no-shortage-of-ideas-6873873.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">March 2, 2016</p>
+                <p class="archive-headline">Homeless camp on SF’s Division Street cleared by city</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/City-begins-sweeping-out-homeless-encampment-on-6862853.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">Feb. 27, 2016</p>
+                <p class="archive-headline">Flood of homeless in tent camp just small part of the problem</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/Flood-of-homeless-in-tent-camp-just-small-part-of-6858519.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">Feb. 19, 2016</p>
+                <p class="archive-headline">C.W. Nevius: Lone voice of dissent on homeless piece</p> 
+                <a href="http://www.sfchronicle.com/bayarea/nevius/article/An-open-letter-to-Coalition-on-Homelessness-leader-6843309.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">Feb. 17, 2016</p>
+                <p class="archive-headline">C.W. Nevius: Homeless tent city on Division starting to intimidate neighbors</p> 
+                <a href="http://www.sfchronicle.com/bayarea/nevius/article/Homeless-tent-city-on-Division-starting-to-6837820.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div> 
+            <div class="archive-item">
+                <p class="archive-date">Feb. 6, 2016</p>
+                <p class="archive-headline">SF spends record $241 million on homeless, can’t track results</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/S-F-spends-record-241-million-on-homeless-6808319.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">Feb. 1, 2016</p>
+                <p class="archive-headline">C.W. Nevius: Buying tents isn't helping homeless</p> 
+                <a href="http://www.sfchronicle.com/bayarea/nevius/article/Buying-tents-for-S-F-s-homeless-isn-t-6799235.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div> 
+            <div class="archive-item">
+                <p class="archive-date">Oct. 23, 2015</p>
+                <p class="archive-headline">SF’s homeless crisis: Can Ed Lee clean up the streets? </p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/S-F-s-homeless-crisis-Can-Mayor-Ed-Lee-clean-6585482.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">Oct. 23, 2015</p>
+                <p class="archive-headline">Mission Creek: SF hot spot for homeless complaints</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/Mission-Creek-S-F-s-hot-spot-for-homeless-6585492.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">Oct. 23, 2015</p>
+                <p class="archive-headline">A ‘most beautiful spot’ turned into a toilet</p> 
+                <a href="http://www.sfchronicle.com/bayarea/article/S-F-homeless-crisis-A-most-beautiful-spot-6585499.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">June 29, 2014</p>
+                <p class="archive-headline">Salt Lake City a model for SF on homeless solutions</p> 
+                <a href="http://www.sfchronicle.com/nation/article/Salt-Lake-City-a-model-for-S-F-on-homeless-5587357.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="archive-item">
+                <p class="archive-date">June 28, 2014</p>
+                <p class="archive-headline">A decade of homelessness: Thousands in SF remain in crisis </p> 
+                <a href="http://www.sfchronicle.com/archive/item/A-decade-of-homelessness-Thousands-in-S-F-30431.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div> 
+            <div class="archive-item">
+                <p class="archive-date">June 28, 2014</p>
+                <p class="archive-headline">A return to SF’s Homeless Island, 10 years later</p> 
+                <a href="http://www.sfchronicle.com/archive/item/A-decade-of-homelessness-Thousands-in-S-F-30431.php" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>   
+        </div> -->
 {% endblock %}
 
 {% block javascript %}
@@ -56,20 +301,20 @@
 		App.init();
 	});
 
-  function sticky_relocate() {
-    var window_top = $(window).scrollTop();
-    var div_top = $('#sticky-anchor').offset().top - 40;
-    if (window_top > div_top) {
-        $('#sticky-element').addClass('sticky');
-        $('.menu-navigation').addClass('sticky');
-    } else {
-        $('#sticky-element').removeClass('sticky');
-        $('.menu-navigation').removeClass('sticky');
-    }
-  }
-  $(function() {
-      $(window).scroll(sticky_relocate);
-      sticky_relocate();
-  });
+  // function sticky_relocate() {
+  //   var window_top = $(window).scrollTop();
+  //   var div_top = $('#sticky-anchor').offset().top - 40;
+  //   if (window_top > div_top) {
+  //       $('#sticky-element').addClass('sticky');
+  //       $('.menu-navigation').addClass('sticky');
+  //   } else {
+  //       $('#sticky-element').removeClass('sticky');
+  //       $('.menu-navigation').removeClass('sticky');
+  //   }
+  // }
+  // $(function() {
+  //     $(window).scroll(sticky_relocate);
+  //     sticky_relocate();
+  // });
 </script>
 {% endblock %}
