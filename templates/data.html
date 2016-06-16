@@ -56,7 +56,9 @@
 {% endblock %}
 
 {% block javascript %}
-<script type="text/javascript" src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
+
+<script src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
+
 <script>
 	$(document).ready(function() {
 		App.init();
@@ -76,6 +78,11 @@
 			$(window).scroll(sticky_relocate);
 			sticky_relocate();
 	});
-	var pymParent = new pym.Parent('Interactive_311map', 'http://projects.sfchronicle.com/test-proj/homeless-interactives-v2/map/index.html', {});
+
+	var pymParent311 = new pym.Parent('map311', 'http://projects.sfchronicle.com/2016/homelessness/map/index.html', {});
+	var pymParentBycity = new pym.Parent('bycity', 'http://projects.sfchronicle.com/2016/homelessness/bycity/index.html', {});
+	var pymParentIllness = new pym.Parent('illness', 'http://projects.sfchronicle.com/2016/homelessness/illness/index.html', {});
+	var pymParentCosts = new pym.Parent('costs', 'http://projects.sfchronicle.com/2016/homelessness/costs/index.html', {});
+
 </script>
 {% endblock %}

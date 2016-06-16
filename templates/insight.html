@@ -14,55 +14,14 @@
 	<div class="title-container">
 		<div>
 			<h1 class="title">Five Mayors</h1>
-			{% include '_components/_social_links.html' %}
+			<!-- {% include '_components/_social_links.html' %} -->
 			<p class="author">By 5 Mayors</p>
 			<p class="date">June 26, 2016</p>
 
 		</div>
 	</div>
 
-	<div cass="row">
-		<p style="text-align: center;">Placeholder text here? TBD telling people to click on each mayor's head to read the letter</p>
-	</div>
-
-	<div class="mayor-container">
-		<div class="mayor-photo" id="mayorOne"><a href="javascript:void(0)"><img src="
-http://drawingpencil.info/wp-content/uploads/2015/10/human-face-sketch-image.jpg"></a></div>
-		<div class="mayor-photo" id="mayorTwo"><a href="javascript:void(0)"><img src="
-http://drawingpencil.info/wp-content/uploads/2015/10/human-face-sketch-image.jpg"></a></div>
-		<div class="mayor-photo" id="mayorThree"><a href="javascript:void(0)"><img src="
-http://drawingpencil.info/wp-content/uploads/2015/10/human-face-sketch-image.jpg"></a></div>
-		<div class="mayor-photo" id="mayorFour"><a href="javascript:void(0)"><img src="
-http://drawingpencil.info/wp-content/uploads/2015/10/human-face-sketch-image.jpg"></a></div>
-		<div class="mayor-photo" id="mayorFive"><a href="javascript:void(0)"><img src="
-http://drawingpencil.info/wp-content/uploads/2015/10/human-face-sketch-image.jpg"></a></div>
-	</div>
-
-	<div class="row">
-		<div id="intro-text">
-			{% include '_text/insight_intro.html' %}
-		</div>
-
-		<div id="mayor-one">
-			{% include '_text/insight_lee.html' %}
-		</div>
-
-		<div id="mayor-two">
-			{% include '_text/insight_newsom.html' %}
-		</div>
-
-		<div id="mayor-three">
-			{% include '_text/insight_agnos.html' %}
-		</div>
-
-		<div id="mayor-four">
-			{% include '_text/insight_lee.html' %}
-		</div>
-
-		<div id="mayor-five">
-			{% include '_text/insight_lee.html' %}
-		</div>
-	</div>
+	{% include '_text/insight.html' %}
 
 	<div class="row">
 		<hr>
@@ -111,49 +70,5 @@ http://drawingpencil.info/wp-content/uploads/2015/10/human-face-sketch-image.jpg
 			$(window).scroll(sticky_relocate);
 			sticky_relocate();
 	});
-
-	function hidden() {
-		var mayors = ["#intro-text", "#mayor-one", "#mayor-two", "#mayor-three", "#mayor-four", "#mayor-five"];
-		for ( i = 0; i < mayors.length; i++) {
-			$(mayors[i]).hide();
-		}
-	};
-
-	$("#mayorOne").click(function() {
-		hidden();
-		$("#mayor-one").fadeIn("slow", function() {
-			});
-	});
-
-	$("#mayorTwo").click(function() {
-		hidden();
-		$("#mayor-two").fadeIn("slow", function() {
-			});
-	});
-
-	$("#mayorThree").click(function() {
-		hidden();
-		$("#mayor-three").fadeIn("slow", function() {
-			});
-	});
-
-	$("#mayorFour").click(function() {
-		hidden();
-		$("#mayor-four").fadeIn("slow", function() {
-			});
-	});
-
-	$("#mayorFive").click(function() {
-		hidden();
-		$("#mayor-five").fadeIn("slow", function() {
-			});
-	});
-
-	$(".mayor-photo").click(function() {
-		$(".mayor-photo").removeClass("active");
-		$(this).addClass("active");
-	})
-
 </script>
-
 {% endblock %}
