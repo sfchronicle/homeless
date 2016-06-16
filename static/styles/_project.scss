@@ -39,7 +39,7 @@ p {
 
   a {
     text-decoration: none;
-    color: #FF0000;
+    color: $red;
   }
 
   @media #{$mobile} {
@@ -291,17 +291,28 @@ header {
 }
 
 .project-logo {
-  max-width: 220px;
+  max-width: 730px;
   margin: 10px auto;
   img {
-    width: 100%;
+    width: 160px;
+    padding-left: 10px;
     margin: 10px auto;
-    text-align: center;
+    float:right;
+    margin-top: -100px;
+    @media #{$mobile} {
+      float: none;
+      width: 150px;
+      padding-right: 20px;
+      margin-top: 0px;
+    }
   }
   &.small {
     max-width: 100px;
     float: right;
     margin: 0;
+    img {
+      margin-top: 0;
+    }
   }
 
 }
@@ -358,6 +369,9 @@ footer {
       width: 180px;
       vertical-align: bottom;
     }
+  }
+  @media #{$mobile} {
+    visibility: hidden;
   }
 
   &::after {
