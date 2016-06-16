@@ -598,6 +598,11 @@ hr{
   display: inline-block;
   text-align: center;
   margin-right: calc(20%/4);
+
+  &.active {
+    opacity: 0.5;
+  }
+
 }
 
 .mayor-container {
@@ -616,10 +621,6 @@ hr{
 
 #mayor-one, #mayor-two, #mayor-three, #mayor-four, #mayor-five {
   display: none;
-}
-
-.active {
-  opacity: 0.5;
 }
 
 // styles for photo galleries --------------------------------------------------

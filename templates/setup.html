@@ -57,6 +57,8 @@
 
 {% block javascript %}
 
+<script src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
+
 <script>
 	$(document).ready(function() {
 		App.init();
@@ -111,6 +113,9 @@
 	    $("#scrollLeft-Gallery1").removeClass("first");
 	  };
 	});
+
+	// var pymParent = new pym.Parent('usmap', '{{ url_for('static', filename='interactives/setup/usmap.html') }}', {});
+	var pymParenttwo = new pym.Parent('sfmap', '{{ url_for('static', filename='interactives/setup/sfmap.html') }}', {});
 </script>
 
 {% endblock %}
