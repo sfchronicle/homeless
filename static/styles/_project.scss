@@ -597,25 +597,25 @@ hr{
 
 // insight page styling ----------------------------------------
 
-.mayor-photo {
-  width: calc(100%/6.25);
+.mayor-info {
   float: left;
-  display: inline-block;
-  text-align: center;
+  width: calc(100%/6.25);
   margin-right: calc(20%/4);
+  text-align: center;
+
+  @media #{$tablet} {
+  width: calc(100%/4);
+  margin-right: calc(25%/2);
+  }
+}
+
+.mayor-photo {
+  display: inline;
   opacity: 0.3;
 
   &.active {
     opacity: 1;
   }
-}
-
-.mayor-text {
-  width: calc(100%/6.25);
-  float: left;
-  display: inline-block;
-  text-align: center;
-  margin-right: calc(20%/4);
 }
 
 .mayor-name {
@@ -637,6 +637,12 @@ hr{
 
   }
 
+.bottom-row {
+  @media #{$tablet} {
+  margin-top: 1em;
+  }
+}
+
 .mayor-container {
   overflow: auto;
   width: 70%;
@@ -647,8 +653,20 @@ hr{
   }
 }
 
-#lee {
-  margin-right: 0;
+#no-margin-right {
+    margin-right: 0;
+  }
+
+.no-margin-right-tab {
+    @media #{$tablet} {
+      margin-right: 0;
+    }
+  }
+
+  .adjust-left-margin {
+    @media #{$tablet} {
+      margin-left: calc(30%/2);
+    }
   }
 
 #agnos-letter, #newsom-letter, #jordan-letter, #brown-letter {
