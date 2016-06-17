@@ -21,7 +21,48 @@
 		</div>
 	</div>
 
-	{% include '_text/insight.html' %}
+  	<div cass="row">
+  		<p style="text-align: center;">Placeholder text here? TBD telling people to click on each mayor's head to read the letter</p>		
+  	</div>		
+  		
+  	<div class="mayor-container">		
+  		<div class="mayor-photo" id="agnos"><a href="javascript:void(0)"><img src="		
+  /static/images/insight/sketches/artagnos.png"></a></div>		
+  		<div class="mayor-photo" id="lee"><a href="javascript:void(0)"><img src="		
+  /static/images/insight/sketches/edlee.png"></a></div>		
+  		<div class="mayor-photo" id="jordan"><a href="javascript:void(0)"><img src="		
+  /static/images/insight/sketches/frankjordan.png"></a></div>		
+  		<div class="mayor-photo" id="newsom"><a href="javascript:void(0)"><img src="		
+  /static/images/insight/sketches/gavinnewsom.png"></a></div>		
+  		<div class="mayor-photo" id="brown"><a href="javascript:void(0)"><img src="		
+  /static/images/insight/sketches/williebrown.png"></a></div>		
+  	</div>		
+  		
+  	<div class="row">		
+  		<div id="intro-text">		
+  			{% include '_text/insight_intro.html' %}		
+  		</div>		
+  		
+  		<div id="agnos-letter">		
+  			{% include '_text/insight_lee.html' %}		
+  		</div>		
+  		
+  		<div id="lee-letter">		
+  			{% include '_text/insight_newsom.html' %}		
+  		</div>		
+  		
+  		<div id="jordan-letter">		
+  			{% include '_text/insight_agnos.html' %}		
+  		</div>		
+  		
+  		<div id="newsom-letter">		
+  			{% include '_text/insight_lee.html' %}		
+  		</div>		
+  		
+  		<div id="brown-letter">		
+  			{% include '_text/insight_lee.html' %}		
+  		</div>		
+  	</div>		
 
 	<div class="row">
 		<hr>
@@ -70,5 +111,48 @@
 			$(window).scroll(sticky_relocate);
 			sticky_relocate();
 	});
+		
+  	function hidden() {		
+  		var mayors = ["#intro-text", "#agnos-letter", "#lee-letter", "#jordan-letter", "#newsom-letter", "#brown-letter"];		
+  		for ( i = 0; i < mayors.length; i++) {		
+  			$(mayors[i]).hide();		
+  		}		
+  	};		
+  		
+  	$("#agnos").click(function() {		
+  		hidden();		
+  		$("#agnos-letter").fadeIn("slow", function() {		
+  			});		
+  	});		
+  		
+  	$("#lee").click(function() {		
+  		hidden();		
+  		$("#lee-letter").fadeIn("slow", function() {		
+  			});		
+  	});		
+  		
+  	$("#jordan").click(function() {		
+  		hidden();		
+  		$("#jordan-letter").fadeIn("slow", function() {		
+  			});		
+  	});		
+  		
+  	$("#newsom").click(function() {		
+  		hidden();		
+  		$("#newsom-letter").fadeIn("slow", function() {		
+  			});		
+  	});		
+  		
+  	$("#brown").click(function() {		
+  		hidden();		
+  		$("#brown-letter").fadeIn("slow", function() {		
+  			});		
+  	});		
+  		
+  	$(".mayor-photo").click(function() {		
+  		$(".mayor-photo").removeClass("active");		
+  		$(this).addClass("active");		
+  	})		
+  
 </script>
 {% endblock %}
