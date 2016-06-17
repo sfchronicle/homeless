@@ -602,10 +602,32 @@ hr{
   width: calc(100%/6.25);
   margin-right: calc(20%/4);
   text-align: center;
+  height: 255px;
+
+  @media screen and (max-width: 886px) {
+  height: 220px;
+  }
 
   @media #{$tablet} {
   width: calc(100%/4);
   margin-right: calc(25%/2);
+  height: 285px;
+  }
+
+  @media screen and (max-width: 600px) {
+  height: 250px;
+  }
+
+  @media screen and (max-width: 550px) {
+  height: 230px;
+  }
+
+  @media screen and (max-width: 500px) {
+  height: 200px;
+  }
+
+  @media #{$mobile} {
+  height: 210px;
   }
 }
 
@@ -616,6 +638,11 @@ hr{
   &.active {
     opacity: 1;
   }
+}
+
+.mayor-photo img {
+  width: 100%;
+  max-width: 202px;
 }
 
 .mayor-name {
@@ -671,6 +698,22 @@ hr{
 
 #agnos-letter, #newsom-letter, #jordan-letter, #brown-letter {
   display: none;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+#read {
+  height: 2em;
+
+  @media #{$tablet} {
+  height: 45px;
+  }
+
+  @media #{$mobile} {
+  height: 0;
+  }
 }
 
 // styles for photo galleries --------------------------------------------------

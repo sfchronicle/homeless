@@ -5,7 +5,6 @@
 {% block head %}
 {% include '_components/_social.html' %}
 {% endblock %}
-
 {% block content %}
 <main class="container">
 
@@ -23,41 +22,41 @@
   	<div cass="row">
   		<p style="text-align: center; margin-bottom: 2em;">The city's last five mayors, including its current one, discuss their attempts to solve the homelessness problem while in office. Click on each mayor to read their letter.</p>		
   	</div>		
-  		
+
   	<div class="mayor-container">
       <div class="mayor-info">
-    		<div class="mayor-photo" id="agnos"><a href="javascript:void(0)"><img src="		
-    /static/images/insight/sketches/artagnos.png"></a></div>
-        <div class="mayor-text mayor-name">Art Agnos</div>
-        <div class="mayor-text mayor-years">1988-1992</div>
+    		<div class="mayor-photo" id="agnos"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/artagnos.png"></a></div>
+        <div class="mayor-name">Art Agnos</div>
+        <div class="mayor-years">1988-1992</div>
       </div>
 
       <div class="mayor-info">
-    		<div class="mayor-photo" id="jordan"><a href="javascript:void(0)"><img src="		
-  /static/images/insight/sketches/frankjordan.png"></a></div>
-        <div class="mayor-text mayor-name">Frank Jordan</div>
-        <div class="mayor-text mayor-years">1992-1996</div>
+    		<div class="mayor-photo" id="jordan"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/frankjordan.png"></a></div>
+        <div class="mayor-name">Frank Jordan</div>
+        <div class="mayor-years">1992-1996</div>
       </div>		
 
       <div class="mayor-info no-margin-right-tab">
-        <div class="mayor-photo" id="brown"><a href="javascript:void(0)"><img src="   /static/images/insight/sketches/williebrown.png"></a></div>   
-        <div class="mayor-text mayor-name">Willie Brown</div>
-        <div class="mayor-text mayor-years">1996-2004</div>
+        <div class="mayor-photo" id="brown"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/williebrown.png"></a></div>   
+        <div class="mayor-name">Willie Brown</div>
+        <div class="mayor-years">1996-2004</div>
       </div>
 
       <div class="mayor-info bottom-row adjust-left-margin">
-    		<div class="mayor-photo" id="newsom"><a href="javascript:void(0)"><img src="/static/images/insight/sketches/gavinnewsom.png"></a></div>		
-        <div class="mayor-text mayor-name">Gavin Newsom</div>
-        <div class="mayor-text mayor-years">2004-2011</div>
+    		<div class="mayor-photo" id="newsom"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/gavinnewsom.png"></a></div>		
+        <div class="mayor-name">Gavin Newsom</div>
+        <div class="mayor-years">2004-2011</div>
       </div>
 
       <div class="mayor-info bottom-row" id="no-margin-right">
-        <div class="mayor-photo active" id="lee"><a href="javascript:void(0)"><img src="/static/images/insight/sketches/edlee.png"></a></div>   
-        <div class="mayor-text mayor-name">Ed Lee</div>
-        <div class="mayor-text mayor-years">2011-present</div>
+        <div class="mayor-photo active" id="lee"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/edlee.png"></a></div>   
+        <div class="mayor-name">Ed Lee</div>
+        <div class="mayor-years">2011-present</div>
       </div>
 
   	</div>
+
+    <div id="read"></div>
 
   	<div class="row">		  		
   		<div id="agnos-letter">		
@@ -80,6 +79,8 @@
   			{% include '_text/insight_lee.html' %}		
   		</div>		
   	</div>		
+
+  <button>Read another letter</button>
 
 	<div class="row">
 		<hr>
@@ -128,7 +129,7 @@
 			$(window).scroll(sticky_relocate);
 			sticky_relocate();
 	});
-		
+		   
   	function hidden() {		
   		var mayors = ["#agnos-letter", "#lee-letter", "#jordan-letter", "#newsom-letter", "#brown-letter"];		
   		for ( i = 0; i < mayors.length; i++) {		
@@ -170,5 +171,11 @@
   		$(".mayor-photo").removeClass("active");		
   		$(this).addClass("active");		
   	})		  
+
+    $(".scroll").click(function(event){   
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+    });
+
 </script>
 {% endblock %}
