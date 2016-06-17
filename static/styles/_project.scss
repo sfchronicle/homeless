@@ -603,29 +603,55 @@ hr{
   display: inline-block;
   text-align: center;
   margin-right: calc(20%/4);
-  opacity: 0.7;
+  opacity: 0.3;
 
   &.active {
     opacity: 1;
   }
-
 }
+
+.mayor-text {
+  width: calc(100%/6.25);
+  float: left;
+  display: inline-block;
+  text-align: center;
+  margin-right: calc(20%/4);
+}
+
+.mayor-name {
+  font-size: 93%;
+
+  @media #{$tablet} {
+    font-size: 70%;
+  }
+}
+
+.mayor-years {
+    font-family:$banner;
+    color:$red;
+    font-size: 70%;
+
+  @media #{$tablet} {
+    font-size: 60%;
+  }
+
+  }
 
 .mayor-container {
   overflow: auto;
   width: 70%;
   margin: 0 auto;
 
-  @media #{$mobile} {
+  @media #{$tablet} {
     width: 95%;
   }
 }
 
-#brown {
+#lee {
   margin-right: 0;
   }
 
-#agnos-letter, #lee-letter, #newsom-letter, #jordan-letter, #brown-letter {
+#agnos-letter, #newsom-letter, #jordan-letter, #brown-letter {
   display: none;
 }
 
