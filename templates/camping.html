@@ -53,6 +53,9 @@
 {% endblock %}
 
 {% block javascript %}
+
+<script src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
+
 <script>
 	$(document).ready(function() {
 		App.init();
@@ -72,5 +75,9 @@
 			$(window).scroll(sticky_relocate);
 			sticky_relocate();
 	});
+
+	var pymParentMapCamping = new pym.Parent('map_camping', 'http://projects.sfchronicle.com/2016/homelessness/map/index.html', {});
+	var pymParentBarChartCamping = new pym.Parent('barchart_camping', 'http://projects.sfchronicle.com/2016/homelessness/violations/index.html', {});
+
 </script>
 {% endblock %}
