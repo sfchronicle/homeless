@@ -19,7 +19,7 @@
 		</div>
 	</div>
 
-  	<div cass="row">
+  	<div class="row">
   		<p style="text-align: center; margin-bottom: 2em;">The city's last five mayors, including its current one, discuss their attempts to solve the homelessness problem while in office. Click on each mayor to read their letter.</p>		
   	</div>		
 
@@ -68,7 +68,7 @@
   		</div>		
   		
   		<div id="jordan-letter">		
-  			{% include '_text/insight_newsom.html' %}		
+  			{% include '_text/insight_jordan.html' %}		
   		</div>		
   		
   		<div id="newsom-letter">		
@@ -76,11 +76,12 @@
   		</div>		
   		
   		<div id="brown-letter">		
-  			{% include '_text/insight_lee.html' %}		
+  			{% include '_text/insight_brown.html' %}		
   		</div>		
-  	</div>		
 
-  <button>Read another letter</button>
+      <div id="button-styling"><button style="width: 100%" id="button"><a class="scroll" href="#read">Read another letter >></a></button></div>
+
+  	</div>		
 
 	<div class="row">
 		<hr>
@@ -175,6 +176,34 @@
     $(".scroll").click(function(event){   
       event.preventDefault();
       $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+    });
+
+    $("button").click(function(){
+
+      var activeLetter = $(".active");
+      var photos = ["#agnos","#jordan","#brown","#newsom","#lee"];
+      var index = $(".active").index(".mayor-photo");
+
+      console.log(index);
+
+      index++;
+
+      if (index >= 5) {
+        index = 0;
+      }
+      else {
+      };
+
+      $(activeLetter).removeClass("active");
+      $(photos[index]).addClass("active");
+
+      var activeLetter = $(".active");
+
+      hidden();
+      var mayors = ["#agnos-letter", "#jordan-letter", "#brown-letter", "#newsom-letter", "#lee-letter"];
+      $(mayors[index]).fadeIn("slow",function() {
+        });
+
     });
 
 </script>

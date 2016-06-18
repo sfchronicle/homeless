@@ -693,7 +693,7 @@ hr{
 
   .adjust-left-margin {
     @media #{$tablet} {
-      margin-left: calc(30%/2);
+      margin-left: calc(37.5%/2);
     }
   }
 
@@ -714,6 +714,26 @@ hr{
 
   @media #{$mobile} {
   height: 0;
+  }
+}
+
+button {
+  background: #b2b2b2;
+  padding: 10px 20px 10px 20px;
+}
+
+button a {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+#button-styling {
+  padding-top: 2em;
+  width: 50%;
+  margin: 0 auto;
+
+  @media #{$tablet} {
+  width: 100%;
   }
 }
 
