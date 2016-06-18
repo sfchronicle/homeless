@@ -1,17 +1,6 @@
 .intro {
     margin: 0 auto;
-    padding: 2em 2em 4em;
-    max-width: 1400px;
-    font-size: 16px;
-    line-height: 1.5em;
-    color: #545454;
-
-    & h1, h2, h3, h4, h5, h6 {
-    font-family: $sans-serif;
-    color: #222;
-    font-weight: 600;
-    line-height: 1.3em;
-    }
+    position: relative;
 
     & h2 {
         margin-top: 1.3em;
@@ -29,37 +18,88 @@
         display: none;
     }
 
-    & img {
-        -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-        animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-        background: transparent;
-        border: 10px solid rgba(0, 0, 0, 0.12);
-        border-radius: 4px;
-        display: block;
-        margin: 1.3em auto;
-        max-width: 95%;
+    & .full-width-img{
+        margin:0;
+
+        img {
+            width:100%;
+        }
+    }
+}
+
+.header {
+    position: absolute;
+    top: 27%;
+    left: 0;
+    right: 0;
+    color: red;
+    opacity: 0.9;
+    text-align:center;
+
+    @media (max-width:860px){
+        position:relative;
+    }
+
+    & h1{
+        font-family: $serif;
+        color: $red;
+        margin-bottom: 0;
     }
 
     & .subhead{
-        font-size:1em;
         padding-top:3px;
-        padding-bottom:3px
-    }
-}
-.headline{
-        font-weight:bold;
-        letter-spacing:2px;
         padding-bottom:3px;
-        text-align:center;
-        color: $red;
+        color:#fff;
+        text-shadow: 1px 1px 1px #000;
+
+        @media (max-width:860px){
+            color: #333;
+            text-shadow:none;
+        }
+
+        @media #{$mobile} {
+            font-size: 0.8em;
+        }
+
     }
 
+    & .button {
+        background-color: $red;
+        color: #fefefe; 
+        font-family:$sans-serif;
+        text-transform:uppercase;
+    }
+
+    & #social a{
+        color: #f3f3f3;
+
+        @media (max-width:860px){
+            color: #64758e;
+        }
+
+    }
+}
+
+.headline{
+    font-weight:bold;
+    letter-spacing:2px;
+    padding:0 10px 3px;
+    text-align:center;
+    color: $red;
+
+    @media #{$mobile} {
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+}
+
 .stories {
-    margin-top: 100px;
+    margin: 100px 0 50px;
+    width: 100%;
+    float: left;
 }
 
 .contributors {
-    float: right;
     text-align: center;
 }
 
@@ -68,7 +108,9 @@
 }
 
 .contrib-name {
-    font-weight: bold;
+    font-size: 0.7em;
+    font-family: $sans-serif;
+    min-height: 98px;
 }
 
 .contrib-link {

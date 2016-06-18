@@ -9,7 +9,7 @@
  @include foundation-grid;
  @include foundation-global-styles;
 //  @include foundation-forms;
-//  @include foundation-button;
+@include foundation-button;
 //  @include foundation-accordion;
 //  @include foundation-accordion-menu;
 //  @include foundation-badge;
@@ -32,8 +32,8 @@
 //  @include foundation-slider;
 //  @include foundation-sticky;
 //  @include foundation-reveal;
-//  @include foundation-switch;
-//  @include foundation-table;
+//  @include foundation-switch;  
+@include foundation-table;
 //  @include foundation-tabs;
 //  @include foundation-thumbnail;
 //  @include foundation-title-bar;

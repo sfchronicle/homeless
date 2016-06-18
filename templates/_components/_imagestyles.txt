@@ -17,8 +17,8 @@
 
 
 ===== FLOAT LEFT IMAGE ====
-<div class="sm-img-cont">
-	<div class="float-left-img">
+<div class="float-img-container">
+	<div class="float-img left">
 	    <img src="....jpg">
 	    <p class="caption">A man walks past an Alexander Calder mobile.
 	    <span class="byline"> Photo: Tim Hussin, The Chronicle</span></p>
@@ -27,8 +27,8 @@
 
 
 ===== FLOAT RIGHT IMAGE ====
-<div class="sm-img-cont">
-	<div class="float-right-img">
+<div class="float-img-container">
+	<div class="float-img right">
 	    <img src="....jpg">
 	    <p class="caption">A man walks past an Alexander Calder mobile.
 	    <span class="byline"> Photo: Tim Hussin, The Chronicle</span></p>

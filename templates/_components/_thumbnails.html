@@ -1,0 +1,8 @@
+{% macro info(title='title', img_url='', link='http://sfchronicle.com') -%}
+
+<div class="column">
+    <a href="{{ link }}"><img class="thumbnail" src="{{ img_url }}"></a>
+    <a href="{{ link }}"><h5>{{ title }}</h5></a>
+</div>
+
+{%- endmacro %}

@@ -33,18 +33,18 @@ def index():
     	description='',
     	twitter_text='')
 
-@app.route('/setup/')
+@app.route('/overview/')
 def setup():
     return render_template('setup.html',
-    	slug='',
+    	slug='overview',
     	title='',
     	description='',
     	twitter_text='')
 
-@app.route('/insight/')
+@app.route('/letters-from-the-mayors/')
 def insight():
     return render_template('insight.html',
-    	slug='',
+    	slug='letters-from-the-mayors',
     	title='',
     	description='',
     	twitter_text='')
@@ -92,10 +92,10 @@ def camping():
 @app.route('/supportive/')
 def supportive():
     return render_template('supportive.html',
-    	slug='supportive',
-    	title='Homeless Supportive',
+    	slug='',
+    	title='',
     	description='',
-    	twitter_text='this is twitter text')
+    	twitter_text='')
 
 @app.route('/opinion/')
 def opinion():
@@ -105,10 +105,10 @@ def opinion():
     	description='',
     	twitter_text='')
 
-@app.route('/letter_of_intent/')
+@app.route('/letter-to-the-city/')
 def letter_of_intent():
     return render_template('letter_of_intent.html',
-    	slug='',
+    	slug='letter-to-the-city',
     	title='',
     	description='',
     	twitter_text='')
