@@ -26,22 +26,23 @@
         
     <div class="stories">
         <div class="max small-up-1 medium-up-3 large-up-3">
+
             <div class="column">
-                <a href="#">
-                    <img class="thumbnail" src="http://placehold.it/1200x800">
+                <a href="{{ url_for('setup') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/setup/01_thumb.jpg') }}">
+                    <h5>SF homeless problem looks the same as it did 20 years ago</h5>
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('insight') }}">
+                    <img class="thumbnail" src="{{ url_for('static', filename='images/insight/mayors.jpg') }}">
                     <h5>Letters from five mayors</h5>
                 </a>
             </div>
             <div class="column">
-                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
-                <a href="#"><h5>SF homeless problem looks the same as it did 20 years ago</h5></a>
+                <a href="{{ url_for('letter_of_intent') }}"><img class="thumbnail" src="{{ url_for('static', filename='logos/SFHomeless_long_thumb.jpg') }}">
+                    <h5>Letter to the city</h5>
+                </a>
             </div>
-            <div class="column">
-                <a href="#"><img class="thumbnail" src="http://placehold.it/1200x800"></a>
-                <a href="#"><h5>Letter to the city</h5></a>
-            </div>
-            <!-- {% import '_components/_thumbnails.html' as thumbnail %}
-            {{thumbnail.info("Letter to the city", "/static/images/frontpage/bg.jpg", "http://luciovilla.com")}} -->
         </div>
     </div>
 

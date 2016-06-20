@@ -26,7 +26,7 @@
 </div>
 <div class="row">   
     <div class="large-12 columns">    
-        <div id="map" style="position: relative; height: 550px;"></div>
+        <div id="usmap" style="position: relative; height: 550px;"></div>
     </div>   
 </div>
 <div class="row">
@@ -39,32 +39,32 @@
 <script>
 document.getElementById('total').focus();    
 $("#youth").click(function(){
-    $('#map').fadeOut(100, function() {
+    $('#usmap').fadeOut(250, function() {
           $(this).empty();
           $.getScript("js/homelessyouth.js");
     });
-    $('#map').fadeIn(100);
+    $('#usmap').fadeIn(100);
 });
 $("#veteran").click(function(){
-  $('#map').fadeOut(100, function() {
+  $('#usmap').fadeOut(250, function() {
     $(this).empty();
     $.getScript("js/veteranhomeless.js");  
   });          
-    $('#map').fadeIn(100);
+    $('#usmap').fadeIn(100);
 });
 $("#chronic").click(function(){
-$('#map').fadeOut(100, function() {    
+$('#usmap').fadeOut(250, function() {    
   $(this).empty();
   $.getScript("js/chronichomeless.js");
 });     
-    $('#map').fadeIn(100);
+    $('#usmap').fadeIn(100);
 });
 $("#total").click(function(){
-$('#map').fadeOut(250, function() {     
+$('#usmap').fadeOut(250, function() {     
   $(this).empty();
   $.getScript("js/totalhomeless.js");
 });    
-    $('#map').fadeIn(100);
+    $('#usmap').fadeIn(100);
 });
 var pymChild = new pym.Child();        
 </script>

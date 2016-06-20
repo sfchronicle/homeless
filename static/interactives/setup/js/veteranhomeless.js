@@ -1,6 +1,6 @@
 var election = new Datamap({
         scope: 'usa',
-        element: document.getElementById('map'),
+        element: document.getElementById('usmap'),
         geographyConfig: {
           highlightBorderColor: '#bada55',
          popupTemplate: function(geography, data) {
