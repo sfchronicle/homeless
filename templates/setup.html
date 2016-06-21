@@ -44,8 +44,8 @@
 		<!-- <div  class="divider-text">Read related stories</div> -->
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('Letters from the mayors', 'URL', '../static/images/insight/mayors.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/logos/SFHomeless_long_thumb.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 		</div>
@@ -115,7 +115,7 @@
 	  };
 	});
 
-	//var pymParent = new pym.Parent('usmap', '{{ url_for('static', filename='interactives/setup/usmap.html') }}', {});
+	var pymParent = new pym.Parent('usmap', '{{ url_for('static', filename='interactives/setup/usmap.html') }}', {});
 	var pymParenttwo = new pym.Parent('sfmap', '{{ url_for('static', filename='interactives/setup/sfmap.html') }}', {});
 </script>
 

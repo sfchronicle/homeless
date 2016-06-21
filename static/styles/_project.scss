@@ -128,9 +128,6 @@ header {
   a {
     color: white;
   }
-  .logo {
-    height: 30px;
-  }
 }
 
 .jump-navigation {
@@ -155,6 +152,9 @@ header {
   @media #{$mobile} {
     font-size: 20px;
   }
+  & .social {
+    margin-top: 5px;
+  }
 }
 
 .jump-navigation {
@@ -167,15 +167,14 @@ header {
 }
 
 .link {
-  margin: 0 20px;
+  margin: 0 10px;
   vertical-align: top;
   cursor: pointer;
-  padding-top: 3px;
   &.special {
+      margin-top: 3px;
     a {
       color: $red;
     }
-    padding-top: 4px;
     @media #{$mobile} {
       margin-top: 1px;
     }
@@ -237,7 +236,7 @@ header {
 
 
 header {
-  padding: 6px 10px;
+  padding: 6px 5px;
   -webkit-box-shadow: 0 0 6px 0 $dark-gray;
   -moz-box-shadow: 0 0 6px 0 $dark-gray;
   box-shadow: 0 0 6px 0 $dark-gray;
@@ -248,7 +247,6 @@ header {
     // text-transform: uppercase;
     float: right;
     font-size: 18px; //16px;
-    padding-top: 1px;
     @media #{$mobile} {
       font-size: 14px;
       margin-top: 0;
@@ -262,7 +260,7 @@ header {
 
   .logo {
     float: left;
-    margin-right: 10px;
+    margin: 0;
       img {
        vertical-align: baseline;
        width:200px;
