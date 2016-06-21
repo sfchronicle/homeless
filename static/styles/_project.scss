@@ -602,11 +602,6 @@ hr{
   width: calc(100%/6.25);
   margin-right: calc(20%/4);
   text-align: center;
-  height: 255px;
-
-  @media screen and (max-width: 886px) {
-  height: 220px;
-  }
 
   @media #{$tablet} {
   width: calc(100%/4);
@@ -704,7 +699,7 @@ hr{
   }
 }
 
-#read {
+#read, #next {
   height: 2em;
 
   @media #{$tablet} {
