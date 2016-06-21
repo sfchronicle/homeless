@@ -20,8 +20,8 @@
 	</div>
 
   	<div class="row">
-  		<p style="text-align: center; margin-bottom: 2em;">The city's last five mayors, including its current one, discuss their attempts to solve the homelessness problem while in office. Click on a mayor to read his letter.</p>		
-  	</div>		
+  		<p style="text-align: center; margin-bottom: 2em;">The city's last five mayors, including its current one, discuss their attempts to solve the homelessness problem while in office. Click on a mayor to read his letter.</p>
+  	</div>
 
   	<div class="mayor-container">
       <div class="mayor-info">
@@ -34,22 +34,22 @@
     		<div class="mayor-photo" id="jordan"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/frankjordan.png"></a></div>
         <div class="mayor-name">Frank Jordan</div>
         <div class="mayor-years">1992-1996</div>
-      </div>		
+      </div>
 
       <div class="mayor-info no-margin-right-tab">
-        <div class="mayor-photo" id="brown"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/williebrown.png"></a></div>   
+        <div class="mayor-photo" id="brown"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/williebrown.png"></a></div>
         <div class="mayor-name">Willie Brown</div>
         <div class="mayor-years">1996-2004</div>
       </div>
 
       <div class="mayor-info bottom-row adjust-left-margin">
-    		<div class="mayor-photo" id="newsom"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/gavinnewsom.png"></a></div>		
+    		<div class="mayor-photo" id="newsom"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/gavinnewsom.png"></a></div>
         <div class="mayor-name">Gavin Newsom</div>
         <div class="mayor-years">2004-2011</div>
       </div>
 
       <div class="mayor-info bottom-row" id="no-margin-right">
-        <div class="mayor-photo active" id="lee"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/edlee.png"></a></div>   
+        <div class="mayor-photo active" id="lee"><a class="scroll" href="#read"><img src="/static/images/insight/sketches/edlee.png"></a></div>
         <div class="mayor-name">Ed Lee</div>
         <div class="mayor-years">2011-present</div>
       </div>
@@ -58,38 +58,39 @@
 
     <div id="read"></div>
 
-  	<div class="row">		  		
-  		<div id="agnos-letter">		
-  			{% include '_text/insight_agnos.html' %}		
-  		</div>		
-  		
-  		<div id="lee-letter">		
-  			{% include '_text/insight_lee.html' %}		
-  		</div>		
-  		
-  		<div id="jordan-letter">		
-  			{% include '_text/insight_jordan.html' %}		
-  		</div>		
-  		
-  		<div id="newsom-letter">		
-  			{% include '_text/insight_newsom.html' %}		
-  		</div>		
-  		
-  		<div id="brown-letter">		
-  			{% include '_text/insight_brown.html' %}		
-  		</div>		
+  	<div class="row">
+  		<div id="agnos-letter">
+  			{% include '_text/insight_agnos.html' %}
+  		</div>
+
+  		<div id="lee-letter">
+  			{% include '_text/insight_lee.html' %}
+  		</div>
+
+  		<div id="jordan-letter">
+  			{% include '_text/insight_jordan.html' %}
+  		</div>
+
+  		<div id="newsom-letter">
+  			{% include '_text/insight_newsom.html' %}
+  		</div>
+
+  		<div id="brown-letter">
+  			{% include '_text/insight_brown.html' %}
+  		</div>
 
       <div id="button-styling"><a class="scroll" href="#read"><button style="width: 100%" id="button">Read another letter >></button></a></div>
 
-  	</div>		
+  	</div>
 
 	<div class="row">
 		<hr>
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
-			{{ credit.info("Interactive producer: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
-			{{ credit.info('Interactive producer: Lucio Villa', 'lvilla', 'luciovilla' ) }}
+			{{ credit.info("Interactive producers: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
+			{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
 		</div>
 	</div>
 
@@ -130,50 +131,50 @@
 			$(window).scroll(sticky_relocate);
 			sticky_relocate();
 	});
-		   
-  	function hidden() {		
-  		var mayors = ["#agnos-letter", "#lee-letter", "#jordan-letter", "#newsom-letter", "#brown-letter"];		
-  		for ( i = 0; i < mayors.length; i++) {		
-  			$(mayors[i]).hide();		
-  		}		
-  	};	
-  		
-  	$("#agnos").click(function() {		
-  		hidden();		
-  		$("#agnos-letter").fadeIn("slow", function() {		
-  			});		
-  	});		
-  		
-  	$("#lee").click(function() {		
-  		hidden();		
-  		$("#lee-letter").fadeIn("slow", function() {		
-  			});		
-  	});		
-  		
-  	$("#jordan").click(function() {		
-  		hidden();		
-  		$("#jordan-letter").fadeIn("slow", function() {		
-  			});		
-  	});		
-  		
-  	$("#newsom").click(function() {		
-  		hidden();		
-  		$("#newsom-letter").fadeIn("slow", function() {		
-  			});		
-  	});		
-  		
-  	$("#brown").click(function() {		
-  		hidden();		
-  		$("#brown-letter").fadeIn("slow", function() {		
-  			});		
-  	});		
-  		
-  	$(".mayor-photo").click(function() {		
-  		$(".mayor-photo").removeClass("active");		
-  		$(this).addClass("active");		
-  	})		  
 
-    $(".scroll").click(function(event){   
+  	function hidden() {
+  		var mayors = ["#agnos-letter", "#lee-letter", "#jordan-letter", "#newsom-letter", "#brown-letter"];
+  		for ( i = 0; i < mayors.length; i++) {
+  			$(mayors[i]).hide();
+  		}
+  	};
+
+  	$("#agnos").click(function() {
+  		hidden();
+  		$("#agnos-letter").fadeIn("slow", function() {
+  			});
+  	});
+
+  	$("#lee").click(function() {
+  		hidden();
+  		$("#lee-letter").fadeIn("slow", function() {
+  			});
+  	});
+
+  	$("#jordan").click(function() {
+  		hidden();
+  		$("#jordan-letter").fadeIn("slow", function() {
+  			});
+  	});
+
+  	$("#newsom").click(function() {
+  		hidden();
+  		$("#newsom-letter").fadeIn("slow", function() {
+  			});
+  	});
+
+  	$("#brown").click(function() {
+  		hidden();
+  		$("#brown-letter").fadeIn("slow", function() {
+  			});
+  	});
+
+  	$(".mayor-photo").click(function() {
+  		$(".mayor-photo").removeClass("active");
+  		$(this).addClass("active");
+  	})
+
+    $(".scroll").click(function(event){
       event.preventDefault();
       $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
     });
