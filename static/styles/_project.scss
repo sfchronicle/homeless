@@ -602,11 +602,7 @@ hr{
   width: calc(100%/6.25);
   margin-right: calc(20%/4);
   text-align: center;
-  height: 255px;
-
-  @media screen and (max-width: 886px) {
-  height: 220px;
-  }
+  overflow: hidden;
 
   @media #{$tablet} {
   width: calc(100%/4);
@@ -629,6 +625,14 @@ hr{
   @media #{$mobile} {
   height: 210px;
   }
+
+  @media screen and (max-width: 375px) {
+  height: 180px;
+  }
+
+  @media screen and (max-width: 320px) {
+  height: 170px;
+  }
 }
 
 .mayor-photo {
@@ -638,11 +642,22 @@ hr{
   &.active {
     opacity: 1;
   }
+
+  &.full-color {
+  opacity: 1;
+  }
 }
 
 .mayor-photo img {
   width: 100%;
   max-width: 202px;
+}
+
+.inline-mayor {
+  float: right;
+  padding-left: 5%;
+  padding-right: 1%;
+  max-width: 160px;
 }
 
 .mayor-name {
@@ -704,7 +719,7 @@ hr{
   }
 }
 
-#read {
+#read, #next {
   height: 2em;
 
   @media #{$tablet} {
