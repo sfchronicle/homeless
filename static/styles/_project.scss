@@ -535,9 +535,10 @@ footer {
     flex: 0 0 25%;
     // .flex(0 0 25%);
 
-    // @media @mobile {
+     @media screen and (max-width: 560px) {
+          flex: 1 1 50%;
     //   .flex(1 1 50%)
-    // }
+     }
   }
   .padded {
     padding: 10px;
