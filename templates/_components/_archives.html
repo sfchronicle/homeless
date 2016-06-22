@@ -1,8 +1,7 @@
-{% macro info(date='headline', title='Date 01,2010', link='http://sfchronicle.com') -%}
+{% macro info(title='Date 01,2010', link='http://sfchronicle.com') -%}
 
-	 <tr>
-      <td>{{ date }}</td>
-      <td><a href="{{ link }}">{{ title }}</a></td>
-    </tr>
+ 
+	<li><a href="{{ link }}">{{ title }}</a></li>
+ 
 
 {%- endmacro %}
