@@ -99,7 +99,7 @@ p {
 
     &.left {
       float: left;
-      margin: 0 1em 2em -8em;
+      margin: 1em 1.5em 0.5em -7.5em;
 
       @media (max-width: 1072px){
         float: none;
@@ -108,7 +108,7 @@ p {
     }
     &.right {
       float: right;
-      margin: 0 -8em 2em 1em;
+      margin: 1em -7.5em 0.5em 1.5em;
 
       @media (max-width: 1072px){
         float: none;
@@ -336,7 +336,7 @@ header {
 .partners {
   text-align: center;
   display: inline-block;
-  font-family: $banner;
+  font-family: $serif;
   .partner-name {
     display: inline-block;
     padding: 0 20px;
@@ -345,6 +345,7 @@ header {
       text-decoration:none;
       color: $red;
       font-size: 0.8em;
+      font-family: $banner;
     }
   }
 }
@@ -365,6 +366,7 @@ footer {
   position: relative;
   z-index: 99;
   margin-top: 10px;
+  clear:both;
 
   .logo {
     float: left;
@@ -535,9 +537,10 @@ footer {
     flex: 0 0 25%;
     // .flex(0 0 25%);
 
-    // @media @mobile {
+     @media screen and (max-width: 560px) {
+          flex: 1 1 50%;
     //   .flex(1 1 50%)
-    // }
+     }
   }
   .padded {
     padding: 10px;

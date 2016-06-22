@@ -18,7 +18,7 @@
             <h1 class="headline">Beyond Homelessness</h1>
             {% include '_components/_social_links.html' %}
             <p class="subhead">
-            This week, the Chronicle will join more than 70 other news organizations to focus San Francisco’s attention on the seemingly intractable problem of homelessness in our city. The S.F. Homeless Project aims to explore possible solutions that might ease, if not end, the suffering of so many thousands of unfortunate people living on our streets, and improve the quality of life for all residents. The project’s primary day of coverage is June 29, but the Chronicle will publish stories and editorials all week.</p>
+            This week, The Chronicle will join 70 other news organizations to focus San Francisco’s attention on the seemingly intractable problem of homelessness in our city. The SF Homeless Project will explore possible solutions that might ease, if not end, the suffering of so many thousands of people living on our streets, and improve the quality of life for all residents. The project’s primary day of coverage is June 29, but The Chronicle will publish stories and editorials all week.</p>
 
             <div class="button radius">Explore the stories</div>
         </div>
@@ -30,18 +30,18 @@
 
             <div class="column">
                 <a href="{{ url_for('setup') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/setup/01_thumb.jpg') }}">
-                    <h5>SF homeless problem looks the same as it did 20 years ago</h5>
+                    <h5>A problem that looks the same as it did 20 years ago</h5>
                 </a>
             </div>
             <div class="column">
                 <a href="{{ url_for('insight') }}">
                     <img class="thumbnail" src="{{ url_for('static', filename='images/insight/mayors.jpg') }}">
-                    <h5>Letters from five mayors</h5>
+                    <h5>Letter from five leaders: SF mayors on homelessness</h5>
                 </a>
             </div>
             <div class="column">
                 <a href="{{ url_for('letter_of_intent') }}"><img class="thumbnail" src="{{ url_for('static', filename='logos/SFHomeless_long_thumb.jpg') }}">
-                    <h5>Letter to the city</h5>
+                    <h5>Letter to the city and people of San Francisco</h5>
                 </a>
             </div>
         </div>
@@ -50,7 +50,7 @@
     <div class="max">
         <hr>
         <div class="partners">
-            <h2>Contributors</h2>
+            <h2>SF Homeless Project Partners</h2>
             {% import '_components/_partners.html' as partner %}
             <!-- Variables are name, link -->
             {{ partner.info("San Francisco Chronicle", "http://www.sfchronicle.com" ) }}
@@ -128,11 +128,10 @@
     <div class="max">
     <hr>
         <div class="archives">
-            <h2>Previous SFChronicle.com coverage</h2>
+            <h2>More Chronicle Homeless Coverage</h2>
 
             
-                <ul> 
-
+                <div class="contrib-links" data-equalizer data-equalizer-mq="large-up"> 
                 {% import '_components/_archives.html' as archive %}
                 <!-- Variables are headline and link -->
                 
@@ -149,7 +148,7 @@
                 {{ archive.info("Flood of homeless in tent camp just small part of the problem", "http://www.sfchronicle.com/bayarea/article/Flood-of-homeless-in-tent-camp-just-small-part-of-6858519.php") }}
 
                 {{ archive.info("C.W. Nevius: Lone voice of dissent on homeless piece", "http://www.sfchronicle.com/bayarea/nevius/article/An-open-letter-to-Coalition-on-Homelessness-leader-6843309.php") }}
-
+            
                 {{ archive.info("C.W. Nevius: Homeless tent city on Division starting to intimidate neighbors", "http://www.sfchronicle.com/bayarea/nevius/article/Homeless-tent-city-on-Division-starting-to-6837820.php") }}
 
                 {{ archive.info("SF spends record $241 million on homeless, can’t track results", "http://www.sfchronicle.com/bayarea/article/S-F-spends-record-241-million-on-homeless-6808319.php") }}
@@ -168,7 +167,7 @@
 
                 {{ archive.info("A return to SF’s Homeless Island, 10 years later", "http://www.sfchronicle.com/archive/item/A-decade-of-homelessness-Thousands-in-S-F-30431.php") }}
                  
-                </ul>
+                </div>
         </div>
     </div>
         {% include '_components/_footer.html' %}
@@ -177,16 +176,19 @@
 {% endblock %}
 
 {% block javascript %}
+<script type="text/javascript" src="{{ url_for('static', filename='bower_components/foundation-sites/js/foundation.equalizer.js') }}"></script>
 <script>
 	$(document).ready(function() {
 		App.init();
 	});
 
     $(".button").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#stories").offset().top - 100
-    }, 1500);
-});
+        $('html, body').animate({
+            scrollTop: $("#stories").offset().top - 100
+        }, 1500);
+    });
+
+    $(document).foundation();
 
   // function sticky_relocate() {
   //   var window_top = $(window).scrollTop();
