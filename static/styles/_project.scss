@@ -336,7 +336,7 @@ header {
 .partners {
   text-align: center;
   display: inline-block;
-  font-family: $banner;
+  font-family: $serif;
   .partner-name {
     display: inline-block;
     padding: 0 20px;
@@ -345,6 +345,7 @@ header {
       text-decoration:none;
       color: $red;
       font-size: 0.8em;
+      font-family: $banner;
     }
   }
 }
@@ -365,6 +366,7 @@ footer {
   position: relative;
   z-index: 99;
   margin-top: 10px;
+  clear:both;
 
   .logo {
     float: left;
