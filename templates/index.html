@@ -10,7 +10,8 @@
 
     <div class="intro">
         <div class="full-width-img">
-            <img src="{{ url_for('static', filename='images/frontpage/bg.jpg') }}">
+            <img class="landing-img" src="{{ url_for('static', filename='images/frontpage/bg.jpg') }}">
+            <img class="mobile-landing-img" src="{{ url_for('static', filename='images/frontpage/bg-mobile.jpg') }}">
         </div>
 
         <div class="header">
@@ -19,12 +20,12 @@
             <p class="subhead">
             This week, the Chronicle will join more than 70 other news organizations to focus San Francisco’s attention on the seemingly intractable problem of homelessness in our city. The S.F. Homeless Project aims to explore possible solutions that might ease, if not end, the suffering of so many thousands of unfortunate people living on our streets, and improve the quality of life for all residents. The project’s primary day of coverage is June 29, but the Chronicle will publish stories and editorials all week.</p>
 
-            <a href="#facts"><div class="button radius">Explore the stories</div></a>
+            <div class="button radius">Explore the stories</div>
         </div>
 
     </div>
         
-    <div class="stories">
+    <div id="stories">
         <div class="max small-up-1 medium-up-3 large-up-3">
 
             <div class="column">
@@ -126,58 +127,51 @@
 
     <div class="max">
     <hr>
-        <div class=" archives " style="clear:both;">
-            <h2 style="text-align:center;">Previous SFChronicle.com coverage</h2>
+        <div class="archives">
+            <h2>Previous SFChronicle.com coverage</h2>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th width="150">Date</th>
-                        <th width="150">Headline</th>
-                    </tr>
-                </thead>
-                <tbody> 
+            
+                <ul> 
 
                 {% import '_components/_archives.html' as archive %}
-                <!-- Variables are headline, data and link -->
+                <!-- Variables are headline and link -->
                 
-                {{ archive.info("April 8, 2016", "Myths, like homeless problem, not going away", "http://www.sfchronicle.com/bayarea/article/Myths-like-homeless-problem-not-going-away-7238304.php") }}
+                {{ archive.info("Myths, like homeless problem, not going away", "http://www.sfchronicle.com/bayarea/article/Myths-like-homeless-problem-not-going-away-7238304.php") }}
 
-                {{ archive.info("April 1, 2016", "What San Franciscans know about homeless isn’t necessarily true", "http://www.sfchronicle.com/bayarea/article/What-San-Franciscans-know-about-homeless-isn-t-7224018.php") }}
+                {{ archive.info("What San Franciscans know about homeless isn’t necessarily true", "http://www.sfchronicle.com/bayarea/article/What-San-Franciscans-know-about-homeless-isn-t-7224018.php") }}
 
-                {{ archive.info("March 4, 2016", "Fast-aging homeless population may lead to public health crisis", "http://www.sfchronicle.com/bayarea/article/Fast-aging-homeless-population-may-lead-to-public-6871865.php") }}
+                {{ archive.info("Fast-aging homeless population may lead to public health crisis", "http://www.sfchronicle.com/bayarea/article/Fast-aging-homeless-population-may-lead-to-public-6871865.php") }}
 
-                {{ archive.info("March 6, 2016", "With tent city cleared, no shortage of ideas &mdash; or homeless", "http://www.sfchronicle.com/bayarea/article/With-tent-city-cleared-no-shortage-of-ideas-6873873.php") }}
+                {{ archive.info("With tent city cleared, no shortage of ideas – or homeless", "http://www.sfchronicle.com/bayarea/article/With-tent-city-cleared-no-shortage-of-ideas-6873873.php") }}
 
-                {{ archive.info("March 2, 2016", "Homeless camp on SF’s Division Street cleared by city", "http://www.sfchronicle.com/bayarea/article/City-begins-sweeping-out-homeless-encampment-on-6862853.php") }}
+                {{ archive.info("Homeless camp on SF’s Division Street cleared by city", "http://www.sfchronicle.com/bayarea/article/City-begins-sweeping-out-homeless-encampment-on-6862853.php") }}
 
-                {{ archive.info("Feb. 27, 2016", "Flood of homeless in tent camp just small part of the problem", "http://www.sfchronicle.com/bayarea/article/Flood-of-homeless-in-tent-camp-just-small-part-of-6858519.php") }}
+                {{ archive.info("Flood of homeless in tent camp just small part of the problem", "http://www.sfchronicle.com/bayarea/article/Flood-of-homeless-in-tent-camp-just-small-part-of-6858519.php") }}
 
-                {{ archive.info("Feb. 19, 2016", "C.W. Nevius: Lone voice of dissent on homeless piece", "http://www.sfchronicle.com/bayarea/nevius/article/An-open-letter-to-Coalition-on-Homelessness-leader-6843309.php") }}
+                {{ archive.info("C.W. Nevius: Lone voice of dissent on homeless piece", "http://www.sfchronicle.com/bayarea/nevius/article/An-open-letter-to-Coalition-on-Homelessness-leader-6843309.php") }}
 
-                {{ archive.info("Feb. 17, 2016", "C.W. Nevius: Homeless tent city on Division starting to intimidate neighbors", "http://www.sfchronicle.com/bayarea/nevius/article/Homeless-tent-city-on-Division-starting-to-6837820.php") }}
+                {{ archive.info("C.W. Nevius: Homeless tent city on Division starting to intimidate neighbors", "http://www.sfchronicle.com/bayarea/nevius/article/Homeless-tent-city-on-Division-starting-to-6837820.php") }}
 
-                {{ archive.info("Feb. 6, 2016", "SF spends record $241 million on homeless, can’t track results", "http://www.sfchronicle.com/bayarea/article/S-F-spends-record-241-million-on-homeless-6808319.php") }}
+                {{ archive.info("SF spends record $241 million on homeless, can’t track results", "http://www.sfchronicle.com/bayarea/article/S-F-spends-record-241-million-on-homeless-6808319.php") }}
 
-                {{ archive.info("Feb. 1, 2016", "C.W. Nevius: Buying tents isn't helping homeless", "http://www.sfchronicle.com/bayarea/nevius/article/Buying-tents-for-S-F-s-homeless-isn-t-6799235.php") }}
+                {{ archive.info("C.W. Nevius: Buying tents isn't helping homeless", "http://www.sfchronicle.com/bayarea/nevius/article/Buying-tents-for-S-F-s-homeless-isn-t-6799235.php") }}
 
-                {{ archive.info("Oct. 23, 2015", "SF’s homeless crisis: Can Ed Lee clean up the streets? ", "http://www.sfchronicle.com/bayarea/article/S-F-s-homeless-crisis-Can-Mayor-Ed-Lee-clean-6585482.php") }}
+                {{ archive.info("SF’s homeless crisis: Can Ed Lee clean up the streets? ", "http://www.sfchronicle.com/bayarea/article/S-F-s-homeless-crisis-Can-Mayor-Ed-Lee-clean-6585482.php") }}
 
-                {{ archive.info("Oct. 23, 2015", "Mission Creek: SF hot spot for homeless complaints", "http://www.sfchronicle.com/bayarea/article/Mission-Creek-S-F-s-hot-spot-for-homeless-6585492.php") }}
+                {{ archive.info("Mission Creek: SF hot spot for homeless complaints", "http://www.sfchronicle.com/bayarea/article/Mission-Creek-S-F-s-hot-spot-for-homeless-6585492.php") }}
 
-                {{ archive.info("Oct. 23, 2015", "A ‘most beautiful spot’ turned into a toilet", "http://www.sfchronicle.com/bayarea/article/S-F-homeless-crisis-A-most-beautiful-spot-6585499.php") }}
+                {{ archive.info("A ‘most beautiful spot’ turned into a toilet", "http://www.sfchronicle.com/bayarea/article/S-F-homeless-crisis-A-most-beautiful-spot-6585499.php") }}
 
-                {{ archive.info("June 29, 2014", "Salt Lake City a model for SF on homeless solutions", "http://www.sfchronicle.com/nation/article/Salt-Lake-City-a-model-for-S-F-on-homeless-5587357.php") }}
+                {{ archive.info("Salt Lake City a model for SF on homeless solutions", "http://www.sfchronicle.com/nation/article/Salt-Lake-City-a-model-for-S-F-on-homeless-5587357.php") }}
 
-                {{ archive.info("June 28, 2014", "A decade of homelessness: Thousands in SF remain in crisis ", "http://www.sfchronicle.com/archive/item/A-decade-of-homelessness-Thousands-in-S-F-30431.php") }}
+                {{ archive.info("A decade of homelessness: Thousands in SF remain in crisis ", "http://www.sfchronicle.com/archive/item/A-decade-of-homelessness-Thousands-in-S-F-30431.php") }}
 
-                {{ archive.info("June 28, 2014", "A return to SF’s Homeless Island, 10 years later", "http://www.sfchronicle.com/archive/item/A-decade-of-homelessness-Thousands-in-S-F-30431.php") }}
+                {{ archive.info("A return to SF’s Homeless Island, 10 years later", "http://www.sfchronicle.com/archive/item/A-decade-of-homelessness-Thousands-in-S-F-30431.php") }}
                  
-                </tbody>
-            </table>
+                </ul>
         </div>
-        </div>
-        
+    </div>
+        {% include '_components/_footer.html' %}
 
         
 {% endblock %}
@@ -187,6 +181,12 @@
 	$(document).ready(function() {
 		App.init();
 	});
+
+    $(".button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#stories").offset().top - 100
+    }, 1500);
+});
 
   // function sticky_relocate() {
   //   var window_top = $(window).scrollTop();
