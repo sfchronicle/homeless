@@ -99,7 +99,7 @@ p {
 
     &.left {
       float: left;
-      margin: 0 1em 2em -8em;
+      margin: 1em 1.5em 0.5em -7.5em;
 
       @media (max-width: 1072px){
         float: none;
@@ -108,7 +108,7 @@ p {
     }
     &.right {
       float: right;
-      margin: 0 -8em 2em 1em;
+      margin: 1em -7.5em 0.5em 1.5em;
 
       @media (max-width: 1072px){
         float: none;
