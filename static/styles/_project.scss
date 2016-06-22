@@ -678,7 +678,8 @@ hr{
 
 .mayor-name {
   font-size: 93%;
-
+  line-height: 1.1;
+  padding-top: 10px;
   @media #{$tablet} {
     font-size: 70%;
   }
