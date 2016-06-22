@@ -80,6 +80,9 @@ p {
 
 .float-img {
     max-width: 420px;
+    &.vertical {
+      max-width: 300px;
+    }
 
     @media (max-width: 861px){
       float: none;
