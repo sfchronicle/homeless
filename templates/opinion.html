@@ -20,7 +20,7 @@
 		<div>
 			<h1 class="title">A civic disgrace</h1>
 			<!-- {% include '_components/_social_links.html' %} -->
-			<p class="author">By The San Francisco Editorial Board</p>
+			<p class="author">The San Francisco Editorial Board</p>
 			<p class="date">July 3, 2016</p>
 
 		</div>
@@ -33,23 +33,24 @@
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
-			By the San Francisco Chronicle Editorial Board
-			Interactive producers:
-			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-			{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
-			{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			<div class="group">
+				<p>Interactive producers</p>
+				{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
+				{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
+				{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			</div>
 		</div>
 	</div>
 
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
-		<hr>
+		<!-- <hr> -->
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
+			<!-- {{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }} -->
 		</div>
 	</div>
 
