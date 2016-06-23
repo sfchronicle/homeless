@@ -5,6 +5,12 @@
 {% block head %}
 {% include '_components/_social.html' %}
 {% endblock %}
+
+{% block hearst_title %}Letters from the mayors{% endblock %}
+{% block hearst_class %}article{% endblock %}
+{% block hearst_date %}2016-06-26 00:00:00{% endblock %}
+{% block author %}Lea Suzuki, Lucio Villa, Emma O'Neill, Benjamin Din{% endblock %}
+
 {% block content %}
 <main class="container">
 
@@ -101,13 +107,9 @@
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
 		<hr>
-		<div  class="divider-text">Read related stories</div>
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('A problem that looks the same as it did 20 years ago', '/homeless/overview', '../static/images/setup/01_thumb.jpg' ) }}
 		</div>
 	</div>
 
@@ -145,31 +147,31 @@
 
   	$("#agnos").click(function() {
   		hidden();
-  		$("#agnos-letter").fadeIn("slow", function() {
+  		$("#agnos-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#lee").click(function() {
   		hidden();
-  		$("#lee-letter").fadeIn("slow", function() {
+  		$("#lee-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#jordan").click(function() {
   		hidden();
-  		$("#jordan-letter").fadeIn("slow", function() {
+  		$("#jordan-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#newsom").click(function() {
   		hidden();
-  		$("#newsom-letter").fadeIn("slow", function() {
+  		$("#newsom-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#brown").click(function() {
   		hidden();
-  		$("#brown-letter").fadeIn("slow", function() {
+  		$("#brown-letter").fadeIn("fast", function() {
   			});
   	});
 
@@ -180,7 +182,7 @@
 
     $(".scroll").click(function(event){
       event.preventDefault();
-      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
     });
 
     $("button").click(function(){
@@ -206,7 +208,7 @@
 
       hidden();
       var mayors = ["#agnos-letter", "#jordan-letter", "#brown-letter", "#newsom-letter", "#lee-letter"];
-      $(mayors[index]).fadeIn("slow",function() {
+      $(mayors[index]).fadeIn("fast",function() {
         });
 
     });

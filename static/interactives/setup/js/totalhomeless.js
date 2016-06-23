@@ -221,3 +221,7 @@ var election = new Datamap({
 
 //add a map legend using the 'legend' plugin
 election.legend({legendTitle : "Distribution of Total Homeless"});
+
+window.addEventListener('resize', function() {
+        election.resize();
+    });

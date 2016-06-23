@@ -6,6 +6,11 @@
 {% include '_components/_social.html' %}
 {% endblock %}
 
+{% block hearst_title %}Mental{% endblock %}
+{% block hearst_class %}article{% endblock %}
+{% block hearst_date %}2016-06-29 00:00:00{% endblock %}
+{% block author %}Erin Allday, Tim Hussin, Lea Suzuki, Lucio Villa, Emma O'Neill, Benjamin Din{% endblock %}
+
 {% block content %}
 <main class="container">
 
@@ -44,13 +49,12 @@
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
 		<hr>
-		<div  class="divider-text">Read related stories</div>
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
+			<!-- {{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }} -->
 		</div>
 	</div>
 
