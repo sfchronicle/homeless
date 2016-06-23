@@ -132,6 +132,10 @@
 
 .contrib-links {
     display:inline-block;
+
+    & a:hover {
+        text-decoration: underline;
+    }
 }
 
 .archives {
