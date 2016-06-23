@@ -6,6 +6,11 @@
 {% include '_components/_social.html' %}
 {% endblock %}
 
+{% block hearst_title %}Data{% endblock %}
+{% block hearst_class %}article{% endblock %}
+{% block hearst_date %}2016-06-26 00:00:00{% endblock %}
+{% block author %}Joaquin Palomino, Lea Suzuki, Lucio Villa, Emma O'Neill, Rahul Mukherjee, Benjamin Din{% endblock %}
+
 {% block content %}
 <main class="container">
 
@@ -18,7 +23,7 @@
 			<p class="author">By Joaquin Palomino</p>
 			<p class="date">June 28, 2016</p>
 			<div class="full-width-img">
-					<img src="../static/images/data/10-1.jpg">
+					<img src="{{ url_for('static', filename='images/data/10-1.jpg') }}">
 					<p class="caption">A man pushes a grocery cart across Second Street while Christine Boyer (right) panhandles on the corner of Mission and Second Street on Friday, May, 27, 2016 in San Francisco, California.<span class="byline"> Photo: Lea Suzuki, The Chronicle</span></p>
 			</div>
 
@@ -42,13 +47,12 @@
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
 		<hr>
-		<div  class="divider-text">Read related stories</div>
 		<div class="dont-miss">
-		<!-- Variables are title, url and image url -->
+		<!-- Variables are title, url and image url --><!-- 
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }} -->
 		</div>
 	</div>
 

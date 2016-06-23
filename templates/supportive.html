@@ -6,6 +6,11 @@
 {% include '_components/_social.html' %}
 {% endblock %}
 
+{% block hearst_title %}Supportive{% endblock %}
+{% block hearst_class %}article{% endblock %}
+{% block hearst_date %}2016-06-29 00:00:00{% endblock %}
+{% block author %}Kevin Fagan, Lea Suzuki, Lucio Villa, Emma O'Neill, Benjamin Din{% endblock %}
+
 {% block content %}
 <main class="container">
 
@@ -21,7 +26,7 @@
 			<p class="author">By Kevin Fagan</p>
 			<p class="date">July 2, 2016</p>
 			<div class="full-width-img">
-					<img src="/static/images/supportive/homeless_supportive_PH1.jpg">
+					<img src="{{ url_for('static', filename='images/supportive/homeless_supportive_PH1.jpg') }}">
 					<p class="caption">Kenney Williams : walks along a path between Mission Creek at the Mission Creek Senior Community where he lives as he returns from the library on Tuesday, May 10, 2016 in San Francisco, California. Williams said he felt at home for the first time in his adult life when he sat down in his apartment when he first arrived.<span class="byline"> Photo: Lea Suzuki, The Chronicle</span></p>
 			</div>
 
@@ -49,11 +54,11 @@
 		<hr>
 		<div  class="divider-text"></div>
 		<div class="dont-miss">
-		<!-- Variables are title, url and image url -->
+		<!-- Variables are title, url and image url --><!-- 
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }} -->
 		</div>
 	</div>
 
