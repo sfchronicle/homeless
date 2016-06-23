@@ -16,26 +16,20 @@
     </div>
     <div class="row">
         <div class="large-6 large-offset-3 columns">
-            <div id="map" class="tooltip ">
-                <span id="tooltip-span">
-                    <h4><span id="region-name"></span></h4><br/>
-                    <h5><span id="total"></span></h5><br/>
-                    <h5><span id="ind"></span> </h5><br/>
-                    <h5><span id="fam"></span></h5><br/>
-                    <h5><span id="youth"> </span></h5><br/>
-                </span>
-                <img class="key" src="img/key.png"/>
+            <div id="map" class="tooltip">
             </div>
-
-            <div class="mobile-sfmap">
-                <img src="img/sfmap.png">
-            </div>
-
-            
+            <img class="key" src="img/key.png"/>
             <p class="creditline">Rahul Mukherjee • <a href="mailto: rmukherjee@sfchronicle.com">rmukherjee@sfchronicle.com</a> • <a href="https://twitter.com/ruhlmuk">@ruhlmuk</a></p>
             <p class="creditline">Source: <a href="http://www.sfmayor.org/modules/showdocument.aspx?documentid=455">Homeless data</a> is recorded by the city of San Francisco.</p>
         </div>
     </div>
+    <span id="tooltip-span" align="left">
+        <h4><span id="region-name"></span></h4>
+        <h5><span id="total"></span></h5>
+        <h5><span id="ind"></span> </h5>
+        <h5><span id="fam"></span></h5>
+        <h5><span id="youth"> </span></h5>
+    </span>
     <script src="js/raphael.min.js"></script>
     <script src="js/sfmap.js"></script>
     <script>var pymChild = new pym.Child(); </script>

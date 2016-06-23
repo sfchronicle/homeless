@@ -63,6 +63,10 @@ var tooltipSpan = document.getElementById('tooltip-span');
 window.onmousemove = function (e) {
     var x = e.clientX,
         y = e.clientY;
+        if (x+170 > window.innerWidth)
+        {
+            x = window.innerWidth - 220;
+        }
     tooltipSpan.style.top = (y + 20) + 'px';
     tooltipSpan.style.left = (x + 20) + 'px';
 };
