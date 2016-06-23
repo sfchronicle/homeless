@@ -145,31 +145,31 @@
 
   	$("#agnos").click(function() {
   		hidden();
-  		$("#agnos-letter").fadeIn("slow", function() {
+  		$("#agnos-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#lee").click(function() {
   		hidden();
-  		$("#lee-letter").fadeIn("slow", function() {
+  		$("#lee-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#jordan").click(function() {
   		hidden();
-  		$("#jordan-letter").fadeIn("slow", function() {
+  		$("#jordan-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#newsom").click(function() {
   		hidden();
-  		$("#newsom-letter").fadeIn("slow", function() {
+  		$("#newsom-letter").fadeIn("fast", function() {
   			});
   	});
 
   	$("#brown").click(function() {
   		hidden();
-  		$("#brown-letter").fadeIn("slow", function() {
+  		$("#brown-letter").fadeIn("fast", function() {
   			});
   	});
 
@@ -180,7 +180,7 @@
 
     $(".scroll").click(function(event){
       event.preventDefault();
-      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
     });
 
     $("button").click(function(){
@@ -206,7 +206,7 @@
 
       hidden();
       var mayors = ["#agnos-letter", "#jordan-letter", "#brown-letter", "#newsom-letter", "#lee-letter"];
-      $(mayors[index]).fadeIn("slow",function() {
+      $(mayors[index]).fadeIn("fast",function() {
         });
 
     });
