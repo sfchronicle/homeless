@@ -9,7 +9,7 @@ ROOT_URL = '//extras.sfgate.com'
 
 # CHANGE THE FOLDER SLUG TO NEW PROJECT 
 TEST_PROJECT_NAME = 'test-proj/homeless'
-PROJECT_NAME = 'CHANGE-ME'
+PROJECT_NAME = 'sf-homeless'
 
 
 if __name__ == '__main__':
