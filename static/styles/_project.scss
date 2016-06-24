@@ -435,16 +435,18 @@ footer {
   font-style: italic;
   font-family: $block-graphics;
   @media #{$tablet} {
-    padding: 10px 20px;
+    padding: 0px 10px;
+    padding-top: 10px;
   }
   @media #{$mobile} {
-    padding: 10px;
+    padding: 0px 10px;
+    padding-top: 10px;
   }
   &.padded {
     padding-bottom: 40px;
   }
   &.second {
-    padding-top: 0;
+    padding-top: 0px;
   }
 }
 
