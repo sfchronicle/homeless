@@ -35,7 +35,7 @@
 
 .header {
     position: absolute;
-    bottom: 16.5%;
+    bottom: 7.5%;
     left: 0;
     right: 0;
     color: red;
@@ -99,7 +99,6 @@
     @media #{$mobile} {
         font-size: 1.5em;
         line-height: 1.2;
-        margin-top: 10px;
     }
 }
 
@@ -119,6 +118,10 @@
         color: #333;
         font-family: $title;
         line-height: 1.2;
+    }
+
+    @media #{$mobile} {
+        margin-top:50px;
     }
 }
 

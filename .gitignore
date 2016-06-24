@@ -10,3 +10,4 @@ build/
 .webassets-cache/
 local_settings.py
 *.BridgeSort
+static/styles/main.css
