@@ -926,3 +926,17 @@ button {
   width: 100%;
   height: 100%;
 }
+
+// interactive styles
+
+#usmap {
+  @media #{$mobile} {
+    display: none;
+  }
+}
+.usmap-mobile-container {
+  display: none;
+  @media #{$mobile} {
+    display: block;
+  }
+}
