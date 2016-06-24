@@ -1,4 +1,4 @@
-	<div clas{% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}{{title}}{% endblock %}
 
@@ -46,6 +46,12 @@
 				<p>Reporter</p>
 				{{ credit.info('Heather Knight', 'hknight', 'hknightsf' ) }}
 			</div>
+
+			<div class="group">
+				<p>Contributing reporter</p>
+				{{ credit.info('Kevin Fagan', 'kfagan', 'KevinChron' ) }}
+			</div>
+
 			<div class="group">
 				<p>Interactive producers</p>
 				{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
