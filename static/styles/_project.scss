@@ -538,7 +538,14 @@ footer {
      @media screen and (max-width: 560px) {
           flex: 1 1 50%;
      }
+
+    & a {
+        text-decoration: none;
+        color: #333;
+        line-height: 1.2;
+    }
   }
+  
   .padded {
     padding: 10px;
   }
