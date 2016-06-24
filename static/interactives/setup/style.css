@@ -1,3 +1,15 @@
+@font-face{
+  font-family:"AntennaExtraLight";
+  font-style: normal;
+  font-weight: normal;
+
+  src:url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.eot");
+
+  src:url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.eot?") format("embedded-opentype"),
+      url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.woff") format("woff"),
+      url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.ttf") format("truetype");
+}
+
 body    {
     background: #fff;
     max-width: 700px;
@@ -14,6 +26,10 @@ a {
 
 a:hover, a:active, a:focus {
     color: #ec1c24;
+}
+
+.creditline a:hover {
+    color: #696969;
 }
 
 h3 {
@@ -81,15 +97,19 @@ button{
     outline: none;
     border-radius: 1px;
 }
+
 .credits{
     text-align: left;
     font-size: 12px;
+    margin-bottom: 5px;
 }
-.creditline {
-    margin-bottom: 0;
-    font-size: 12px;
-    text-align:left;
+
+.credits p {
+    color: #696969;
     font-style: italic;
+    font-family: "AntennaExtraLight";
+    padding-top: 10px;
+    margin-bottom: 0;
 }
 
 .button.secondary:focus   {
@@ -121,20 +141,43 @@ path:hover, path.highlighted {
     margin:0 auto;
 }
 
+.hed {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: "AntennaExtraLight";
+    font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+    .hed {
+        padding: 0 10px;
+    }
+    .credits p {
+        padding: 10px;
+    }
+}
+
+.chatter {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: "AntennaExtraLight";
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .chatter {
+        padding: 5px;
+    }
+    .credits p {
+        padding: 10px 20px;
+    }
+}
+
 @media (max-width: 320px) {
     #usmap {
         height:200px;
     }
-}
-
-@font-face{
-  font-family:"AntennaExtraLight";
-  font-style: normal;
-  font-weight: normal;
-
-  src:url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.eot");
-
-  src:url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.eot?") format("embedded-opentype"),
-      url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.woff") format("woff"),
-      url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.ttf") format("truetype");
 }

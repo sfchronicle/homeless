@@ -10,8 +10,8 @@
 <body align="center">
     <div class="row">
         <div class="large-6 large-offset-3 columns">
-        <h3>Homelessness in San Francisco</h3>
-            <h6>Hover over this map to see the number of homeless people in each administrative supervisorial district and Golden Gate Park in 2015. Totals are broken down by the number of homeless individuals, those homeless in families, and unaccompanied youth.</h6>
+        <div class="hed">Homelessness in San Francisco</div>
+            <div class="chatter">Hover over this map to see the number of homeless people in each administrative supervisorial district and Golden Gate Park in 2015. Totals are broken down by the number of homeless individuals, those homeless in families, and unaccompanied youth.</div>
         </div>
     </div>
     <div class="row">
@@ -19,9 +19,11 @@
             <div id="map" class="tooltip">
             </div>
             <img class="key" src="img/key.png"/>
-            <p class="creditline">Credit: Rahul Mukherjee • <a href="mailto:rmukherjee@sfchronicle.com">rmukherjee@sfchronicle.com</a> • <a href="https://twitter.com/ruhlmuk" target="_blank">@ruhlmuk</a></p>
-            <p class="creditline">Source: <a href="http://www.sfmayor.org/modules/showdocument.aspx?documentid=455" target="_blank">Homeless data</a> is recorded by the city of San Francisco.</p>
-            <p class="creditline">Note: Golden Gate Park is in Districts 1 and 5. Totals include separate youth count, which may be duplicative.</p>
+            <div class="credits">
+                <p>Rahul Mukherjee • <a href="mailto:rmukherjee@sfchronicle.com">rmukherjee@sfchronicle.com</a> • <a href="https://twitter.com/ruhlmuk" target="_blank">@ruhlmuk</a></p>
+                <p>About the data: Golden Gate Park is in Districts 1 and 5. Totals include separate youth count, which may be duplicative.</p>
+                <p>Source: <a href="http://www.sfmayor.org/modules/showdocument.aspx?documentid=455" target="_blank">Homeless data</a> is recorded by the city of San Francisco.</p>
+            </div>
         </div>
     </div>
     <span id="tooltip-span" align="left">
@@ -33,6 +35,6 @@
     </span>
     <script src="js/raphael.min.js"></script>
     <script src="js/sfmap.js"></script>
-    <script>var pymChild = new pym.Child(); </script>
+    <script>var pymChild = new pym.Child({polling: 500});</script>
 </body>
 </html>
