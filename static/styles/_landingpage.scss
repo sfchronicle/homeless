@@ -27,6 +27,12 @@
     }
 }
 
+.social {
+  & a {
+    color: white !important;
+  }
+}
+
 .header {
     position: absolute;
     bottom: 16.5%;
@@ -65,11 +71,11 @@
 
     & .button {
         background-color: $red;
-        color: #fefefe; 
+        color: #fefefe;
         font-family:$sans-serif;
         text-transform:uppercase;
 
-        
+
 
     }
 
@@ -168,7 +174,7 @@
 }
 
 .archive-date {
-    
+
 }
 
 .archive-headline {

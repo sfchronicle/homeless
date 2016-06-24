@@ -17,6 +17,24 @@
             <img class="mobile-landing-img" src="{{ url_for('static', filename='images/frontpage/bg-mobile.jpg') }}">
         </div>
 
+        <div class="navigation">
+          <div class="jump-navigation" id="sticky-element">
+            <div class="jump-links">
+              <div class="logo-link link"><a href="http://www.sfchronicle.com" target="_blank">
+                <img src="http://projects.sfchronicle.com/shared/logos/sfletter_c_white.png"></a>
+              </div>
+              <div class="link special"><a class="special-head" href="http://www.sfchronicle.com/homeless/" target="_blank">Beyond Homelessness</a></div>
+              <div class="link social"><a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fprojects.sfchronicle.com%2Fsf-homeless%2F{{slug}}%2F&text={{twitter_text|urlencode}}&hashtags=SFHomelessProject"><i class="fa fa-twitter"></i></a></div>
+              <div class="link social"><a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2Fsf-{{slug}}%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;"><i class="fa fa-facebook"></i></a></div>
+              <div class="link social"><a id="mail-icon" title="Share via email" href="mailto:?subject={{title|urlencode}}&body={{description|urlencode}}%0A%0Ahttp%3A%2F%2Fprojects.sfchronicle.com%2Fsf-homeless%2F{{slug}}%2F">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </a></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sticky-anchor"></div>
+
         <div class="header">
             <h1 class="headline">Beyond Homelessness</h1>
             {% include '_components/_social_links.html' %}
@@ -27,7 +45,7 @@
         </div>
 
     </div>
-        
+
     <div id="stories">
         <div class="max small-up-1 medium-up-2 large-up-2">
 
@@ -129,10 +147,10 @@
         <div class="archives">
             <h2>More Chronicle homeless coverage</h2>
 
-            
-                <div class="contrib-links"> 
+
+                <div class="contrib-links">
                     {% import '_components/_archives.html' as archive %}
-                    
+
                     {{ archive.info("Myths, like homeless problem, not going away", "http://www.sfchronicle.com/bayarea/article/Myths-like-homeless-problem-not-going-away-7238304.php") }}
 
                     {{ archive.info("What San Franciscans know about homeless isn’t necessarily true", "http://www.sfchronicle.com/bayarea/article/What-San-Franciscans-know-about-homeless-isn-t-7224018.php") }}
@@ -146,7 +164,7 @@
                     {{ archive.info("Flood of homeless in tent camp just small part of the problem", "http://www.sfchronicle.com/bayarea/article/Flood-of-homeless-in-tent-camp-just-small-part-of-6858519.php") }}
 
                     {{ archive.info("C.W. Nevius: Lone voice of dissent on homeless piece", "http://www.sfchronicle.com/bayarea/nevius/article/An-open-letter-to-Coalition-on-Homelessness-leader-6843309.php") }}
-                
+
                     {{ archive.info("C.W. Nevius: Homeless tent city on Division starting to intimidate neighbors", "http://www.sfchronicle.com/bayarea/nevius/article/Homeless-tent-city-on-Division-starting-to-6837820.php") }}
 
                     {{ archive.info("SF spends record $241 million on homeless, can’t track results", "http://www.sfchronicle.com/bayarea/article/S-F-spends-record-241-million-on-homeless-6808319.php") }}
@@ -174,13 +192,13 @@
                     {{ archive.info("SF pilot program looks to help drug users, not arrest them", "http://www.sfchronicle.com/crime/article/SF-pilot-program-looks-to-help-drug-users-not-7421843.php") }}
 
                     {{ archive.info("C.W. Nevius: Plan for homeless camps a template for chaos", "http://www.sfchronicle.com/bayarea/nevius/article/SF-supe-s-plan-for-homeless-camps-a-template-7384553.php") }}
-                 
+
                 </div>
         </div>
     </div>
         {% include '_components/_footer.html' %}
 
-        
+
 {% endblock %}
 
 {% block javascript %}
@@ -197,20 +215,20 @@
 
     $(document).foundation();
 
-  // function sticky_relocate() {
-  //   var window_top = $(window).scrollTop();
-  //   var div_top = $('#sticky-anchor').offset().top - 40;
-  //   if (window_top > div_top) {
-  //       $('#sticky-element').addClass('sticky');
-  //       $('.menu-navigation').addClass('sticky');
-  //   } else {
-  //       $('#sticky-element').removeClass('sticky');
-  //       $('.menu-navigation').removeClass('sticky');
-  //   }
-  // }
-  // $(function() {
-  //     $(window).scroll(sticky_relocate);
-  //     sticky_relocate();
-  // });
+  function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top - 40;
+    if (window_top > div_top) {
+        $('#sticky-element').addClass('sticky');
+        $('.menu-navigation').addClass('sticky');
+    } else {
+        $('#sticky-element').removeClass('sticky');
+        $('.menu-navigation').removeClass('sticky');
+    }
+  }
+  $(function() {
+      $(window).scroll(sticky_relocate);
+      sticky_relocate();
+  });
 </script>
 {% endblock %}
