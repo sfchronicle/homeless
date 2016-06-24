@@ -1,0 +1,183 @@
+@font-face{
+  font-family:"AntennaExtraLight";
+  font-style: normal;
+  font-weight: normal;
+
+  src:url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.eot");
+
+  src:url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.eot?") format("embedded-opentype"),
+      url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.woff") format("woff"),
+      url("https://s3-us-west-1.amazonaws.com/projects.sfchronicle.com/shared/fonts/antenna/extralight/antennaextralight.ttf") format("truetype");
+}
+
+body    {
+    background: #fff;
+    max-width: 700px;
+    margin:0 auto;
+}
+
+.tooltip span {
+    display:none;
+}
+
+a {
+    color: #ec1c24;
+}
+
+a:hover, a:active, a:focus {
+    color: #ec1c24;
+}
+
+.creditline a:hover {
+    color: #696969;
+}
+
+h3 {
+    font-family: 'AntennaExtraLight', sans-serif;
+    font-size: 1.9em;
+}
+
+#tooltip-span {
+    display:none;
+    position: fixed;
+    width:100%;
+    max-width: 170px;
+    padding: 10px; 
+    border-radius: 1px; 
+    background-color: #FFF; 
+    box-shadow: 1px 1px 5px #CCC;  
+    border: 1px solid #CCC;
+}
+
+#demo   {
+    font-weight: 700;
+}
+
+#infobox    {    
+    padding-left: 25px;
+    padding-top: 100px;
+}
+
+h4   {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'AntennaExtraLight', sans-serif;
+    align-content: center;
+}
+
+h5   {
+    font-size: 14px;
+    font-family: 'AntennaExtraLight', sans-serif;
+}
+
+h6 {
+    font-family: 'AntennaExtraLight', sans-serif;
+}
+
+#oneN, #twoN, #threeN   {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#one, #two, #three   {
+    margin: 0rem;
+}
+
+
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+}
+
+.key {
+    padding-bottom: 15px;
+}
+button{
+    outline: none;
+    border-radius: 1px;
+}
+
+.credits{
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.credits p {
+    color: #696969;
+    font-style: italic;
+    font-family: "AntennaExtraLight";
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.button.secondary:focus   {
+    background: #333;
+}
+
+.active {
+    background: #333;
+}
+
+path:hover, path.highlighted {
+  fill: #57646f;
+}
+
+.datamap path{
+    stroke: #FFFFFF !important;
+}
+.datamaps-legend dt{
+    font-family: 'AntennaExtraLight', sans-serif;
+}
+
+#usmap {
+    position: relative;
+    height: 350px;
+}
+
+#map{
+    max-width: 320px;
+    margin:0 auto;
+}
+
+.hed {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: "AntennaExtraLight";
+    font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+    .hed {
+        padding: 0 10px;
+    }
+    .credits p {
+        padding: 10px;
+    }
+}
+
+.chatter {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: "AntennaExtraLight";
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .chatter {
+        padding: 5px;
+    }
+    .credits p {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    #usmap {
+        height:200px;
+    }
+}

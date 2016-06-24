@@ -12,11 +12,10 @@
 <script type="text/javascript" src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
 <div class="row">
     <div class="large-8 large-offset-2 columns">
-        <h3>Homelessness across the U.S.</h3>
-            <h6>Click on tabs below and hover over map to view some demographics of homeless people demographics of homeless people by state, including the number of military veterans, youths on their own, and the chronically homeless.</h6>        
+        <div class="hed">Homelessness across the U.S.</div>
     </div>
 </div>
-<div class="row">
+<div class="row chatter">
     <div class="large-12 columns" align="center">
         <button id="total" class="secondary button">Total Homeless</button>
         <button id="youth" class="secondary button">Unaccompanied Youth</button>
@@ -31,7 +30,7 @@
 </div>
 <div class="row">
     <div class="large-12 columns small-12 columns credits"> 
-        <p class="creditline">Credit: Rahul Mukherjee • <a href="mailto:rmukherjee@sfchronicle.com">rmukherjee@sfchronicle.com</a> • <a href="https://twitter.com/ruhlmuk" target="_blank">@ruhlmuk</a></p>
+        <p>Rahul Mukherjee • <a href="mailto:rmukherjee@sfchronicle.com">rmukherjee@sfchronicle.com</a> • <a href="https://twitter.com/ruhlmuk" target="_blank">@ruhlmuk</a></p>
         <p>Source: <a href="http://www.sfmayor.org/modules/showdocument.aspx?documentid=455" target="_blank">Homeless data</a> is recorded by the city of San Francisco.</p>
     </div>
 </div>
@@ -66,7 +65,7 @@ $('#usmap').fadeOut(250, function() {
 });    
     $('#usmap').fadeIn(100);
 });
-var pymChild = new pym.Child();        
+var pymChild = new pym.Child({polling: 500});        
 </script>
 
 </body></html>
