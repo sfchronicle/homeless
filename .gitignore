@@ -4,7 +4,6 @@
 migrations/
 node_modules/
 bower_components/
-*.css
 *.css.map
 build/
 .sass-cache/
