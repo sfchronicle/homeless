@@ -13,9 +13,8 @@
 
 	<div class="title-container">
 		<div>
-			<h1 class="title">Photos</h1>
+			<h1 class="title">Faces of homelessness</h1>
 			<!-- {% include '_components/_social_links.html' %} -->
-			<p class="author">By Photographers</p>
 			<p class="date">June 28, 2016</p>
 
 		</div>
@@ -46,23 +45,18 @@
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
-			{{ credit.info('Reporter: Joaquin Palomino', 'jpalomino', 'JoaquinPalomino' ) }}
-			Interactive producers:
-			{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			Interactive producers
 			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
 			{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
+			{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
 		</div>
 	</div>
 
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
 		<hr>
-		<div  class="divider-text">Read related stories</div>
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 		</div>
 	</div>
