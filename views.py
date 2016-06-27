@@ -45,9 +45,9 @@ def setup():
 def insight():
     return render_template('insight.html',
     	slug='letters-from-the-mayors',
-    	title='How 5 SF mayors tackled the homeless issue',
+    	title='How 5 SF mayors tackled homelessness',
     	description="SF Homeless Project: San Francisco's last five mayors, including its current one, discuss their attempts to solve the homelessness problem while in office.",
-    	twitter_text='How 5 SF mayors tackled the homeless issue')
+    	twitter_text='How 5 SF mayors tackled homelessness')
 
 @app.route('/photos/')
 def photos():

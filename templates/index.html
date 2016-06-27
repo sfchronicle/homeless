@@ -39,7 +39,7 @@
             <h1 class="headline">Beyond Homelessness</h1>
             {% include '_components/_social_links.html' %}
             <p class="subhead">
-            This week, The Chronicle joins 70 other news organizations to focus San Francisco’s attention on the seemingly intractable problem of homelessness in our city. The SF Homeless Project will explore possible solutions that might ease, if not end, the suffering of so many thousands of people living on our streets, and improve the quality of life for all residents. The project’s primary day of coverage is June 29, but The Chronicle will publish stories and editorials all week.</p>
+            This week, The Chronicle joins more than 70 other news organizations to focus San Francisco’s attention on the seemingly intractable problem of homelessness in our city. The SF Homeless Project will explore possible solutions that might ease, if not end, the suffering of so many thousands of people living on our streets, and improve the quality of life for all residents. The project’s primary day of coverage is June 29, but The Chronicle will publish stories and editorials all week.</p>
 
             <div class="button radius">Read the stories</div>
         </div>
@@ -47,7 +47,7 @@
     </div>
 
     <div id="stories">
-        <div class="max small-up-1 medium-up-2 large-up-2">
+        <div class="max small-up-1 medium-up-3 large-up-3">
 
             <div class="column">
                 <a href="{{ url_for('setup') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/setup/01_thumb.jpg') }}">
@@ -57,7 +57,12 @@
             <div class="column">
                 <a href="{{ url_for('insight') }}">
                     <img class="thumbnail" src="{{ url_for('static', filename='images/insight/mayors.jpg') }}">
-                    <h5>How 5 S.F. mayors tackled the homeless issue</h5>
+                    <h5>In their words: How SF's last 5 mayors tackled homelessness</h5>
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('letter_of_intent') }}"><img class="thumbnail" src="{{ url_for('static', filename='logos/SFHomeless_long_thumb.jpg') }}">
+                    <h5>Letter to the city and people of San Francisco</h5>
                 </a>
             </div>
         </div>
