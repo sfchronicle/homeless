@@ -80,15 +80,12 @@ App = {
         var $current_target = $current_gridder.find(".gridder-show");
         if($current_gridder.length){
             if ( keycode === 37 ) {
-                console.log("Pressed Left Arrow");
                 $current_target.prev().prev().trigger("click");
             }
             if ( keycode === 39 ) {
-                console.log("Pressed Right Arrow");
                 $current_target.next().trigger("click");
             }
         }else{
-            console.log("No active gridder.");
         }
         e.preventDefault();
     });
@@ -205,11 +202,11 @@ App = {
                     var prevItem = ($(".selectedItem").prev());
                     var nextItem = ($(".selectedItem").next().next());
                     
-                    htmlcontent += "<div class=\"gridder-navigation\">";
-                    htmlcontent += "<a href=\"#\" class=\"gridder-close\">"+settings.closeText+"</a>";
-                    htmlcontent += "<a href=\"#\" class=\"gridder-nav prev "+(!prevItem.length?"disabled":"")+"\">"+settings.prevText+"</a>";
-                    htmlcontent += "<a href=\"#\" class=\"gridder-nav next "+(!nextItem.length?"disabled":"")+"\">"+settings.nextText+"</a>";
-                    htmlcontent += "</div>";
+                    // htmlcontent += "<div class=\"gridder-navigation\">";
+                    // htmlcontent += "<a href=\"#\" class=\"gridder-close\">"+settings.closeText+"</a>";
+                    // htmlcontent += "<a href=\"#\" class=\"gridder-nav prev "+(!prevItem.length?"disabled":"")+"\">"+settings.prevText+"</a>";
+                    // htmlcontent += "<a href=\"#\" class=\"gridder-nav next "+(!nextItem.length?"disabled":"")+"\">"+settings.nextText+"</a>";
+                    // htmlcontent += "</div>";
                 }     
                 
                 htmlcontent += "<div class=\"gridder-expanded-content\">";
