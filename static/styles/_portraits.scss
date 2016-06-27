@@ -25,6 +25,13 @@
     float: left;
     width: 100%;
     position: relative;
+
+    @media #{$tablet} {
+    padding: 0 0 45px;
+    
+  	}
+
+        padding: 20px 0 45px;
 }
 
 .gridder-content {
@@ -82,5 +89,11 @@
 	color: #dedede;
     margin-right: 10px;
     font-size:18px;
+    }
+}
+
+.gridder-img {
+	@media #{$tablet} {
+    padding: 0;
     }
 }
