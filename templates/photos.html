@@ -14,7 +14,7 @@
 	<div class="title-container">
 		<div>
 			<h1 class="title portrait-title">Faces of the streets</h1>
-			<!-- {% include '_components/_social_links.html' %} -->
+			<p class="author">Photos by Lea Suzuki</p>
 			<p class="date">June 28, 2016</p>
 
 		</div>
@@ -356,11 +356,16 @@
 		<hr>
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
-			<!-- Variables are name, email slug and twitter handle -->
-			Interactive producers
-			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-			{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
-			{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			<div class="group">
+        <p>Photographer</p>
+        {{ credit.info("Lea Suzuki", "lsuzuki", 'Lea_Suzuki' ) }}
+      </div>
+      <div class="group">
+        <p>Interactive producers</p>
+        {{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
+        {{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}     
+        {{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+      </div>
 		</div>
 	</div>
 
@@ -368,8 +373,10 @@
 	<div class="max">
 		<hr>
 		<div class="dont-miss">
-		<!-- Variables are title, url and image url --><!-- 
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }} -->
+		<!-- Variables are title, url and image url -->
+			{{ related.story('A problem that looks the same as it did 20 years ago', '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg' ) }}
+			{{ related.story("In their words: How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg' ) }}
+	      	{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg' ) }}
 		</div>
 	</div>
 
