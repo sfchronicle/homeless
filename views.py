@@ -53,9 +53,9 @@ def insight():
 def photos():
     return render_template('photos.html',
     	slug='faces-of-the-streets',
-    	title='',
-    	description='',
-    	twitter_text='')
+    	title='Faces of homelessness in San Francisco',
+    	description="SF Homeless Project: A Chronicle photographer spent a year covering the city's homeless epidemic. These are glimpses into the lives of 12 people she met.",
+    	twitter_text="Faces of homelessness: Portraits of life on SF's streets.")
 
 @app.route('/numbers/')
 def data():
