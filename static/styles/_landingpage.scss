@@ -110,7 +110,7 @@
     & h5 {
         margin-top: 0.5em;
         font-family: $sans-serif-light;
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     & a {
@@ -123,6 +123,12 @@
     @media #{$mobile} {
         margin-top:50px;
     }
+}
+
+.stories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
 .contributors {

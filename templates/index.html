@@ -47,7 +47,7 @@
     </div>
 
     <div id="stories">
-        <div class="max small-up-1 medium-up-3 large-up-3">
+        <div class="stories-container small-up-2 medium-up-4 large-up-4">
 
             <div class="column">
                 <a href="{{ url_for('setup') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/setup/01_thumb.jpg') }}">
@@ -61,7 +61,12 @@
                 </a>
             </div>
             <div class="column">
-                <a href="{{ url_for('letter_of_intent') }}"><img class="thumbnail" src="{{ url_for('static', filename='logos/SFHomeless_long_thumb.jpg') }}">
+                <a href="{{ url_for('data') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/data/10_thumb.jpg') }}">
+                    <h5>How many people live on our streets?</h5>
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('photos') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/portraits/07_thumb.jpg') }}">
                     <h5>Letter to the city and people of San Francisco</h5>
                 </a>
             </div>
