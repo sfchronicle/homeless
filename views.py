@@ -49,18 +49,18 @@ def insight():
     	description="SF Homeless Project: San Francisco's last five mayors, including its current one, discuss their attempts to solve the homelessness problem while in office.",
     	twitter_text='How 5 SF mayors tackled homelessness')
 
-@app.route('/photos/')
+@app.route('/faces-of-the-streets/')
 def photos():
     return render_template('photos.html',
-    	slug='',
+    	slug='faces-of-the-streets',
     	title='',
     	description='',
     	twitter_text='')
 
-@app.route('/data/')
+@app.route('/numbers/')
 def data():
     return render_template('data.html',
-    	slug='',
+    	slug='numbers',
     	title='How many people live on our streets?',
     	description='SF Homeless Project: That question is the basis for the most frequent Google search in San Francisco regarding homelessness. The answer, though, is elusive.',
     	twitter_text='How many people live on San Francisco streets?')
