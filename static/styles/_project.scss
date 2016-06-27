@@ -952,6 +952,7 @@ button {
 
 #homelessviz {
   text-align: center;
+  overflow: auto;
 
   i {
     color: white;
@@ -970,7 +971,7 @@ button {
 }
 
 .disappear {
-  display: none;
+  opacity: 0;
 }
 
 .headline-opinion {
