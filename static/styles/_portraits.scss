@@ -16,7 +16,7 @@
 	vertical-align:top;
 }
 
-.gridder-show { 
+.gridder-show {
 	padding: 20px 15px 45px;
     background: #3a3a3a;
     margin-bottom: 1%;
@@ -28,7 +28,7 @@
 
     @media #{$tablet} {
     padding: 0 0 45px;
-    
+
   	}
 
         padding: 20px 0 45px;
@@ -80,7 +80,7 @@
     font-size: 18px;
 
     p {
-    margin 0 0 1em;
+    margin: 0 0 1em;
     }
 }
 
@@ -88,8 +88,8 @@
 .gridder-navigation {
 
 	padding: 0 15px;
-    
-    a { 
+
+    a {
 	color: #dedede;
     margin-right: 10px;
     font-size:18px;
