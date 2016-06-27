@@ -12,7 +12,7 @@
     <!-- Begin Hearst analytics -->
     <script type="text/javascript">
         var omni_channelPath = "News :: Special Projects :: Homeless Project";
-        var omni_title = "{% block hearst_title %}{% endblock %}";
+        var omni_title = "{{title|safe}}";
         var omni_className = "{% block hearst_class %}channel{% endblock %}";
         var omni_publicationDate = "{% block hearst_date %}{% endblock %}";
         var omni_authorName = "{% block author %}Lucio Villa, Emma O'Neill, Benjamin Din{% endblock %}";
