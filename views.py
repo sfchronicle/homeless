@@ -69,33 +69,33 @@ def data():
 def shelters():
     return render_template('shelters.html',
     	slug='',
-    	title='',
-    	description='',
-    	twitter_text='')
+    	title='Can the shelter system be successful?',
+    	description="SF Homeless Project: Would converting San Francisco's shelter system to a more accessible, service-oriented model get more people off the streets?",
+    	twitter_text='Can the shelter system be successful?')
 
 @app.route('/mental-health/')
 def mental():
     return render_template('mental.html',
     	slug='mental-health',
-    	title='',
-    	description='',
-    	twitter_text='')
+    	title="The streets' sickest, costliest: the mentally ill",
+    	description='SF Homeless Project: What would it take to create enough mental health services to permanently meet the needs of the thousands of people living on its streets?',
+    	twitter_text="The streets' sickest, costliest: the mentally ill.")
 
 @app.route('/encampments/')
 def camping():
     return render_template('camping.html',
     	slug='encampments',
-    	title='',
-    	description='',
-    	twitter_text='')
+    	title='Can law enforcement curb the crisis?',
+    	description='SF Homeless Project: Would stronger enforcement of laws against street camping and petty crime reduce homelessness?',
+    	twitter_text='Can law enforcement curb the crisis?')
 
 @app.route('/supportive-housing/')
 def supportive():
     return render_template('supportive.html',
     	slug='supportive-housing',
-    	title='',
-    	description='',
-    	twitter_text='')
+    	title='Solution starts with supportive housing',
+    	description='SF Homeless Project: Could San Francisco increase its stock of supportive housing by enough units to get the neediest homeless people off its streets in two years?',
+    	twitter_text="Solution to SF's homeless problem starts with supportive housing.")
 
 @app.route('/civic-disgrace/')
 def opinion():
