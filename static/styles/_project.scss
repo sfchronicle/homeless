@@ -79,6 +79,9 @@ p {
 .too-big {
   img {
     max-width: 80%;
+    @media #{$mobile} {
+      max-width: 100%;
+    }
   }
 }
 
@@ -828,11 +831,11 @@ hr{
 
 .no-mobile {
   max-width: 340px;
-  
+
   img {
     text-align: center;
   }
-  
+
   @media screen and (min-width: 481px) {
     display: none;
   }
