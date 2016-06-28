@@ -73,34 +73,34 @@ def shelters():
     	description='',
     	twitter_text='')
 
-@app.route('/mental/')
+@app.route('/mental-health/')
 def mental():
     return render_template('mental.html',
-    	slug='',
+    	slug='mental-health',
     	title='',
     	description='',
     	twitter_text='')
 
-@app.route('/camping/')
+@app.route('/encampments/')
 def camping():
     return render_template('camping.html',
-    	slug='',
+    	slug='encampments',
     	title='',
     	description='',
     	twitter_text='')
 
-@app.route('/supportive/')
+@app.route('/supportive-housing/')
 def supportive():
     return render_template('supportive.html',
-    	slug='',
+    	slug='supportive-housing',
     	title='',
     	description='',
     	twitter_text='')
 
-@app.route('/opinion/')
+@app.route('/civic-disgrace/')
 def opinion():
     return render_template('opinion.html',
-    	slug='',
+    	slug='civic-disgrace',
     	title='',
     	description='',
     	twitter_text='')
