@@ -54,7 +54,7 @@ def photos():
     return render_template('photos.html',
     	slug='faces-of-the-streets',
     	title='Faces of homelessness in San Francisco',
-    	description="SF Homeless Project: A Chronicle photographer spent a year covering the city's homeless epidemic. These are glimpses into the lives of 12 people she met.",
+    	description="SF Homeless Project: These portraits provide glimpses into the lives of 12 people whose experiences help tell the story of the streets.",
     	twitter_text="Faces of homelessness: Portraits of life on SF's streets.")
 
 @app.route('/numbers/')
