@@ -87,7 +87,7 @@ App = {
             }
         }else{
         }
-        e.preventDefault();
+        // e.preventDefault();
     });
     
     $.fn.gridderExpander = function(options) {
