@@ -566,12 +566,16 @@ footer {
     flex: 0 0 25%;
 
     &.three {
-      flex: 0 0 33%
+      flex: 0 0 33%;
+
+        @media screen and (max-width: 560px) {
+            flex: 1 1 100%;
+       }
     }
 
 
      @media screen and (max-width: 560px) {
-          flex: 1 1 50%;
+          flex: 1 1 100%;
      }
 
     & a {
