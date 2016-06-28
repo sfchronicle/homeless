@@ -826,6 +826,24 @@ hr{
   }
 }
 
+.no-mobile {
+  max-width: 340px;
+  
+  img {
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 481px) {
+    display: none;
+  }
+}
+
+.mobile {
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
 #read, #next {
   height: 2em;
 
