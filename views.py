@@ -68,7 +68,7 @@ def data():
 @app.route('/shelters/')
 def shelters():
     return render_template('shelters.html',
-    	slug='',
+    	slug='shelters',
     	title='Can the shelter system be successful?',
     	description="SF Homeless Project: Would converting San Francisco's shelter system to a more accessible, service-oriented model get more people off the streets?",
     	twitter_text='Can the shelter system be successful?')
