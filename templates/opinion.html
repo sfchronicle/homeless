@@ -73,7 +73,7 @@
 		App.init();
 	});
 
-	$(window).load(function() {
+	function populate_humans() {
 		for (var i = 0; i < 6686; i ++) {
 			if (Math.random() <= 0.66) {
 				$('<i class="fa fa-male" aria-hidden="true"></i>').appendTo(".homeless");
@@ -81,18 +81,34 @@
 			else {
 				$('<i class="fa fa-female" aria-hidden="true"></i>').appendTo(".homeless");
 			}
-		};
+		}
+	}
 
-		var animationHeight = $('#homelessviz').height();
+	$(document).ready(function() {
+		populate_humans();
+	});
 
-		console.log(animationHeight);
+	$(window).load(function() {
 
-		$('#homelessviz').offset({top: 0 - animationHeight, left: 0});
-		$('#homelessviz').removeClass("disappear");
-		$('#homelessviz').velocity({
+		var animationHeight = $('#homelessviz').height() - 60;
+
+		var newSpeed;
+
+		if (screen.width > 480) {
+			newSpeed = 40000;
+		}
+		else {
+			newSpeed = 60000;
+		}
+
+		$("#homelessviz").offset({top: 0 - animationHeight, left: 0});
+		$("#homelessviz").removeClass("disappear");
+		$("#homelessviz").velocity({
 			top: '0px',
+		}, {
+			duration: newSpeed,
 			easing: "linear"
-		}, 40000)
+		})
 
 	});
 
@@ -107,6 +123,7 @@
 				$('.menu-navigation').removeClass('sticky');
 		}
 	}
+
 	$(function() {
 		$(window).scroll(sticky_relocate);
 		sticky_relocate();
