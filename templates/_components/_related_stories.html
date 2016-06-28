@@ -1,6 +1,6 @@
-{% macro story(title='Article Title', link='http://sfchronicle.com', imgurl='../static/images/sharing/dont-miss-visas.png') -%}
+{% macro story(title='Article Title', link='http://sfchronicle.com', imgurl='../static/images/sharing/dont-miss-visas.png', three='') -%}
 
-	<div class="story">
+	<div class="story {{ three }}">
 		<div class="padded">
 			<a href="{{ link }}">
 				<img src="{{ imgurl }}"></img>

@@ -563,7 +563,12 @@ footer {
   font-family: $block-graphics;
 
   .story {
-    flex: 0 0 33%;
+    flex: 0 0 25%;
+
+    &.three {
+      flex: 0 0 33%
+    }
+
 
      @media screen and (max-width: 560px) {
           flex: 1 1 50%;
@@ -582,6 +587,7 @@ footer {
   h4 {
     margin-top:2px;
     line-height: 1.2;
+    font-size:0.9em;
   }
   img {
     width: 100%;
