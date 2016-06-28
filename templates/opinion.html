@@ -40,8 +40,10 @@
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
-			{{ credit.info('By the San Francisco Chronicle Editorial Board', 'EMAIL', 'sfchronicle' ) }}
-			{{ credit.info("Interactive producers: Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
+			{{ credit.info('The San Francisco Chronicle Editorial Board', 'letters', 'sfchronicle' ) }}
+			<br>
+			Interactive producers
+			{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
 			{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
 			{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
 		</div>
@@ -112,8 +114,3 @@
 
 </script>
 {% endblock %}
-
-<!-- 
-		$('#myAnimation').removeClass('disappear').addClass('enable');
-		console.log(animationHeight);
--->
