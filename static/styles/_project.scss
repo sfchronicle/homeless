@@ -56,6 +56,10 @@ p {
 .full-width-img {
   margin: 2em auto;
   width: 100%;
+
+  img {
+    width:100%;
+  }
 }
 
 .inline-img {
