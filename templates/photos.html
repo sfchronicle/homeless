@@ -29,7 +29,7 @@
 	<div class="container">
 
 			<ul class="gridder gridder-1">
-				
+
 				<li class="gridder-list" data-griddercontent="#gridder-content-0">
 					<img src="../static/images/portraits/01-2.jpg" class="img-responsive">
 				</li>
@@ -117,7 +117,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-2" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -136,7 +136,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-3" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -155,7 +155,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-4" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -174,7 +174,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-5" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -193,7 +193,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-7" class="gridder-content">
 				<div class="">
 					<div class="large-6 columns gridder-img">
@@ -212,7 +212,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-8" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -231,7 +231,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-9" class="gridder-content">
 				<div class="">
 					<div class="large-5 columns gridder-img">
@@ -250,7 +250,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-10" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -269,7 +269,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-11" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -288,7 +288,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-12" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -307,7 +307,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="gridder-content-13" class="gridder-content">
 				<div class="">
 					<div class="large-9 columns gridder-img">
@@ -327,11 +327,11 @@
 				</div>
 			</div>
 
-							
-							
+
+
 		</div>
         <script>
-            
+
         </script>
 
 	<div class="max" style="clear: both;">
@@ -345,7 +345,7 @@
       <div class="group">
         <p>Interactive producers</p>
         {{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-        {{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}     
+        {{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
         {{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
       </div>
 		</div>
@@ -356,9 +356,9 @@
 		<hr>
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
-			{{ related.story('A problem that looks the same as it did 20 years ago', '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg' ) }}
-			{{ related.story("In their words: How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg' ) }}
-	      	{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg' ) }}
+			{{ related.story('A problem that looks the same as it did 20 years ago', '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg','three') }}
+	    {{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg','three') }}
+			{{ related.story("In their words: How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg','three') }}
 		</div>
 	</div>
 
@@ -385,7 +385,7 @@
 					onStart: function(){
 					},
 					onContent: function(){
-						
+
 						$(".carousel").carousel();
 					},
 					onClosed: function(){
