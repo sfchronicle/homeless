@@ -1075,6 +1075,10 @@ button {
 
 }
 
+table {
+  margin-bottom: 0;
+}
+
 table thead, table tbody, table tfoot {
   border: 0;
 }
@@ -1107,6 +1111,10 @@ table thead, table tbody, table tfoot {
     color: #696969;
     font-style: italic;
     font-family: "AntennaExtraLight";
+
+    @media #{$tablet} {
+      padding-left: 10px;
+    }
 }
 
 td, th {
@@ -1129,4 +1137,5 @@ td {
 
 .last-column {
   text-align: right;
+  font-weight: bold;
 }
