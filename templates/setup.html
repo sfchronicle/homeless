@@ -54,7 +54,15 @@
 		<hr>
 		<!-- <div  class="divider-text">Read related stories</div> -->
 		<div class="dont-miss">
-		<!-- Variables are title, url and image url -->
+
+			{{ related.story("Solution starts with supportive housing", '/sf-homeless/supportive-housing', '../static/images/supportive/thumb.jpg') }}
+
+			{{ related.story("The streets' sickest and costliest residents", '/sf-homeless/mental-health', '../static/images/mental/thumb.jpg') }}
+
+			{{ related.story("Can the shelter system be successful?", '/sf-homeless/shelters', '../static/images/shelters/thumb.jpg') }}
+
+			{{ related.story("Can law enforcement curb the crisis?", '/sf-homeless/encampments', '../static/images/camping/thumb.jpg') }}
+
 			{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg','three') }}
 			{{ related.story("Faces of homelessness: Portraits of life on SF's streets", '/sf-homeless/faces-of-the-streets', '../static/images/portraits/07_thumb.jpg','three') }}
 			{{ related.story("In their words: How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg','three') }}
