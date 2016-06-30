@@ -3,7 +3,6 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 {% include '_components/_social.html' %}
 {% endblock %}
 
@@ -19,7 +18,7 @@
 		<h2 class="title h2-opinion">A civic disgrace</h2>
 
 		<div style="padding-top: 15px;">
-			<!-- {% include '_components/_social_links.html' %} -->
+			
 			<p class="author">San Francisco Chronicle</p>
 			<p class="date">July 3, 2016</p>
 
@@ -54,10 +53,10 @@
 		<hr>
 		<div class="dont-miss">
 		<!-- Variables are title, url and image url -->
+			<!-- {{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
 			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
+			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }} -->
 		</div>
 	</div>
 
@@ -67,11 +66,16 @@
 
 {% block javascript %}
 <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="http://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.velocity.js"></script>
 
 <script>
 	$(document).ready(function() {
 		App.init();
 	});
+	
+	var controller = new ScrollMagic.Controller();
 
 	function populate_humans() {
 		for (var i = 0; i < 6686; i ++) {
@@ -92,13 +96,20 @@
 
 		var animationHeight = $('#homelessviz').height() - 60;
 
-		var newSpeed;
+		var newSpeed = 80000;
 
-		if (screen.width > 480) {
-			newSpeed = 40000;
+		var Easing = [ 0.37, 0.67, 0.83, 0.67 ];
+
+		if (screen.width < 480) {
+			newSpeed = 60000;
+			Easing = "linear"
+
 		}
 		else {
-			newSpeed = 60000;
+
+			newSpeed = 80000;
+			Easing = [ 0.37, 0.67, 0.83, 0.67 ]
+			
 		}
 
 		$("#homelessviz").offset({top: 0 - animationHeight, left: 0});
@@ -107,10 +118,13 @@
 			top: '0px',
 		}, {
 			duration: newSpeed,
-			easing: "linear"
+			easing: Easing
 		})
 
+
 	});
+
+	$("#homelessviz").velocity("stop");
 
 	function sticky_relocate() {
 		var window_top = $(window).scrollTop();
@@ -128,6 +142,59 @@
 		$(window).scroll(sticky_relocate);
 		sticky_relocate();
 	});
+
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger0"})
+	// trigger a velocity opaticy animation
+	.setVelocity("#animate0", {
+		"font-size": "1.7em", 
+		"line-height":"43",
+		"color":"#ec1c24"
+		}, {duration: 400})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
+	// trigger a velocity opaticy animation
+	.setVelocity("#animate1", {
+		"font-size": "1.7em", 
+		"line-height":"40",
+		"margin":"4",
+		"display":"inline-block",
+		"color":"#ec1c24"}, {duration: 400})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger2"})
+	// trigger a velocity opaticy animation
+	.setVelocity("#animate2", {
+		"font-size": "1.7em", 
+		"line-height":"28",
+		"margin":"4",
+		"display":"inline-block",
+		"color":"#ec1c24"}, {duration: 400})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger3"})
+	// trigger a velocity opaticy animation
+	.setVelocity("#animate3", {
+		"font-size": "1.7em", 
+		"line-height":"45",
+		"margin":"4",
+		"display":"inline-block",
+		"color":"#ec1c24"}, {duration: 400})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+	var scene = new ScrollMagic.Scene({triggerElement: "#trigger4"})
+	// trigger a velocity opaticy animation
+	.setVelocity("#animate4", {
+		"font-size": "1.6em", 
+		"line-height":"35",
+		"display":"inline-block",
+		"color":"#ec1c24"}, {duration: 400})
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
 
 </script>
 {% endblock %}
