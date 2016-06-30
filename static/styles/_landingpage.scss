@@ -204,6 +204,8 @@
 
 .banner {
     width: 100%;
-    height: 100px;
-    background: url("../static/images/frontpage/editorial.jpg") cover;
+    background-image: url('../images/frontpage/editorial.jpg');
+    background-size: cover;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
