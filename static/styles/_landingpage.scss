@@ -145,6 +145,13 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 12px;
+  padding-left: calc(0.9375rem + 12px);
+  padding-right: calc(0.9375rem + 12px);
+
+  @media screen and (max-width: 639px) {
+    padding-left: calc(0.625rem + 12px);
+    padding-right: calc(0.625rem + 12px);
+  }
 }
 
 .contributors {
@@ -226,6 +233,6 @@
     background-image: url('../images/frontpage/editorial.jpg');
     background-size: cover;
     margin-bottom: 40px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
