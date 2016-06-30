@@ -49,16 +49,27 @@
 	</div>
 
 	{% import '_components/_related_stories.html' as related %}
-	<div class="max">
-		<hr>
-		<div class="dont-miss">
-		<!-- Variables are title, url and image url -->
-			<!-- {{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }}
-			{{ related.story('TITLE', 'URL', '../static/images/test/01.jpg' ) }} -->
-		</div>
-	</div>
+    <div class="max">
+        <hr>
+        <div class="dont-miss">
+
+            {{ related.story("Solution starts with supportive housing", '/sf-homeless/supportive-housing', '../static/images/supportive/thumb.jpg' ) }}
+
+            {{ related.story("The mentally ill: Streets' costliest residents", '/sf-homeless/mental-health', '../static/images/mental/thumb.jpg' ) }}
+
+            {{ related.story("Can the shelter system be successful?", '/sf-homeless/shelters', '../static/images/shelters/thumb.jpg' ) }}
+
+            {{ related.story("Can law enforcement curb the crisis?", '/sf-homeless/encampments', '../static/images/camping/thumb.jpg' ) }}
+
+            {{ related.story("A problem that looked the same 20 years ago", '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg' ) }}
+
+            {{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg' ) }}
+
+            {{ related.story("Portraits of life on SF's streets", '/sf-homeless/faces-of-the-streets', '../static/images/portraits/07_thumb.jpg' ) }}
+
+            {{ related.story("How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg' ) }}
+        </div>
+    </div>
 
 	{% include '_components/_footer.html' %}
 </main>
@@ -67,7 +78,6 @@
 {% block javascript %}
 <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="http://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.velocity.js"></script>
 
 <script>
@@ -78,7 +88,7 @@
 	var controller = new ScrollMagic.Controller();
 
 	function populate_humans() {
-		for (var i = 0; i < 6686; i ++) {
+		for (var i = 0; i < 1338; i ++) {
 			if (Math.random() <= 0.66) {
 				$('<i class="fa fa-male" aria-hidden="true"></i>').appendTo(".homeless");
 			}
@@ -96,19 +106,19 @@
 
 		var animationHeight = $('#homelessviz').height() - 60;
 
-		var newSpeed = 80000;
+		var newSpeed;
 
-		var Easing = [ 0.37, 0.67, 0.83, 0.67 ];
+		var Easing;
 
 		if (screen.width < 480) {
-			newSpeed = 60000;
-			Easing = "linear"
+			newSpeed = 90000;
+			Easing = "linear";
 
 		}
 		else {
 
-			newSpeed = 80000;
-			Easing = [ 0.37, 0.67, 0.83, 0.67 ]
+			newSpeed = 30000;
+			Easing = "linear";
 			
 		}
 
@@ -120,11 +130,10 @@
 			duration: newSpeed,
 			easing: Easing
 		})
-
-
 	});
 
-	$("#homelessviz").velocity("stop");
+	$("#homelessviz").velocity("finish");
+
 
 	function sticky_relocate() {
 		var window_top = $(window).scrollTop();
@@ -147,21 +156,19 @@
 	// trigger a velocity opaticy animation
 	.setVelocity("#animate0", {
 		"font-size": "1.7em", 
-		"line-height":"43",
+		"line-height":"30",
 		"color":"#ec1c24"
 		}, {duration: 400})
-	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
 	// trigger a velocity opaticy animation
 	.setVelocity("#animate1", {
 		"font-size": "1.7em", 
-		"line-height":"40",
+		"line-height":"30",
 		"margin":"4",
 		"display":"inline-block",
 		"color":"#ec1c24"}, {duration: 400})
-	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger2"})
@@ -172,18 +179,16 @@
 		"margin":"4",
 		"display":"inline-block",
 		"color":"#ec1c24"}, {duration: 400})
-	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger3"})
 	// trigger a velocity opaticy animation
 	.setVelocity("#animate3", {
 		"font-size": "1.7em", 
-		"line-height":"45",
+		"line-height":"35",
 		"margin":"4",
 		"display":"inline-block",
 		"color":"#ec1c24"}, {duration: 400})
-	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger4"})
@@ -193,7 +198,6 @@
 		"line-height":"35",
 		"display":"inline-block",
 		"color":"#ec1c24"}, {duration: 400})
-	.addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 
 </script>

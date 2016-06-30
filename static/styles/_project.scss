@@ -994,6 +994,12 @@ button {
   height: 600px;
   overflow: hidden;
   background: linear-gradient(#cecece, white 99%);
+  @media #{$tablet} {
+    height:500px;
+  }
+  @media #{$mobile} {
+    height:400px;
+  }
 }
 
 #homelessviz {
