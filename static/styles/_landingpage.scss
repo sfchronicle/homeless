@@ -103,11 +103,13 @@
     margin: 100px 0 50px;
     width: 100%;
     float: left;
+    text-align: center;
 
     & h5 {
         margin-top: 0.5em;
         font-family: $sans-serif-light;
         font-size: 0.8em;
+        text-align: left;
     }
 
     & a {
@@ -117,12 +119,29 @@
         line-height: 1.2;
     }
 
+    & .button {
+        background-color: $red;
+        color: #fefefe;
+        font-family:$sans-serif;
+        text-transform:uppercase;
+    }
+
+    & .button:hover {
+        background-color: $red;
+    }
+
     @media #{$mobile} {
         margin-top:50px;
     }
 }
 
 .stories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.stories-container-2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 12px;
@@ -202,18 +221,11 @@
     }
 }
 
-.button {
-    background-color: $red;
-    color: #fefefe;
-    font-family:$sans-serif;
-    text-transform:uppercase;
-}
-
 .banner {
     width: 100%;
     background-image: url('../images/frontpage/editorial.jpg');
     background-size: cover;
     margin-bottom: 40px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
