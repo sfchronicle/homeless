@@ -202,6 +202,13 @@
     }
 }
 
+.button {
+    background-color: $red;
+    color: #fefefe;
+    font-family:$sans-serif;
+    text-transform:uppercase;
+}
+
 .banner {
     width: 100%;
     background-image: url('../images/frontpage/editorial.jpg');
