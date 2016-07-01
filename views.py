@@ -103,7 +103,7 @@ def opinion():
     	slug='civic-disgrace',
     	title="SF's homeless problem: A civic disgrace",
     	description="SF Homeless Project Editorial: The reduction of homelessness to the extent humanly possible must be San Francisco's No. 1 priority.",
-    	twitter_text='Editorial: SF’s homeless problem is a civic disgrace. ')
+    	twitter_text="Editorial: SF's homeless problem is a civic disgrace.")
 
 @app.route('/letter-to-the-city/')
 def letter_of_intent():
