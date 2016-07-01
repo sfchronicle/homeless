@@ -994,12 +994,30 @@ button {
   height: 600px;
   overflow: hidden;
   background: linear-gradient(#cecece, white 99%);
-  @media #{$tablet} {
-    height:500px;
-  }
-  @media #{$mobile} {
-    height:400px;
-  }
+
+    h2 {
+      max-width: 645px;
+      margin: 0 auto;
+      font-size: 1em;
+      font-family: "FarnhamDisplayLight", Georgia, serif;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-top: 20px;
+      padding: 0 15px;
+
+      @media #{$mobile} {
+        font-size: 0.8em;
+        margin-top: 10px;
+      }
+    }
+
+    @media #{$tablet} {
+      height:500px;
+    }
+
+    @media #{$mobile} {
+      height:400px;
+    }
 }
 
 #homelessviz {
@@ -1013,12 +1031,30 @@ button {
 }
 
 .header-opinion {
+    z-index: 2;
     position: absolute;
     top: 10.5%;
     left: 0;
     right: 0;
     opacity: 1;
     text-align:center;
+
+    h5 {
+      margin: 15px 0 0;
+      text-align: center;
+      color: #ec1c24;
+      font-family: Dispatch;
+      font-weight: normal;
+
+      @media #{$mobile} {
+        font-size: 0.7em;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 0.7em;
+    }
 }
 
 .disappear {
@@ -1027,34 +1063,36 @@ button {
 
 .headline-opinion {
     font-size: 200px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin:20px 0 0;
     font-weight:bold;
     letter-spacing:2px;
-    padding:0 10px 3px;
+    padding:0 10px 0;
     text-align:center;
     color: $red;
+    line-height: 1.2;
 
-    @media screen and (max-width: 860px) {
+    @media #{$tablet} {
       font-size: 5.5em;
     }
 
-    @media screen and (max-width: 340px) {
-      font-size: 3.5em;
+    @media #{$mobile} {
+      font-size: 3em;
     }
 }
 
 .h2-opinion {
   font-size: 100px;
   line-height: 1;
-  margin-top: -50px;
   margin-bottom: 0;
-  color: black;
+  color: #000;
   text-align: center;
 
-    @media screen and (max-width: 860px) {
-      font-size: 2.5em;
-      margin-top: -10px;
+    @media #{$tablet} {
+      font-size: 3.5em;
+    }
+
+    @media #{$mobile} {
+      font-size: 2em;
     }
 }
 
@@ -1171,4 +1209,18 @@ td {
 
 .zap {
   color:red;
+}
+
+.footnote {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 0.5em;
+  font-family: $sans-serif;
+  margin-bottom: 2em;
+}
+
+.bottom-footnote {
+  margin-top:3em;
+  font-style: italic;
+  font-size: 0.8em;
 }

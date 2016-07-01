@@ -13,26 +13,32 @@
 
 <div id="homelesscontainer">
 
-	<div class="header-opinion" style="z-index: 2;">
-		<h1 class="headline-opinion">6,686</h1>
-		<h2 class="title h2-opinion">A civic disgrace</h2>
+	<div class="header-opinion">
+		<div class="headline-opinion">6,686</div>
+		<h1 class="title h2-opinion">A civic disgrace</h1>
+		<h2>The reduction of homelessness to the extent humanly possible must be San Francisco’s No. 1 priority.</h2>
 
-		<div style="padding-top: 15px;">
-			
-			<p class="author">San Francisco Chronicle</p>
+		<div>
+			<h5>EDITORIAL</h5>
 			<p class="date">July 3, 2016</p>
-
 		</div>
-
-
 	</div>	
 
 	<div class="disappear" id="homelessviz">
 		<span class="homeless"></span>
 	</div>
 </div>
-
+<div class="footnote">* Each figure represents 2</div>
 	{% include '_text/opinion.html' %}
+	
+	<p class="bottom-footnote">Footnote for using the number 6,686 with link to <a href="{{ url_for('data') }}">data story</a>.</p>
+	<hr style="width: 75%;max-width:710px;">
+	<!-- VIDEO -->
+	<div class="inline-img">
+		<p class="text-hed">About Beyond Homelessness</p>
+	    <div class='embed-container'><iframe src='https://player.vimeo.com/video/171866623' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+	    <p class="caption"><span class="byline">Video: Erin Brethauer and Tim Hussin, The Chronicle<br>Edited by Erin Brethauer</span></p>
+	</div>
 
 	<div class="max">
 		<hr>
@@ -84,11 +90,9 @@
 	$(document).ready(function() {
 		App.init();
 	});
-	
-	var controller = new ScrollMagic.Controller();
 
 	function populate_humans() {
-		for (var i = 0; i < 1338; i ++) {
+		for (var i = 0; i < 3343; i ++) {
 			if (Math.random() <= 0.66) {
 				$('<i class="fa fa-male" aria-hidden="true"></i>').appendTo(".homeless");
 			}
@@ -111,7 +115,7 @@
 		var Easing;
 
 		if (screen.width < 480) {
-			newSpeed = 90000;
+			newSpeed = 98000;
 			Easing = "linear";
 
 		}
@@ -152,13 +156,14 @@
 		sticky_relocate();
 	});
 
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {reverse: false}});
+
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger0"})
 	// trigger a velocity opaticy animation
 	.setVelocity("#animate0", {
 		"font-size": "1.7em", 
 		"line-height":"30",
-		"color":"#ec1c24"
-		}, {duration: 400})
+		"color":"#ec1c24"}, {duration: 400})
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
