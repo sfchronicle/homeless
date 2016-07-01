@@ -41,7 +41,8 @@
             <p class="subhead">
             This week, The Chronicle joins more than 70 other news organizations to focus San Francisco’s attention on the seemingly intractable problem of homelessness in our city. The SF Homeless Project will explore possible solutions that might ease, if not end, the suffering of so many thousands of people living on our streets, and improve the quality of life for all residents. The project’s primary day of coverage is June 29, but The Chronicle will publish stories and editorials all week.</p>
 
-            <div class="button radius">Read the stories</div>
+            <div class="button radius btn-stories">Read the stories</div>
+            <div class="button radius btn-videos">View the Videos</div>
         </div>
 
     </div>
@@ -110,6 +111,14 @@
             <a href="{{ url_for('letter_of_intent') }}"><div class="button radius">Read the letter to the city</div></a>
         </div>
     </div>
+    <hr class="video-hr">
+    <!-- VIDEO PLAYER -->
+    <div id="videos" class="video-embed">
+        <h2>Videos</h2>
+        <div class='embed-container'><iframe src='https://verse.com/story/private/640/' frameborder='0'     webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    </div>
+
+    
 
     <div class="max">
         <hr>
@@ -263,10 +272,16 @@
 	$(document).ready(function() {
 		App.init();
 	});
-
-    $(".button").click(function() {
+    
+    $(".btn-stories").click(function() {
         $('html, body').animate({
             scrollTop: $("#stories").offset().top - 50
+        }, 500);
+    });
+
+    $(".btn-videos").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#videos").offset().top - 50
         }, 500);
     });
 

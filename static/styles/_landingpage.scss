@@ -74,6 +74,7 @@
         color: #fefefe;
         font-family:$sans-serif;
         text-transform:uppercase;
+        min-width: 176px;
     }
 
     & #social a{
@@ -84,6 +85,10 @@
         }
 
     }
+}
+
+.btn-stories {
+    margin-right: 10px;
 }
 
 .headline{
@@ -100,7 +105,7 @@
 }
 
 #stories {
-    margin: 100px 0 50px;
+    margin: 100px 0 20px;
     width: 100%;
     float: left;
     text-align: center;
@@ -270,4 +275,20 @@
             font-size:0.7em;
         }
     }
+}
+
+.video-embed {
+    margin:0 auto;
+    max-width:930px;
+    width:100%;
+
+    h2{
+        text-align:center;
+    }
+}
+
+.video-hr {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 80%;
 }
