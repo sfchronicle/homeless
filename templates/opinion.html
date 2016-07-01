@@ -84,7 +84,7 @@
 {% block javascript %}
 <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="http://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.velocity.js"></script>
+<script src="{{ url_for('static', filename='scripts/animation.velocity.js') }}"></script>
 
 <script>
 	$(document).ready(function() {
@@ -102,28 +102,20 @@
 		}
 	}
 
-	$(document).ready(function() {
-		populate_humans();
-	});
-
 	$(window).load(function() {
+
+		populate_humans();
 
 		var animationHeight = $('#homelessviz').height() - 60;
 
 		var newSpeed;
 
-		var Easing;
-
 		if (screen.width < 769) {
 			newSpeed = 98000;
-			Easing = "linear";
 
 		}
 		else {
-
 			newSpeed = 30000;
-			Easing = "linear";
-			
 		}
 
 		$("#homelessviz").offset({top: 0 - animationHeight, left: 0});
@@ -132,7 +124,7 @@
 			top: '0px',
 		}, {
 			duration: newSpeed,
-			easing: Easing
+			easing: "linear"
 		})
 	});
 
@@ -159,7 +151,6 @@
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {reverse: false}});
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger0"})
-	// trigger a velocity opaticy animation
 	.setVelocity("#animate0", {
 		"font-size": "1.7em", 
 		"line-height":"30",
@@ -167,7 +158,6 @@
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
-	// trigger a velocity opaticy animation
 	.setVelocity("#animate1", {
 		"font-size": "1.7em", 
 		"line-height":"30",
@@ -177,7 +167,6 @@
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger2"})
-	// trigger a velocity opaticy animation
 	.setVelocity("#animate2", {
 		"font-size": "1.7em", 
 		"line-height":"28",
@@ -187,7 +176,6 @@
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger3"})
-	// trigger a velocity opaticy animation
 	.setVelocity("#animate3", {
 		"font-size": "1.7em", 
 		"line-height":"35",
@@ -197,7 +185,6 @@
 	.addTo(controller);
 
 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger4"})
-	// trigger a velocity opaticy animation
 	.setVelocity("#animate4", {
 		"font-size": "1.6em", 
 		"line-height":"35",
