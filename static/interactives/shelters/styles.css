@@ -1,12 +1,15 @@
-@media screen and (min-width: 40em) {
-  .medium-6 {
-    width: 50%;
-    min-height: 66px;
-    margin-bottom: 3px;
-    line-height: 1.2;
-  }
+html, body {
+  background-color: #000;
+  color: #eee;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-
 
 .dialog {
   display: none;
@@ -45,26 +48,4 @@ canvas:active {
   cursor: grabbing;
   cursor: -moz-grabbing;
   cursor: -webkit-grabbing;
-}
-
-#three60 { 
-  border: 0;
-
-}
-
-
-/* MOBILE */
-@media screen and (max-width: 900px) {
-  #three60 {
-    height: 340px;
-  }
-}
-/* DESKTOP */
-@media screen and (min-width: 900px) {
-  #three60 {
-    height: 600px;
-    width: 900px;
-    margin: 2em auto 0;
-    display: block;
-  }
 }
