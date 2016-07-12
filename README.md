@@ -1,7 +1,8 @@
-**This is *pre-alpha software*. It's literally only been used once. We're working hard to turn into something awesome, but don't rely on this template just yet. If you want a soup-to-nuts flask template, check out NPR Visual's [app-template](https://github.com/nprapps/app-template).**
+# Beyond Homelessness
+The San Francisco Chronicle has joined with more than 70 other news organizations to focus attention on the seemingly intractable problem of homelessness in our region. The SF Homeless Project explores possible solutions that might ease, if not end, the suffering of thousands of people living on our streets, and improve the quality of life for all residents. Project participants, which began publishing in June, will continue the work throughout 2016. To date, the SF Homeless Project has been emulated in more than a dozen U.S. cities where homelessness remains a humanitarian crisis.
 
-# Ingleside
-A simple flask scaffold for building client-side news graphics and applications. Includes:
+
+## Includes:
 
 - Livereload for fast development
 - Grunt tasks for serving application
@@ -12,7 +13,7 @@ A simple flask scaffold for building client-side news graphics and applications.
 - Python 2.7.x
 - Node.js 0.12
   - uglifyjs (`npm install -g uglifyjs`)
-  - clean-css (`npm install -g cleancss`)
+  - clean-css (`npm install -g clean-css`)
   - Bower and Grunt (`$ npm install -g grunt-cli bower`)
 
 ### Installation
@@ -23,9 +24,6 @@ $ mkvirtualenv $PROJECT_NAME
 $ pip install -r requirements.txt && npm install && bower install
 $ grunt serve
 ```
-
-## Structure
-Coming soon.
 
 ### Build and deployment
 Now run `build.py` and specify if its for `production` or `staging` to compress assets for upload.
