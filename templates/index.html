@@ -50,16 +50,16 @@
     <div id="stories">
 
         <div class="stories-container-2">
-            <a href="{{ url_for('opinion') }}">
-            <div class="banner">
-                    <h5>EDITORIAL</h5>
-                    <h1>A civic disgrace</h1>
-                    <h2>The Chronicle on San Francisco's homeless epidemic: The time to act is now</h2>
-            </div>
+            <a href="http://projects.sfchronicle.com/2016/candidates-homeless-survey/">
+                <div class="banner">
+                    <p class="cat">VOTER GUIDE</p>
+                    <h2>Candidates view on homelessness</h2>
+                    <p class="deck">We reached out to the contenders for key state and local offices for their position on one of the region's most vital issues.</p>
+                </div>
             </a>
         </div>
 
-        <div class="stories-container small-up-1 medium-up-4 large-up-4" style="width: 100%; clear: both;">
+        <div class="stories-container small-up-1 medium-up-3 large-up-3" style="width: 100%; clear: both;">
 
             <div class="column">
                 <a href="{{ url_for('supportive') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/supportive/thumb.jpg') }}">
@@ -102,6 +102,12 @@
                 <a href="{{ url_for('insight') }}">
                     <img class="thumbnail" src="{{ url_for('static', filename='images/insight/mayors.jpg') }}">
                     <h5>How SF's last 5 mayors tackled homelessness</h5>
+                </a>
+            </div>
+             <div class="column">
+                <a href="{{ url_for('opinion') }}">
+                    <img src="http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png">
+                    <h5>Editorial: Homelessness a civic disgrace</h5>
                 </a>
             </div>
 
