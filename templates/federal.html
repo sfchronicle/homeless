@@ -6,10 +6,10 @@
 {% include '_components/_social.html' %}
 {% endblock %}
 
-{% block hearst_title %}Mental{% endblock %}
+{% block hearst_title %}Federal{% endblock %}
 {% block hearst_class %}article{% endblock %}
-{% block hearst_date %}2016-06-29 00:00:00{% endblock %}
-{% block author %}Erin Allday, Tim Hussin, Lea Suzuki, Lucio Villa, Emma O'Neill, Benjamin Din{% endblock %}
+{% block hearst_date %}2016-12-05 00:00:00{% endblock %}
+{% block author %}Kevin Fagan, Joaquin Palomino, Lucio Villa, Emma O'Neill{% endblock %}
 
 {% block content %}
 <main class="container">
@@ -18,20 +18,24 @@
 
 	<div class="title-container">
 		<div>
-			<h1 class="title long">The streets’ sickest, costliest: the mentally ill</h1>
+			<h1 class="title long">Federal story headline goes here</h1>
 			<div class="whatif-box">
-				What would it take for San Francisco to create enough mental health services to permanently meet the needs of its thousands of mentally ill homeless people?
+				Could San Francisco increase its stock of supportive housing by enough units to get all of the neediest homeless people off its streets in just two years?
 			</div>
-			<p class="author">By Erin Allday</p>
-			<p class="date">June 29, 2016</p>
+
+			<p class="author">By Kevin Fagan</p>
+			<p class="date">Dec. 5, 2016</p>
 			<div class="full-width-img">
-			    <img src="{{ url_for('static', filename='images/mental/01.jpg') }}">
-			    <p class="caption"><span class="year">April 20, 2015 </span> City outreach worker Jessica Naugle helps dismantle a tent at an encampment near 16th Street. People at the camp were sent to a shelter where they could meet with case managers and be connected to further services.<span class="byline"> Photo: Brant Ward, The Chronicle</span></p>
+					<img src="{{ url_for('static', filename='images/supportive/homeless_supportive_PH1.jpg') }}">
+					<p class="caption"><span class="year">May 10, 2016 </span> A former heroin addict who has spent many of his 62 years behind bars, Kenney Williams is grateful for his place in the Health Department’s Mission Creek housing project near AT&T Park. “If not for this, I’d be going downhill fast,” he said.<span class="byline"> Photo: Lea Suzuki, The Chronicle</span></p>
 			</div>
+
 		</div>
 	</div>
 
-	{% include '_text/mental.html' %}
+
+
+	{% include '_text/federal.html' %}
 
 	<div class="max">
 		<hr>
@@ -40,12 +44,11 @@
 			<!-- Variables are name, email slug and twitter handle -->
 			<div class="group">
 				<p>Reporter</p>
-				{{ credit.info('Erin Allday', 'eallday', 'erinallday' ) }}
+				{{ credit.info('Kevin Fagan', 'kfagan', 'KevinChron' ) }}
 			</div>
 			<div class="group">
 				<p>Interactive producers</p>
 				{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-				{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
 				{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
 			</div>
 		</div>
@@ -54,11 +57,12 @@
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
 		<hr>
+		<div  class="divider-text"></div>
 		<div class="dont-miss">
 
-			{{ related.story("Editorial: SF's homeless problem a civic disgrace", '/sf-homeless/supportive-housing', '../static/images/editorial/thumb.png' ) }}
-
-			{{ related.story("Solution starts with supportive housing", '/sf-homeless/supportive-housing', '../static/images/supportive/thumb.jpg') }}
+			{{ related.story("Editorial: SF's homeless problem a civic disgrace", '/sf-homeless/civic-disgrace', '../static/images/editorial/thumb.png' ) }}
+			
+			{{ related.story("The mentally ill: Streets' costliest residents", '/sf-homeless/mental-health', '../static/images/mental/thumb.jpg') }}
 
 			{{ related.story("Can the shelter system be successful?", '/sf-homeless/shelters', '../static/images/shelters/thumb.jpg') }}
 
@@ -75,18 +79,14 @@
 	</div>
 
 	{% include '_components/_footer.html' %}
+
 </main>
 {% endblock %}
 
 {% block javascript %}
-
-<script src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
-
 <script>
 	$(document).ready(function() {
 		App.init();
 	});
-	var pymParentIllnessMental = new pym.Parent('illness_mental', 'http://projects.sfchronicle.com/2016/homelessness/illness/index.html', {});
-	var pymParentCostsMental = new pym.Parent('costs_mental', 'http://projects.sfchronicle.com/2016/homelessness/costs-aggregate/index.html', {});
 </script>
 {% endblock %}

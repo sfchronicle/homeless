@@ -1224,3 +1224,70 @@ td {
   font-style: italic;
   font-size: 0.7em;
 }
+
+
+#sro {
+    background-image: url(http://ww1.hdnux.com/photos/51/21/44/11851180/5/2000x2000.jpg);
+    background-position: top center;
+
+    h1{
+      text-align:left;
+      margin-bottom:0;
+    }
+    .author{
+      text-align:left;
+    }
+
+    @media (max-width:480px){
+      background-position:56% center;
+    }
+}
+.background-img {
+    height: 800px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: block;
+    z-index: 1;
+
+    @media (max-width:480px){
+      height:600px;
+    }
+}
+.dim {
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0.2;
+    height: 100%;
+    background-color: #000;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.over-img {
+    position: absolute;
+    bottom: 15%;
+    z-index: 2;
+    color: white;
+    left: 1%;
+}
+.deck{
+  max-width:560px;
+}
+
+.title-container{
+  margin-bottom:2em;
+}
+
+.gallery-img{
+  display:none;
+  width:80%;
+  margin:0 auto;
+
+  &.active{
+  display:block;
+  }
+}

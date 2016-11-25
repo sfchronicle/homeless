@@ -85,21 +85,6 @@
 	$(document).ready(function() {
 		App.init();
 	});
-	function sticky_relocate() {
-		var window_top = $(window).scrollTop();
-		var div_top = $('#sticky-anchor').offset().top - 40;
-		if (window_top > div_top) {
-				$('#sticky-element').addClass('sticky');
-				$('.menu-navigation').addClass('sticky');
-		} else {
-				$('#sticky-element').removeClass('sticky');
-				$('.menu-navigation').removeClass('sticky');
-		}
-	}
-	$(function() {
-			$(window).scroll(sticky_relocate);
-			sticky_relocate();
-	});
 
 	var pymParent311 = new pym.Parent('map311', 'http://projects.sfchronicle.com/2016/homelessness/map/index.html', {});
 	var pymParentBycity = new pym.Parent('bycity', 'http://projects.sfchronicle.com/2016/homelessness/bycity/index.html', {});

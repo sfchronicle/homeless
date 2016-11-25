@@ -6,10 +6,10 @@
 {% include '_components/_social.html' %}
 {% endblock %}
 
-{% block hearst_title %}Overview{% endblock %}
+{% block hearst_title %}SRO{% endblock %}
 {% block hearst_class %}article{% endblock %}
-{% block hearst_date %}2016-06-26 00:00:00{% endblock %}
-{% block author %}Kevin Fagan, Lea Suzuki, Brant Ward, Nicole Frugé, Lucio Villa, Emma O'Neill, Rahul Mukherjee, Benjamin Din{% endblock %}
+{% block hearst_date %}2016-11-05 00:00:00{% endblock %}
+{% block author %}Kevin Fagan, Joaquin Palomino, Lucio Villa, Emma O'Neill{% endblock %}
 
 {% block content %}
 <main class="container">
@@ -17,19 +17,19 @@
 	{% include '_components/_header.html' %}
 
 	<div class="title-container">
-		<div>
-			<h1 class="title long">SF homeless problem looks the same as it did 20 years ago</h1>
-			<!-- {% include '_components/_social_links.html' %} -->
-			<p class="author">By Kevin Fagan</p>
-			<p class="date">June 26, 2016</p>
-			<div class="full-width-img">
-			    <img src="{{ url_for('static', filename='images/setup/01-1.jpg') }}">
-			    <p class="caption"><span class="year">Winter 2002</span>  Grimes Poznikov, called the Automatic Human Jukebox when he performed at Fisherman’s Wharf in the 1970s and ’80s, was living on the streets when this photo was taken. Three years later, he was found dead on a city sidewalk from alcohol poisoning.<span class="byline"> Photo: Brant Ward, The Chronicle</span></p>
+		<div id="sro" class="background-img">
+		    <div class="dim"></div>
+			<div class="over-img">
+				<h1 class="title long">SRO headline goes here</h1>
+				<p class="author">Dec. 11, 2016 | By By Kevin Fagan & Joaquin Palomino</p>
+				<p class="deck">Top schools ramp up recruiting of Antioch's Najee Harris, the nation’s No. 1 football prospect</p>
 			</div>
 		</div>
+		<p class="caption">Crosby Hotel resident Grafton "Wes" Jones knocks on fellow resident Anna Hobbs' door in San Francisco, Calif., on Monday, November 14, 2016. Jones and Hobbs have both lived in the Tenderloin SRO for the past 10 years.</p>
 	</div>
 
-	{% include '_text/setup.html' %}
+
+	{% include '_text/sro.html' %}
 
 	<div class="max">
 		<hr>
@@ -43,7 +43,6 @@
 			<div class="group">
 				<p>Interactive producers</p>
 				{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-				{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
 				{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
 			</div>
 		</div>
@@ -52,45 +51,40 @@
 	{% import '_components/_related_stories.html' as related %}
 	<div class="max">
 		<hr>
-		<!-- <div  class="divider-text">Read related stories</div> -->
+		<div  class="divider-text"></div>
 		<div class="dont-miss">
 
 			{{ related.story("Editorial: SF's homeless problem a civic disgrace", '/sf-homeless/civic-disgrace', '../static/images/editorial/thumb.png' ) }}
-
-			{{ related.story("Solution starts with supportive housing", '/sf-homeless/supportive-housing', '../static/images/supportive/thumb.jpg') }}
-
+			
 			{{ related.story("The mentally ill: Streets' costliest residents", '/sf-homeless/mental-health', '../static/images/mental/thumb.jpg') }}
 
 			{{ related.story("Can the shelter system be successful?", '/sf-homeless/shelters', '../static/images/shelters/thumb.jpg') }}
 
 			{{ related.story("Can law enforcement curb the crisis?", '/sf-homeless/encampments', '../static/images/camping/thumb.jpg') }}
 
-			{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg') }}
+			{{ related.story("A problem that looked the same 20 years ago", '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg' ) }}
 
-			{{ related.story("Faces of homelessness: Portraits of life on SF's streets", '/sf-homeless/faces-of-the-streets', '../static/images/portraits/07_thumb.jpg') }}
+			{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg' ) }}
 
-			{{ related.story("In their words: How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg') }}
+			{{ related.story("Portraits of life on SF's streets", '/sf-homeless/faces-of-the-streets', '../static/images/portraits/07_thumb.jpg' ) }}
 
+			{{ related.story("How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg' ) }}
 		</div>
 	</div>
 
-
 	{% include '_components/_footer.html' %}
+
 </main>
 {% endblock %}
 
 {% block javascript %}
-
-<script src="http://projects.sfchronicle.com/shared/js/pym.min.js"></script>
-
 <script>
 	$(document).ready(function() {
 		App.init();
 	});
-
 	// for photo gallery
 	var gallery1_idx = 0;
-	var gallery_len = 13;
+	var gallery_len = 6;
 	// set up clicking to update map interactive on mobile
 	document.getElementById("scrollRight-Gallery1").addEventListener("click", function() {
 	  gallery1_idx = gallery1_idx+1;
@@ -123,8 +117,39 @@
 	  };
 	});
 
-	var pymParent = new pym.Parent('usmap', '{{ url_for('static', filename='interactives/setup/usmap.html') }}', {});
-	var pymParenttwo = new pym.Parent('sfmap', '{{ url_for('static', filename='interactives/setup/sfmap.html') }}', {});
+	// for photo gallery
+	var gallery2_idx = 0;
+	var gallery_len = 6;
+	// set up clicking to update map interactive on mobile
+	document.getElementById("scrollRight-Gallery2").addEventListener("click", function() {
+	  gallery2_idx = gallery2_idx+1;
+	  $(".photoG2").removeClass("active");
+	  $("#photoG2"+gallery2_idx).addClass("active");
+	  if (gallery2_idx == (gallery_len-1)) {
+	    $("#scrollRight-Gallery2").addClass("last");
+	  } else {
+	    $("#scrollRight-Gallery2").removeClass("last");
+	  };
+	  if (gallery2_idx == 0) {
+	    $("#scrollLeft-Gallery2").addClass("first");
+	  } else {
+	    $("#scrollLeft-Gallery2").removeClass("first");
+	  };
+	});
+	document.getElementById("scrollLeft-Gallery2").addEventListener("click", function() {
+	  gallery2_idx = gallery2_idx-1;
+	  $(".photoG2").removeClass("active");
+	  $("#photoG2"+gallery2_idx).addClass("active");
+	  if (gallery2_idx == (gallery_len-1)) {
+	    $("#scrollRight-Gallery2").addClass("last");
+	  } else {
+	    $("#scrollRight-Gallery2").removeClass("last");
+	  };
+	  if (gallery2_idx == 0) {
+	    $("#scrollLeft-Gallery2").addClass("first");
+	  } else {
+	    $("#scrollLeft-Gallery2").removeClass("first");
+	  };
+	});
 </script>
-
 {% endblock %}
