@@ -116,10 +116,10 @@ def letter_of_intent():
 @app.route('/sro/')
 def sro():
     return render_template('sro.html',
-        slug='',
-        title='',
-        description='',
-        twitter_text='')
+        slug='hotels',
+        title='Aging hotels, chronic problems',
+        description='SF Homeless Project: Most San Francisco housing for the homeless is a century old; even refurbished, severe health and safety issues can abound.',
+        twitter_text='Aging hotels, chronic problems: SROs raise health, safety issues for housing homeless.')
 
 @app.route('/federal/')
 def federal():

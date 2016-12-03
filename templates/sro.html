@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{title}}{% endblock %}
+{% block title %}Aging SRO hotels raise health, safety issues for housing homeless{% endblock %}
 
 {% block head %}
 {% include '_components/_social.html' %}
@@ -8,8 +8,8 @@
 
 {% block hearst_title %}SRO{% endblock %}
 {% block hearst_class %}article{% endblock %}
-{% block hearst_date %}2016-11-05 00:00:00{% endblock %}
-{% block author %}Kevin Fagan, Joaquin Palomino, Lucio Villa, Emma O'Neill{% endblock %}
+{% block hearst_date %}2016-12-05 00:00:00{% endblock %}
+{% block author %}Kevin Fagan, Joaquin Palomino, Lucio Villa{% endblock %}
 
 {% block content %}
 <main class="container">
@@ -19,13 +19,13 @@
 	<div class="title-container">
 		<div id="sro" class="background-img">
 		    <div class="dim"></div>
-			<div class="over-img">
-				<h1 class="title long">SRO headline goes here</h1>
-				<p class="author">Dec. 11, 2016 | By By Kevin Fagan & Joaquin Palomino</p>
-				<p class="deck">Top schools ramp up recruiting of Antioch's Najee Harris, the nation’s No. 1 football prospect</p>
+			<div class="over-img sro">
+				<h1 class="title long sro">Aging hotels, chronic problems</h1>
+				<p class="author">Dec. 5, 2016 | By Kevin Fagan & Joaquin Palomino</p>
+				<p class="deck"><span class="investigation">Chronicle Investigation</span><br>Most S.F. housing for the homeless is a century old; even refurbished, severe health and safety issues can abound</p>
 			</div>
 		</div>
-		<p class="caption">Crosby Hotel resident Grafton "Wes" Jones knocks on fellow resident Anna Hobbs' door in San Francisco, Calif., on Monday, November 14, 2016. Jones and Hobbs have both lived in the Tenderloin SRO for the past 10 years.</p>
+		<p class="caption">Crosby Hotel resident Grafton Wesley Jones knocks on fellow resident Anna Hobbs' door. Jones and Hobbs have lived in the Tenderloin SRO for the past 10 years. <span class="byline">Scott Strazzante, The Chronicle</span></p>
 	</div>
 
 
@@ -37,8 +37,13 @@
 			{% import '_components/_credits.html' as credit %}
 			<!-- Variables are name, email slug and twitter handle -->
 			<div class="group">
-				<p>Reporter</p>
+				<p>Reporters</p>
 				{{ credit.info('Kevin Fagan', 'kfagan', 'KevinChron' ) }}
+				{{ credit.info('Joaquin Palomino', 'jpalomino', 'JoaquinPalomino' ) }}
+			</div>
+			<div class="group">
+				<p>Photographer</p>
+				{{ credit.info('Scott Strazzante', 'sstrazzante', 'ScottStrazzante' ) }}
 			</div>
 			<div class="group">
 				<p>Interactive producers</p>
@@ -54,21 +59,21 @@
 		<div  class="divider-text"></div>
 		<div class="dont-miss">
 
-			{{ related.story("Editorial: SF's homeless problem a civic disgrace", '/sf-homeless/civic-disgrace', '../static/images/editorial/thumb.png' ) }}
+			{{ related.story("Editorial: SF's homeless problem a civic disgrace", 'http://projects.sfchronicle.com/sf-homeless/civic-disgrace', 'http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png' ) }}
 			
-			{{ related.story("The mentally ill: Streets' costliest residents", '/sf-homeless/mental-health', '../static/images/mental/thumb.jpg') }}
+			{{ related.story("The mentally ill: Streets' costliest residents", 'http://projects.sfchronicle.com/sf-homeless/mental-health', 'http://projects.sfchronicle.com/sf-homeless/static/images/mental/thumb.jpg') }}
 
-			{{ related.story("Can the shelter system be successful?", '/sf-homeless/shelters', '../static/images/shelters/thumb.jpg') }}
+			{{ related.story("Can the shelter system be successful?", 'http://projects.sfchronicle.com/sf-homeless/shelters', 'http://projects.sfchronicle.com/sf-homeless/static/images/shelters/thumb.jpg') }}
 
-			{{ related.story("Can law enforcement curb the crisis?", '/sf-homeless/encampments', '../static/images/camping/thumb.jpg') }}
+			{{ related.story("Can law enforcement curb the crisis?", 'http://projects.sfchronicle.com/sf-homeless/encampments', 'http://projects.sfchronicle.com/sf-homeless/static/images/camping/thumb.jpg') }}
 
-			{{ related.story("A problem that looked the same 20 years ago", '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg' ) }}
+			{{ related.story("A problem that looked the same 20 years ago", 'http://projects.sfchronicle.com/sf-homeless/overview', 'http://projects.sfchronicle.com/sf-homeless/static/images/setup/01_thumb.jpg' ) }}
 
-			{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg' ) }}
+			{{ related.story("How many people live on our streets?", 'http://projects.sfchronicle.com/sf-homeless/numbers', 'http://projects.sfchronicle.com/sf-homeless/static/images/data/10_thumb.jpg' ) }}
 
-			{{ related.story("Portraits of life on SF's streets", '/sf-homeless/faces-of-the-streets', '../static/images/portraits/07_thumb.jpg' ) }}
+			{{ related.story("Portraits of life on SF's streets", 'http://projects.sfchronicle.com/sf-homeless/faces-of-the-streets', 'http://projects.sfchronicle.com/sf-homeless/static/images/portraits/07_thumb.jpg' ) }}
 
-			{{ related.story("How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg' ) }}
+			{{ related.story("How SF's last 5 mayors tackled homelessness", 'http://projects.sfchronicle.com/sf-homeless/letters-from-the-mayors', 'http://projects.sfchronicle.com/sf-homeless/static/images/insight/mayors.jpg' ) }}
 		</div>
 	</div>
 
@@ -78,6 +83,7 @@
 {% endblock %}
 
 {% block javascript %}
+<script src="http://projects.sfchronicle.com/shared/js/responsive-frame.js"></script>
 <script>
 	$(document).ready(function() {
 		App.init();
@@ -119,13 +125,13 @@
 
 	// for photo gallery
 	var gallery2_idx = 0;
-	var gallery_len = 6;
+	var gallery2_len = 5;
 	// set up clicking to update map interactive on mobile
 	document.getElementById("scrollRight-Gallery2").addEventListener("click", function() {
 	  gallery2_idx = gallery2_idx+1;
 	  $(".photoG2").removeClass("active");
 	  $("#photoG2"+gallery2_idx).addClass("active");
-	  if (gallery2_idx == (gallery_len-1)) {
+	  if (gallery2_idx == (gallery2_len-1)) {
 	    $("#scrollRight-Gallery2").addClass("last");
 	  } else {
 	    $("#scrollRight-Gallery2").removeClass("last");
@@ -140,7 +146,7 @@
 	  gallery2_idx = gallery2_idx-1;
 	  $(".photoG2").removeClass("active");
 	  $("#photoG2"+gallery2_idx).addClass("active");
-	  if (gallery2_idx == (gallery_len-1)) {
+	  if (gallery2_idx == (gallery2_len-1)) {
 	    $("#scrollRight-Gallery2").addClass("last");
 	  } else {
 	    $("#scrollRight-Gallery2").removeClass("last");
@@ -151,5 +157,48 @@
 	    $("#scrollLeft-Gallery2").removeClass("first");
 	  };
 	});
+
+	// for photo gallery
+	var gallery3_idx = 0;
+	var gallery3_len = 4;
+	// set up clicking to update map interactive on mobile
+	document.getElementById("scrollRight-Gallery3").addEventListener("click", function() {
+	  gallery3_idx = gallery3_idx+1;
+	  $(".photoG3").removeClass("active");
+	  $("#photoG3"+gallery3_idx).addClass("active");
+	  if (gallery3_idx == (gallery3_len-1)) {
+	    $("#scrollRight-Gallery3").addClass("last");
+	  } else {
+	    $("#scrollRight-Gallery3").removeClass("last");
+	  };
+	  if (gallery3_idx == 0) {
+	    $("#scrollLeft-Gallery3").addClass("first");
+	  } else {
+	    $("#scrollLeft-Gallery3").removeClass("first");
+	  };
+	});
+	document.getElementById("scrollLeft-Gallery3").addEventListener("click", function() {
+	  gallery3_idx = gallery3_idx-1;
+	  $(".photoG3").removeClass("active");
+	  $("#photoG3"+gallery3_idx).addClass("active");
+	  if (gallery3_idx == (gallery3_len-1)) {
+	    $("#scrollRight-Gallery3").addClass("last");
+	  } else {
+	    $("#scrollRight-Gallery3").removeClass("last");
+	  };
+	  if (gallery3_idx == 0) {
+	    $("#scrollLeft-Gallery3").addClass("first");
+	  } else {
+	    $("#scrollLeft-Gallery3").removeClass("first");
+	  };
+	});
+
+	 $('.sidebar-controls').on('click', function() {
+          $('#sidebar').hide();
+      });
+
+	 $('#sro-sidebar').on('click', function() {
+          $('#sidebar').show();
+      });
 </script>
 {% endblock %}
