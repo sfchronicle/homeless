@@ -113,7 +113,7 @@ def letter_of_intent():
     	description='SF Homeless Project: We, along with 70 other news outlets, aim to provide you with the information and potential options to put San Francisco on a better path.',
     	twitter_text='A unified front in the search for answers')
 
-@app.route('/sro/')
+@app.route('/hotels/')
 def sro():
     return render_template('sro.html',
         slug='hotels',

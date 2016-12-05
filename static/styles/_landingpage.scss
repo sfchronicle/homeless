@@ -99,7 +99,7 @@
     color: $red;
 
     @media #{$mobile} {
-        font-size: 1.5em;
+        font-size: 1.25em;
         line-height: 1.2;
     }
 }
@@ -253,7 +253,7 @@
         text-align: center;
 
         @media #{$mobile} {
-            font-size:1.7em;
+            font-size:1.3em;
         }
     }
 
@@ -265,6 +265,10 @@
         font-size:0.8em;
         text-align: center !important;
         color: #ec1c24;
+
+        @media (max-width:480px){
+            font-size:0.6em;
+        }
     }
 
     p {
@@ -300,8 +304,4 @@
 #button-links{
 	max-width: 600px;
   margin: 0 auto;
-}
-
-.btn-stories{
-	float:left;
 }

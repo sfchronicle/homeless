@@ -580,25 +580,32 @@ footer {
   max-width: 900px;
   margin: auto;
   display: flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  -webkit-flex-wrap: wrap;
   font-size: 17px;
   font-family: $block-graphics;
 
   .story {
     flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
+
 
     &.three {
       flex: 0 0 33%;
+      -webkit-flex: 0 0 33%;
 
         @media screen and (max-width: 560px) {
             flex: 1 1 100%;
+            -webkit-flex: 1 1 100%;
        }
     }
 
 
      @media screen and (max-width: 560px) {
           flex: 1 1 100%;
+          -webkit-flex: 1 1 100%;
      }
 
     & a {
@@ -671,7 +678,7 @@ hr{
   color: #585858;
   font-family: $sans-serif;
   margin: 0 2em 2em;
-  font-size: 15px;
+  font-size: 14px;
   border-left: 5px solid #ccc;
   padding-right: 2em;
 
@@ -1281,7 +1288,7 @@ td {
     left: 0;
     right: 0;
     z-index: 2;
-    opacity: 0.2;
+    opacity: 0.3;
     height: 100%;
     background-color: #000;
     width: 100%;
@@ -1298,7 +1305,8 @@ td {
 
     &.sro{
       @media (max-width:480px){
-        bottom:20%;
+        bottom: 17%;
+        text-shadow: 1px 1px 1px #000;
       }
     }
 
@@ -1385,18 +1393,18 @@ td {
 .sidebar-controls {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: -2px 1px 0.25em 0 rgba(0, 0, 0, 0.05);
-    position: absolute;
+    position: fixed;
     width: 25px;
     top: 20px;
-    left: -24px;
+    z-index:100;
+    left: 14px;
     padding-left:2px;
     background-color: #fff;
     border-width: 1px 0 1px 1px;
     border-style: solid;
     border-color: #e2e2e2;
-    color: #999;
-    font-family:AntennaBlack;
+    color: $red;
+    font-family: sans-serif;
     cursor: pointer;
 }
 

@@ -41,7 +41,7 @@
             <p class="subhead">
             The Chronicle has joined with more than 70 other news organizations to focus attention on the seemingly intractable problem of homelessness in the Bay Area. As part of the SF Homeless Project, The Chronicle's Beyond Homelessness series explores possible solutions that might ease, if not end, the suffering of thousands of people living on our streets, and improve the quality of life for all residents. To date, the SF Homeless Project has been emulated in more than a dozen U.S. cities where homelessness remains a humanitarian crisis.</p>
 
-            <div class="button radius btn-stories">Read the stories</div>
+            <div class="button radius" id="btn-stories">Read the stories</div>
             <div class="button radius btn-videos">View the Videos</div>
         </div>
 
@@ -50,11 +50,11 @@
     <div id="stories">
 
         <div class="stories-container-2">
-            <a href="http://projects.sfchronicle.com/2016/candidates-homeless-survey/">
+            <a href="{{ url_for('sro') }}">
                 <div class="banner">
-                    <p class="cat">VOTER GUIDE</p>
-                    <h2>Candidates' views on homelessness</h2>
-                    <p class="deck">We reached out to the contenders for key federal, state and local offices for their position on one of the region's most vital issues.</p>
+                    <p class="cat">CHRONICLE INVESTIGATION</p>
+                     <h2>Aging hotels, chronic problems</h2>
+                    <p class="deck">Most S.F. housing for the homeless is a century old; even refurbished, severe health and safety issues can abound</p>
                 </div>
             </a>
         </div>
@@ -115,9 +115,6 @@
         <div id="button-links">
             <div class="btn-stories">
                 <a href="{{ url_for('letter_of_intent') }}"><div class="button radius">Read the letter to the city</div></a>
-            </div>
-            <div class="btn-stories">
-                <a href="{{ url_for('letter_of_intent') }}"><div class="button radius">Voter Guide</div></a>
             </div>
         </div>
     </div>
@@ -298,7 +295,7 @@
 		App.init();
 	});
     
-    $(".btn-stories").click(function() {
+    $("#btn-stories").click(function() {
         $('html, body').animate({
             scrollTop: $("#stories").offset().top - 50
         }, 500);
