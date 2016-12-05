@@ -434,6 +434,7 @@ footer {
       line-height: 1;
       font-size: 1.6em;
     }
+
     }
   }
 }
@@ -684,6 +685,10 @@ hr{
 
   &.sro{
     font-size:0.9em;
+  }
+
+  &.ssi{
+    font-size:0.66em;
   }
 
   @media (max-width: 890px){
@@ -1270,6 +1275,8 @@ td {
       background-position:56% center;
     }
 }
+
+
 .background-img {
     height: 800px;
     background-size: cover;
@@ -1310,6 +1317,14 @@ td {
       }
     }
 
+    &.ssi{
+      left:2%;
+      bottom:20%;
+      right:initial;
+      text-align:left;
+      text-shadow: 1px 1px 1px #000;
+    }
+
     @media (max-width:480px){
       left:0;
       right:0;  
@@ -1318,9 +1333,19 @@ td {
 .deck{
   max-width:420px;
   margin-right:0;
-  @media (max-width:480px){
-        text-align:center;
-      }
+    
+    @media (max-width:480px){
+      text-align:center;
+    }
+
+  &.ssi{
+    margin:0 auto;
+    max-width:500px;
+    
+    @media (max-width:480px){
+      text-align:left;
+    }
+  }
 }
 
 .title-container{
@@ -1393,12 +1418,12 @@ td {
 .sidebar-controls {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    position: fixed;
+    position: absolute;
     width: 25px;
     top: 20px;
     z-index:100;
-    left: 14px;
-    padding-left:2px;
+    left: -23px;
+    padding-left:5px;
     background-color: #fff;
     border-width: 1px 0 1px 1px;
     border-style: solid;
@@ -1419,5 +1444,32 @@ td {
 
     @media (max-width:480px){
     padding:50px 20px;
+    }
+}
+
+#ssi {
+    background-image: url(http://ww1.hdnux.com/photos/51/21/44/11878354/5/2000x2000.jpg);
+    background-position: center;
+
+    h1{
+      margin-left:0;
+      max-width:500px;
+      margin-bottom:0;
+      text-align:left;
+      font-size:47px;
+
+      @media (max-width:480px){
+        font-size:1.6em;
+      }
+    }
+    .author{
+      text-align:left;
+      @media (max-width:480px){
+      
+      }
+    }
+
+    @media (max-width:480px){
+      background-position:70% top;
     }
 }

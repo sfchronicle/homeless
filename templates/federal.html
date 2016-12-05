@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}{{title}}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block head %}
 {% include '_components/_social.html' %}
 {% endblock %}
 
-{% block hearst_title %}Federal{% endblock %}
+{% block hearst_title %}SSI{% endblock %}
 {% block hearst_class %}article{% endblock %}
-{% block hearst_date %}2016-12-05 00:00:00{% endblock %}
-{% block author %}Kevin Fagan, Joaquin Palomino, Lucio Villa, Emma O'Neill{% endblock %}
+{% block hearst_date %}2016-12-06 00:00:00{% endblock %}
+{% block author %}Kurtis Alexander, Lucio Villa{% endblock %}
 
 {% block content %}
 <main class="container">
@@ -17,22 +17,16 @@
 	{% include '_components/_header.html' %}
 
 	<div class="title-container">
-		<div>
-			<h1 class="title long">Federal story headline goes here</h1>
-			<div class="whatif-box">
-				Could San Francisco increase its stock of supportive housing by enough units to get all of the neediest homeless people off its streets in just two years?
+		<div id="ssi" class="background-img">
+		    <div class="dim ssi"></div>
+			<div class="over-img ssi">
+				<h1 class="title long">For disabled homeless, federal benefits elusive</h1>
+				<p class="author">Dec. 5, 2016 | By Kurtis Alexander</p>
+				<p class="deck ssi">S.F. boosting efforts to help thousands eligible for SSI payments qualify for aid, get off streets</p>
 			</div>
-
-			<p class="author">By Kevin Fagan</p>
-			<p class="date">Dec. 5, 2016</p>
-			<div class="full-width-img">
-					<img src="{{ url_for('static', filename='images/supportive/homeless_supportive_PH1.jpg') }}">
-					<p class="caption"><span class="year">May 10, 2016 </span> A former heroin addict who has spent many of his 62 years behind bars, Kenney Williams is grateful for his place in the Health Department’s Mission Creek housing project near AT&T Park. “If not for this, I’d be going downhill fast,” he said.<span class="byline"> Photo: Lea Suzuki, The Chronicle</span></p>
-			</div>
-
 		</div>
+		<p class="caption">Brian Devlin and his girlfriend, Ashley Borst, are trying to get federal disability assistance to continue their rebound from homelessness. <span class="byline">Liz Hafalia, The Chronicle</span></p>
 	</div>
-
 
 
 	{% include '_text/federal.html' %}
@@ -44,12 +38,16 @@
 			<!-- Variables are name, email slug and twitter handle -->
 			<div class="group">
 				<p>Reporter</p>
-				{{ credit.info('Kevin Fagan', 'kfagan', 'KevinChron' ) }}
+				{{ credit.info('Kurtis Alexander', 'kalexander', 'kurtisalexander' ) }}
 			</div>
 			<div class="group">
-				<p>Interactive producers</p>
+				<p>Photographers</p>
+				{{ credit.info('Liz Hafalia', 'lhafalia' ) }}
+				{{ credit.info('Paul Chinn', 'pchinn', 'chinnski' ) }}
+			</div>
+			<div class="group">
+				<p>Interactive producer</p>
 				{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-				{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
 			</div>
 		</div>
 	</div>
@@ -60,21 +58,21 @@
 		<div  class="divider-text"></div>
 		<div class="dont-miss">
 
-			{{ related.story("Editorial: SF's homeless problem a civic disgrace", '/sf-homeless/civic-disgrace', '../static/images/editorial/thumb.png' ) }}
+			{{ related.story("Editorial: SF's homeless problem a civic disgrace", 'http://projects.sfchronicle.com/sf-homeless/civic-disgrace', 'http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png' ) }}
 			
-			{{ related.story("The mentally ill: Streets' costliest residents", '/sf-homeless/mental-health', '../static/images/mental/thumb.jpg') }}
+			{{ related.story("The mentally ill: Streets' costliest residents", 'http://projects.sfchronicle.com/sf-homeless/mental-health', 'http://projects.sfchronicle.com/sf-homeless/static/images/mental/thumb.jpg') }}
 
-			{{ related.story("Can the shelter system be successful?", '/sf-homeless/shelters', '../static/images/shelters/thumb.jpg') }}
+			{{ related.story("Can the shelter system be successful?", 'http://projects.sfchronicle.com/sf-homeless/shelters', 'http://projects.sfchronicle.com/sf-homeless/static/images/shelters/thumb.jpg') }}
 
-			{{ related.story("Can law enforcement curb the crisis?", '/sf-homeless/encampments', '../static/images/camping/thumb.jpg') }}
+			{{ related.story("Can law enforcement curb the crisis?", 'http://projects.sfchronicle.com/sf-homeless/encampments', 'http://projects.sfchronicle.com/sf-homeless/static/images/camping/thumb.jpg') }}
 
-			{{ related.story("A problem that looked the same 20 years ago", '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg' ) }}
+			{{ related.story("A problem that looked the same 20 years ago", 'http://projects.sfchronicle.com/sf-homeless/overview', 'http://projects.sfchronicle.com/sf-homeless/static/images/setup/01_thumb.jpg' ) }}
 
-			{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg' ) }}
+			{{ related.story("How many people live on our streets?", 'http://projects.sfchronicle.com/sf-homeless/numbers', 'http://projects.sfchronicle.com/sf-homeless/static/images/data/10_thumb.jpg' ) }}
 
-			{{ related.story("Portraits of life on SF's streets", '/sf-homeless/faces-of-the-streets', '../static/images/portraits/07_thumb.jpg' ) }}
+			{{ related.story("Portraits of life on SF's streets", 'http://projects.sfchronicle.com/sf-homeless/faces-of-the-streets', 'http://projects.sfchronicle.com/sf-homeless/static/images/portraits/07_thumb.jpg' ) }}
 
-			{{ related.story("How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg' ) }}
+			{{ related.story("How SF's last 5 mayors tackled homelessness", 'http://projects.sfchronicle.com/sf-homeless/letters-from-the-mayors', 'http://projects.sfchronicle.com/sf-homeless/static/images/insight/mayors.jpg' ) }}
 		</div>
 	</div>
 

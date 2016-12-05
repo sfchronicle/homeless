@@ -121,10 +121,10 @@ def sro():
         description='SF Homeless Project: Most San Francisco housing for the homeless is a century old; even refurbished, severe health and safety issues can abound.',
         twitter_text='Aging hotels, chronic problems: SROs raise health, safety issues for housing homeless.')
 
-@app.route('/federal/')
+@app.route('/benefits/')
 def federal():
     return render_template('federal.html',
-        slug='',
+        slug='benefits',
         title='',
         description='',
         twitter_text='')
