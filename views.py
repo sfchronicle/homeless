@@ -125,6 +125,6 @@ def sro():
 def federal():
     return render_template('federal.html',
         slug='benefits',
-        title='',
-        description='',
-        twitter_text='')
+        title='The plight of disabled homeless in S.F.',
+        description='S.F. Homeless Project: The city is boosting efforts to help thousands eligible for federal payments qualify for aid and get off the streets.',
+        twitter_text='For disabled homeless in San Francisco, federal benefits remain elusive.')

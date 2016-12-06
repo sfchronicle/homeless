@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}For San Francisco's disabled homeless, federal benefits remain elusive{% endblock %}
 
 {% block head %}
 {% include '_components/_social.html' %}
@@ -21,8 +21,8 @@
 		    <div class="dim ssi"></div>
 			<div class="over-img ssi">
 				<h1 class="title long">For disabled homeless, federal benefits elusive</h1>
-				<p class="author">Dec. 5, 2016 | By Kurtis Alexander</p>
-				<p class="deck ssi">S.F. boosting efforts to help thousands eligible for SSI payments qualify for aid, get off streets</p>
+				<p class="author">Dec. 6, 2016 | By Kurtis Alexander</p>
+				<p class="deck ssi">S.F. is boosting efforts to help thousands eligible for SSI payments qualify for aid and get off the streets</p>
 			</div>
 		</div>
 		<p class="caption">Brian Devlin and his girlfriend, Ashley Borst, are trying to get federal disability assistance to continue their rebound from homelessness. <span class="byline">Liz Hafalia, The Chronicle</span></p>
@@ -35,7 +35,6 @@
 		<hr>
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
-			<!-- Variables are name, email slug and twitter handle -->
 			<div class="group">
 				<p>Reporter</p>
 				{{ credit.info('Kurtis Alexander', 'kalexander', 'kurtisalexander' ) }}
@@ -58,6 +57,8 @@
 		<div  class="divider-text"></div>
 		<div class="dont-miss">
 
+			{{ related.story("Aging hotels, chronic problems", 'http://projects.sfchronicle.com/sf-homeless/hotels', 'http://projects.sfchronicle.com/sf-homeless/static/images/hotels/thumb.jpg' ) }}
+
 			{{ related.story("Editorial: SF's homeless problem a civic disgrace", 'http://projects.sfchronicle.com/sf-homeless/civic-disgrace', 'http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png' ) }}
 			
 			{{ related.story("The mentally ill: Streets' costliest residents", 'http://projects.sfchronicle.com/sf-homeless/mental-health', 'http://projects.sfchronicle.com/sf-homeless/static/images/mental/thumb.jpg') }}
@@ -71,8 +72,6 @@
 			{{ related.story("How many people live on our streets?", 'http://projects.sfchronicle.com/sf-homeless/numbers', 'http://projects.sfchronicle.com/sf-homeless/static/images/data/10_thumb.jpg' ) }}
 
 			{{ related.story("Portraits of life on SF's streets", 'http://projects.sfchronicle.com/sf-homeless/faces-of-the-streets', 'http://projects.sfchronicle.com/sf-homeless/static/images/portraits/07_thumb.jpg' ) }}
-
-			{{ related.story("How SF's last 5 mayors tackled homelessness", 'http://projects.sfchronicle.com/sf-homeless/letters-from-the-mayors', 'http://projects.sfchronicle.com/sf-homeless/static/images/insight/mayors.jpg' ) }}
 		</div>
 	</div>
 
