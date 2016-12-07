@@ -49,59 +49,92 @@
 
     <div id="stories">
 
-        <div class="stories-container-2">
-            <a href="{{ url_for('sro') }}">
-                <div class="banner">
-                    <p class="cat">CHRONICLE INVESTIGATION</p>
-                     <h2>Aging hotels, chronic problems</h2>
-                    <p class="deck">Most S.F. housing for the homeless is a century old; even refurbished, severe health and safety issues can abound</p>
-                </div>
-            </a>
-        </div>
+        <div class="stories-container small-up-2 medium-up-3 large-up-3" style="width: 100%; clear: both;">
 
-        <div class="stories-container small-up-1 medium-up-3 large-up-3" style="width: 100%; clear: both;">
+            <div class="column">
+                <a href="http://www.sfchronicle.com/opinion/editorials/article/S-F-homelessness-Still-a-long-way-to-go-10778795.php"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/second-editorial/thumb.jpg">
+                    <h5>S.F. homelessness: Still a long way to go</h5>
+                </a>
+            </div>
+
+            <div class="column">
+                <a href="http://projects.sfchronicle.com/sf-homeless/how-to-help/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/how-to-help/thumb.jpg">
+                    <h5>Interactive guide: How to help homeless in Bay Area</h5>
+                </a>
+            </div>
+
+            <div class="column">
+                <a href="http://projects.sfchronicle.com/sf-homeless/division-street-map/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/division-street-map/thumb.gif">
+                    <h5>Interactive map: 7 lives, 7 paths, little change</h5>
+                </a>
+            </div>
+
+            <div class="column">
+                <a href="http://projects.sfchronicle.com/sf-homeless/division-street/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/division-street/thumb.jpg">
+                    <h5>After Division Street: No simple path to ending tent cities</h5>
+                </a>
+            </div>
+
+            <div class="column">
+                <a href="{{ url_for('federal') }}"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/benefits/thumb.jpg">
+                    <h5>Seeking help: Federal disability aid an elusive solution</h5>
+                </a>
+            </div>
+
+            <div class="column">
+                <a href="{{ url_for('sro') }}"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/hotels/thumb.jpg">
+                    <h5>Chronicle investigation: Aging hotels, chronic problems</h5>
+                </a>
+            </div>
+            
+            <div class="column">
+                <a href="http://www.sfchronicle.com/bayarea/article/SF-Homeless-Project-What-has-changed-in-response-10688659.php"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/second-follow-up/thumb.jpg">
+                    <h5>SF Homeless Project resumes this week</h5>
+                </a>
+            </div>
 
             <div class="column">
                 <a href="{{ url_for('supportive') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/supportive/thumb.jpg') }}">
-                    <h5>Solution starts with supportive housing</h5>
+                    <h5>Solution possible: Answer starts with supportive housing</h5>
                 </a>
             </div>
+
             <div class="column">
                 <a href="{{ url_for('mental') }}">
                     <img class="thumbnail" src="{{ url_for('static', filename='images/mental/thumb.jpg') }}">
-                    <h5>The mentally ill: Streets' costliest residents</h5>
+                    <h5>Streets’ sickest: Helping the mentally ill comes at huge cost</h5>
                 </a>
             </div>
             <div class="column">
                 <a href="{{ url_for('shelters') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/shelters/thumb.jpg') }}">
-                    <h5>Can the shelter system be successful?</h5>
+                    <h5>Shelter system: Can a smarter model find success?</h5>
                 </a>
             </div>
             <div class="column">
                 <a href="{{ url_for('camping') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/camping/thumb.jpg') }}">
-                    <h5>Can law enforcement curb the crisis?</h5>
+                    <h5>Law enforcement: Can stricter rules curb the crisis?</h5>
                 </a>
             </div>
 
             <div class="column">
                 <a href="{{ url_for('setup') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/setup/01_thumb.jpg') }}">
-                    <h5>A problem that looked the same 20 years ago</h5>
+                    <h5>Long-term view: A problem that looked the same 20 years ago</h5>
                 </a>
             </div>
             <div class="column">
                 <a href="{{ url_for('data') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/data/10_thumb.jpg') }}">
-                    <h5>How many people live on our streets?</h5>
+                    <h5>Data analysis: How many people live on our streets?</h5>
                 </a>
             </div>
             <div class="column">
                 <a href="{{ url_for('photos') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/portraits/07_thumb.jpg') }}">
-                    <h5>Portraits of life on SF's streets</h5>
+                    <h5>Photographer’s lens: Portraits of life on SF's streets</h5>
                 </a>
             </div>
             <div class="column">
                 <a href="{{ url_for('insight') }}">
-                    <img class="thumbnail" src="{{ url_for('static', filename='images/insight/mayors.jpg') }}">
-                    <h5>How SF's last 5 mayors tackled homelessness</h5>
+                    <img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/insight/thumb.jpg">
+                    <h5>In their voices: How SF's last 5 mayors tackled homelessness</h5>
                 </a>
             </div>
              <div class="column">
@@ -111,12 +144,21 @@
                 </a>
             </div>
 
-        </div>        
-        <div id="button-links">
-            <div class="btn-stories">
-                <a href="{{ url_for('letter_of_intent') }}"><div class="button radius">Read the letter to the city</div></a>
+             <div class="column">
+                <a href="http://projects.sfchronicle.com/2016/candidates-homeless-survey/">
+                    <img src="http://projects.sfchronicle.com/2016/candidates-homeless-survey/assets/social.jpg">
+                    <h5>Election 2016: How the candidates view homelessness</h5>
+                </a>
             </div>
-        </div>
+
+             <div class="column">
+                <a href="{{ url_for('letter_of_intent') }}">
+                    <img src="http://projects.sfchronicle.com/sf-homeless/static/images/social/letter-to-the-city.jpg">
+                    <h5>Letter to the City: The time to act is now</h5>
+                </a>
+            </div>
+
+        </div> 
     </div>
     <hr class="video-hr">
     <!-- VIDEO PLAYER -->
@@ -209,6 +251,11 @@
             {{ partner.info("In Menlo", "http://inmenlo.com" ) }}
             {{ partner.info("CNBC", "http://www.cnbc.com" ) }}
             {{ partner.info("New Fillmore", "http://newfillmore.com" ) }}
+            {{ partner.info("E'Ville Eye", "https://evilleeye.com/" ) }}
+            {{ partner.info("Huffington Post", "http://www.huffingtonpost.com/" ) }}
+            {{ partner.info("Metro", "http://www.metrosiliconvalley.com/" ) }}
+            {{ partner.info("Santa Rosa Press Democrat", "http://www.pressdemocrat.com/" ) }}
+            {{ partner.info("The Guardsman", "http://theguardsman.com/" ) }}
        </div>
     </div>
 
