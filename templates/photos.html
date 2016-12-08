@@ -334,7 +334,7 @@
 
         </script>
 
-	<div class="max" style="clear: both;">
+	<div class="max" style="clear: both; margin-top: 5em;">
 		<hr>
 		<div class="credits">
 			{% import '_components/_credits.html' as credit %}
@@ -349,30 +349,49 @@
         {{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
       </div>
 		</div>
+		<hr>
 	</div>
 
 	{% import '_components/_related_stories.html' as related %}
-	<div class="max">
-		<hr>
-		<div class="dont-miss">
+  <div>
+    
+    <div class="related-links-title"><a href="http://projects.sfchronicle.com/sf-homeless/"><h3>Beyond Homelessness Coverage</h3></a></div>
+    <div class="dont-miss two">
 
-			{{ related.story("Editorial: SF's homeless problem a civic disgrace", '/sf-homeless/civic-disgrace', '../static/images/editorial/thumb.png' ) }}
+      {{ related.story("S.F. homelessness: Still a long way to go", 'http://www.sfchronicle.com/opinion/editorials/article/S-F-homelessness-Still-a-long-way-to-go-10778795.php', 'http://projects.sfchronicle.com/sf-homeless/static/images/second-editorial/thumb.jpg' ) }}
 
-			{{ related.story("Solution starts with supportive housing", '/sf-homeless/supportive-housing', '../static/images/supportive/thumb.jpg') }}
+      {{ related.story("Interactive guide: How to help homeless in Bay Area", 'http://projects.sfchronicle.com/sf-homeless/how-to-help/', 'http://projects.sfchronicle.com/sf-homeless/static/images/how-to-help/thumb.jpg') }}
 
-			{{ related.story("The mentally ill: Streets' costliest residents", '/sf-homeless/mental-health', '../static/images/mental/thumb.jpg') }}
+      {{ related.story("Interactive map: 7 lives, 7 paths, little change", 'http://projects.sfchronicle.com/sf-homeless/division-street-map/', 'http://projects.sfchronicle.com/sf-homeless/static/images/division-street-map/thumb.gif') }}
+      
+      {{ related.story("After Division Street: No simple path to ending tent cities", 'http://projects.sfchronicle.com/sf-homeless/division-street/', 'http://projects.sfchronicle.com/sf-homeless/static/images/division-street/thumb.jpg') }}
+      
+      {{ related.story("Seeking help: Federal disability aid an elusive solution", 'http://projects.sfchronicle.com/sf-homeless/benefits', 'http://projects.sfchronicle.com/sf-homeless/static/images/benefits/thumb.jpg') }}
 
-			{{ related.story("Can the shelter system be successful?", '/sf-homeless/shelters', '../static/images/shelters/thumb.jpg') }}
+      {{ related.story("Chronicle investigation: Aging hotels, chronic problems", 'http://projects.sfchronicle.com/sf-homeless/hotels', 'http://projects.sfchronicle.com/sf-homeless/static/images/hotels/thumb.jpg') }}
 
-			{{ related.story("Can law enforcement curb the crisis?", '/sf-homeless/encampments', '../static/images/camping/thumb.jpg') }}
+      {{ related.story("Solution possible: Answer starts with supportive housing", 'http://projects.sfchronicle.com/sf-homeless/supportive-housing', 'http://projects.sfchronicle.com/sf-homeless/static/images/supportive/thumb.jpg') }}
+      
+      {{ related.story("The mentally ill: Streets' costliest residents", 'http://projects.sfchronicle.com/sf-homeless/mental-health', 'http://projects.sfchronicle.com/sf-homeless/static/images/mental/thumb.jpg') }}
 
-			{{ related.story('A problem that looks the same as it did 20 years ago', '/sf-homeless/overview', '../static/images/setup/01_thumb.jpg') }}
+      {{ related.story("Shelter system: Can a smarter model find success?", 'http://projects.sfchronicle.com/sf-homeless/shelters', 'http://projects.sfchronicle.com/sf-homeless/static/images/shelters/thumb.jpg') }}
 
-	  		{{ related.story("How many people live on our streets?", '/sf-homeless/numbers', '../static/images/data/10_thumb.jpg') }}
+      {{ related.story("Law enforcement: Can stricter rules curb the crisis?", 'http://projects.sfchronicle.com/sf-homeless/encampments', 'http://projects.sfchronicle.com/sf-homeless/static/images/camping/thumb.jpg') }}
 
-			{{ related.story("In their words: How SF's last 5 mayors tackled homelessness", '/sf-homeless/letters-from-the-mayors', '../static/images/insight/mayors.jpg') }}
-		</div>
-	</div>
+      {{ related.story("Long-term view: A problem that looked the same 20 years ago", 'http://projects.sfchronicle.com/sf-homeless/overview', 'http://projects.sfchronicle.com/sf-homeless/static/images/setup/01_thumb.jpg' ) }}
+
+      {{ related.story("Data analysis: How many people live on our streets?", 'http://projects.sfchronicle.com/sf-homeless/numbers', 'http://projects.sfchronicle.com/sf-homeless/static/images/data/10_thumb.jpg' ) }}
+
+      {{ related.story("In their voices: How SF's last 5 mayors tackled homelessness", 'http://projects.sfchronicle.com/sf-homeless/letters-from-the-mayors', 'http://projects.sfchronicle.com/sf-homeless/static/images/insight/thumb.jpg' ) }}
+
+      {{ related.story("Editorial: SF's homeless problem a civic disgrace", 'http://projects.sfchronicle.com/sf-homeless/civic-disgrace', 'http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png' ) }}
+
+      {{ related.story("Election 2016: How the candidates view homelessness", 'http://projects.sfchronicle.com/2016/candidates-homeless-survey/', 'http://projects.sfchronicle.com/2016/candidates-homeless-survey/assets/social.jpg') }}
+
+      {{ related.story("Letter to the City: The time to act is now", 'http://projects.sfchronicle.com/sf-homeless/letter-to-the-city/', 'http://projects.sfchronicle.com/sf-homeless/static/images/social/letter-to-the-city.jpg') }}
+
+    </div>
+  </div>
 
 	{% include '_components/_footer.html' %}
 

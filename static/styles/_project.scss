@@ -588,6 +588,10 @@ footer {
   font-size: 17px;
   font-family: $block-graphics;
 
+  &.two{
+  max-width:1000px;
+  }
+
   .story {
     flex: 0 0 25%;
     -webkit-flex: 0 0 25%;
@@ -619,10 +623,11 @@ footer {
   .padded {
     padding: 10px;
   }
-  h4 {
+  h4, h5 {
     margin-top:2px;
     line-height: 1.2;
     font-size:0.9em;
+    font-color:#333;
   }
   img {
     width: 100%;
@@ -1472,4 +1477,19 @@ td {
     @media (max-width:480px){
       background-position:70% top;
     }
+}
+
+.related-links-title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: DispatchLight;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  
+  a {
+    color: #ec1c24;
+    text-decoration:none;
+  }
 }

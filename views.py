@@ -30,7 +30,7 @@ def index():
     return render_template('index.html',
     	slug='',
     	title="Beyond Homelessness: Tackling SF's epidemic",
-    	description="SF Homeless Project: The Chronicle joins 70 news organizations to focus attention on the seemingly intractable problem of homelessness in San Francisco.",
+    	description="SF Homeless Project: The Chronicle joins 80 news organizations to focus attention on the seemingly intractable problem of homelessness in San Francisco.",
     	twitter_text="Beyond Homelessness: An in-depth look at SF's homeless epidemic")
 
 @app.route('/overview/')
@@ -110,7 +110,7 @@ def letter_of_intent():
     return render_template('letter_of_intent.html',
     	slug='letter-to-the-city',
     	title='Letter to SF: A unified front in the search for answers',
-    	description='SF Homeless Project: We, along with 70 other news outlets, aim to provide you with the information and potential options to put San Francisco on a better path.',
+    	description='SF Homeless Project: We, along with 80 other news outlets, aim to provide you with the information and potential options to put San Francisco on a better path.',
     	twitter_text='A unified front in the search for answers')
 
 @app.route('/hotels/')
