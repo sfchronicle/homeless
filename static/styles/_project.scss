@@ -602,15 +602,15 @@ footer {
       -webkit-flex: 0 0 33%;
 
         @media screen and (max-width: 560px) {
-            flex: 1 1 100%;
-            -webkit-flex: 1 1 100%;
+            flex: 0 0 50%;
+            -webkit-flex: 0 0 50%;
        }
     }
 
 
      @media screen and (max-width: 560px) {
-          flex: 1 1 100%;
-          -webkit-flex: 1 1 100%;
+          flex: 0 0 50%;
+          -webkit-flex: 0 0 50%;
      }
 
     & a {
