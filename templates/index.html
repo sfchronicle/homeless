@@ -21,14 +21,18 @@
           <div class="jump-navigation" id="sticky-element">
             <div class="jump-links">
               <div class="logo-link link"><a href="http://www.sfchronicle.com" target="_blank">
-                <img src="http://projects.sfchronicle.com/shared/logos/sfletter_c_white.png"></a>
+                <img src="http://projects.sfchronicle.com/shared/logos/sfletter_c_black.png"></a>
               </div>
               <div class="link special"><a class="special-head" href="http://www.sfchronicle.com/homeless/">Beyond Homelessness</a></div>
-              <div class="link social"><a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fsfchronicle.com%2Fhomeless&text={{twitter_text|urlencode}}&hashtags=SFHomelessProject"><i class="fa fa-twitter"></i></a></div>
-              <div class="link social"><a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2Fsf-homeless%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;"><i class="fa fa-facebook"></i></a></div>
+
               <div class="link social"><a id="mail-icon" title="Share via email" href="mailto:?subject={{title|urlencode}}&body={{description|urlencode}}%0A%0Ahttp%3A%2F%2Fsfchronicle.com%2Fhomeless">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
               </a></div>
+
+              <div class="link social"><a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fsfchronicle.com%2Fhomeless&text={{twitter_text|urlencode}}&hashtags=SFHomelessProject"><i class="fa fa-twitter"></i></a></div>
+
+              <div class="link social"><a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2Fsf-homeless%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;"><i class="fa fa-facebook"></i></a></div>
+
             </div>
           </div>
         </div>
@@ -49,17 +53,11 @@
 
     <div id="stories">
 
-        <div class="stories-container small-up-2 medium-up-3 large-up-3" style="width: 100%; clear: both;">
+        <div class="stories-container small-up-2 medium-up-3 large-up-4" style="width: 100%; clear: both;">
 
             <div class="column">
-                <a href="http://www.sfchronicle.com/opinion/editorials/article/S-F-homelessness-Still-a-long-way-to-go-10778795.php"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/second-editorial/thumb.jpg">
-                    <h5>S.F. homelessness: Still a long way to go</h5>
-                </a>
-            </div>
-
-            <div class="column">
-                <a href="http://projects.sfchronicle.com/sf-homeless/how-to-help/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/how-to-help/thumb.jpg">
-                    <h5>Interactive guide: How to help homeless in Bay Area</h5>
+                <a href="http://projects.sfchronicle.com/sf-homeless/division-street/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/division-street/thumb.jpg">
+                    <h5>After Division Street: No simple path to ending tent cities</h5>
                 </a>
             </div>
 
@@ -70,10 +68,12 @@
             </div>
 
             <div class="column">
-                <a href="http://projects.sfchronicle.com/sf-homeless/division-street/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/division-street/thumb.jpg">
-                    <h5>After Division Street: No simple path to ending tent cities</h5>
+                <a href="{{ url_for('sro') }}"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/hotels/thumb.jpg">
+                    <h5>Chronicle investigation: Aging hotels, chronic problems</h5>
                 </a>
             </div>
+
+            
 
             <div class="column">
                 <a href="{{ url_for('federal') }}"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/benefits/thumb.jpg">
@@ -82,17 +82,11 @@
             </div>
 
             <div class="column">
-                <a href="{{ url_for('sro') }}"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/hotels/thumb.jpg">
-                    <h5>Chronicle investigation: Aging hotels, chronic problems</h5>
+                <a href="{{ url_for('setup') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/setup/01_thumb.jpg') }}">
+                    <h5>Long-term view: A problem that looked the same 20 years ago</h5>
                 </a>
             </div>
             
-            <div class="column">
-                <a href="http://www.sfchronicle.com/bayarea/article/SF-Homeless-Project-What-has-changed-in-response-10688659.php"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/second-follow-up/thumb.jpg">
-                    <h5>SF Homeless Project resumes this week</h5>
-                </a>
-            </div>
-
             <div class="column">
                 <a href="{{ url_for('supportive') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/supportive/thumb.jpg') }}">
                     <h5>Solution possible: Answer starts with supportive housing</h5>
@@ -115,12 +109,6 @@
                     <h5>Law enforcement: Can stricter rules curb the crisis?</h5>
                 </a>
             </div>
-
-            <div class="column">
-                <a href="{{ url_for('setup') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/setup/01_thumb.jpg') }}">
-                    <h5>Long-term view: A problem that looked the same 20 years ago</h5>
-                </a>
-            </div>
             <div class="column">
                 <a href="{{ url_for('data') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/data/10_thumb.jpg') }}">
                     <h5>Data analysis: How many people live on our streets?</h5>
@@ -131,6 +119,20 @@
                     <h5>Photographer’s lens: Portraits of life on SF's streets</h5>
                 </a>
             </div>
+
+            <div class="column">
+                <a href="http://projects.sfchronicle.com/sf-homeless/how-to-help/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/how-to-help/thumb.jpg">
+                    <h5>Interactive guide: How to help homeless in Bay Area</h5>
+                </a>
+            </div>
+
+             <div class="column">
+                <a href="http://projects.sfchronicle.com/2016/candidates-homeless-survey/">
+                    <img src="http://projects.sfchronicle.com/2016/candidates-homeless-survey/assets/social.jpg">
+                    <h5>Election 2016: How the candidates view homelessness</h5>
+                </a>
+            </div>
+            
             <div class="column">
                 <a href="{{ url_for('insight') }}">
                     <img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/insight/thumb.jpg">
@@ -140,14 +142,7 @@
              <div class="column">
                 <a href="{{ url_for('opinion') }}">
                     <img src="http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png">
-                    <h5>Editorial: Homelessness a civic disgrace</h5>
-                </a>
-            </div>
-
-             <div class="column">
-                <a href="http://projects.sfchronicle.com/2016/candidates-homeless-survey/">
-                    <img src="http://projects.sfchronicle.com/2016/candidates-homeless-survey/assets/social.jpg">
-                    <h5>Election 2016: How the candidates view homelessness</h5>
+                    <h5>Editorial: Homelessness remains a civic disgrace</h5>
                 </a>
             </div>
 
