@@ -1513,3 +1513,29 @@ td {
     text-decoration:none;
   }
 }
+
+#sos{
+  text-align:center;
+  padding:1em 0;
+  background:#f1f1f1;
+  margin:2em 0;
+
+  .sos-banner{
+    max-width: 620px;
+    margin:0 auto;
+  }
+
+  .sos-btn{
+    background-color: #ec1c24;
+    color: #fefefe;
+    padding: 7px 14px;
+    margin-top:1em;
+    font-family: "AntennaRegular", Helvetica, sans-serif;
+    text-transform: uppercase;
+
+    a{
+      color:#fff;
+      text-decoration:none;
+    }
+  }
+}
