@@ -89,14 +89,14 @@
             
             <div class="column">
                 <a href="{{ url_for('supportive') }}"><img class="thumbnail" src="{{ url_for('static', filename='images/supportive/thumb.jpg') }}">
-                    <h5>Solution possible: Answer starts with supportive housing</h5>
+                    <h5>Supportive housing: What would it take to solve homelessness?</h5>
                 </a>
             </div>
 
             <div class="column">
                 <a href="{{ url_for('mental') }}">
                     <img class="thumbnail" src="{{ url_for('static', filename='images/mental/thumb.jpg') }}">
-                    <h5>Streets’ sickest: Helping the mentally ill comes at huge cost</h5>
+                    <h5>Mental illness: Are the most destitute people treatable?</h5>
                 </a>
             </div>
             <div class="column">
@@ -122,7 +122,7 @@
 
             <div class="column">
                 <a href="http://projects.sfchronicle.com/sf-homeless/how-to-help/"><img class="thumbnail" src="http://projects.sfchronicle.com/sf-homeless/static/images/how-to-help/thumb.jpg">
-                    <h5>Interactive guide: How to help homeless in Bay Area</h5>
+                    <h5>Interactive guide: How to help homeless people in Bay Area</h5>
                 </a>
             </div>
 
@@ -168,6 +168,7 @@
         <hr>
         <div class="partners">
             <h2>SF Homeless Project: Partners</h2>
+            <a href="http://www.sfgate.com/homeless/" target="_blank"><div class="box-partners">Read all partners' coverage on SFGate.com</div></a>
             {% import '_components/_partners.html' as partner %}
             <!-- Variables are name, link -->
             {{ partner.info("San Francisco Chronicle", "http://www.sfchronicle.com" ) }}
@@ -251,6 +252,7 @@
             {{ partner.info("Metro", "http://www.metrosiliconvalley.com/" ) }}
             {{ partner.info("Santa Rosa Press Democrat", "http://www.pressdemocrat.com/" ) }}
             {{ partner.info("The Guardsman", "http://theguardsman.com/" ) }}
+
        </div>
     </div>
 

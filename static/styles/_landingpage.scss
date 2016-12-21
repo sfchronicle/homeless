@@ -54,6 +54,10 @@
         font-family: $serif;
         color: $red;
         margin-bottom: 0;
+
+        @media (max-width: 480px){
+            margin-top:0.4em;
+        }
     }
 
     & .subhead{
@@ -326,8 +330,27 @@
 
 .partners{
     h2{
+        margin-bottom:0.2em;
         @media (max-width:480px){
             font-size:0.9em;
         }
     }
+
+    a {
+    color:white;
+    text-decoration:none;
+    }
+}
+
+.box-partners{
+    cursor:pointer;
+    margin: 0 auto 1.2em;
+    font-size: 0.67em;
+    max-width: 530px;
+    padding: 5px 10px;
+    background-color: #ec1c24;
+    color: #fefefe;
+    font-family: "AntennaRegular", Helvetica, sans-serif;
+    text-transform: uppercase;
+
 }
