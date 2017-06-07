@@ -12,8 +12,11 @@
 
 module.exports = function (grunt) {
 
+  //load tasks
+  grunt.loadTasks("./tasks");
+
   // Time how long tasks take. Can help when optimizing build times
-  require('time-grunt')(grunt);
+  // require('time-grunt')(grunt);
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -119,29 +122,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-    // The following *-min tasks produce minified files in the dist folder
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images'
-        }]
-      }
-    },
-
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= config.dist %>/images'
-        }]
-      }
-    },
-
     open: {
       dev: {
         path: 'http://127.0.0.1:5000'
@@ -225,8 +205,6 @@ module.exports = function (grunt) {
       ],
       dist: [
         'sass',
-        'imagemin',
-        'svgmin'
       ]
     }
   });
