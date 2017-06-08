@@ -1,6 +1,7 @@
 *.db
 *.pyc
 .DS_Store
+data/
 migrations/
 node_modules/
 bower_components/
