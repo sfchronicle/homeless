@@ -128,3 +128,83 @@ def federal():
         title='The plight of disabled homeless in S.F.',
         description='S.F. Homeless Project: The city is boosting efforts to help thousands eligible for federal payments qualify for aid and get off the streets.',
         twitter_text='For disabled homeless in San Francisco, federal benefits remain elusive.')
+
+@app.route('/letter-from-the-editor/')
+def letterFromTheEditor():
+    return render_template('letter-from-the-editor.html',
+        slug='letter-from-the-editor',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/mayors-voices/')
+def mayorsVoices():
+    return render_template('mayors-voices.html',
+        slug='mayors-voices',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/overview-update/')
+def overviewUpdate():
+    return render_template('overview-update.html',
+        slug='overview-update',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/four-areas/')
+def fourAreas():
+    return render_template('four-areas.html',
+        slug='four-areas',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/regional/')
+def regional():
+    return render_template('regional.html',
+        slug='regional',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/division-street-update/')
+def divisionStreetUpdate():
+    return render_template('division-street-update.html',
+        slug='division-street-update',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/nonprofit/')
+def nonprofit():
+    return render_template('nonprofit.html',
+        slug='nonprofit',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/otis-taylor/')
+def otisTaylor():
+    return render_template('otis-taylor.html',
+        slug='otis-taylor',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/potrero-hill/')
+def potreroHill():
+    return render_template('potrero-hill.html',
+        slug='potrero-hill',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
+
+@app.route('/editorial/')
+def editorial():
+    return render_template('editorial.html',
+        slug='editorial',
+        title='Title.',
+        description='Description.',
+        twitter_text='Twitter Text.')
