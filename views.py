@@ -3,6 +3,8 @@ from flask import render_template, redirect, url_for
 from app import app, db, freezer
 from models import *
 
+import json
+
 """
 slug completes:
 - twitter:url
@@ -131,7 +133,10 @@ def federal():
 
 @app.route('/letter-from-the-editor/')
 def letterFromTheEditor():
+    File = open('data/insight0625_cooper.json', 'r')
+    data = json.load(File) 
     return render_template('letter-from-the-editor.html',
+        data=data,
         slug='letter-from-the-editor',
         title='Title.',
         description='Description.',
@@ -139,7 +144,10 @@ def letterFromTheEditor():
 
 @app.route('/mayors-voices/')
 def mayorsVoices():
+    File = open('data/insight0625_homeless_mayors.json', 'r')
+    data = json.load(File) 
     return render_template('mayors-voices.html',
+        data=data,
         slug='mayors-voices',
         title='Title.',
         description='Description.',
@@ -147,23 +155,32 @@ def mayorsVoices():
 
 @app.route('/overview-update/')
 def overviewUpdate():
+    File = open('data/homeless0626.json', 'r')
+    data = json.load(File) 
     return render_template('overview-update.html',
+        data=data,
         slug='overview-update',
         title='Title.',
         description='Description.',
         twitter_text='Twitter Text.')
 
-@app.route('/four-areas/')
+@app.route('/four-areas/') 
 def fourAreas():
+    File = open('data/homeless0627.json', 'r')
+    data = json.load(File)
     return render_template('four-areas.html',
+        data=data,
         slug='four-areas',
         title='Title.',
         description='Description.',
         twitter_text='Twitter Text.')
 
-@app.route('/regional/')
+@app.route('/regional/') 
 def regional():
+    File = open('data/region0627.json', 'r')
+    data = json.load(File)
     return render_template('regional.html',
+        data=data,
         slug='regional',
         title='Title.',
         description='Description.',
@@ -171,7 +188,10 @@ def regional():
 
 @app.route('/division-street-update/')
 def divisionStreetUpdate():
+    File = open('data/division0629.json', 'r')
+    data = json.load(File) 
     return render_template('division-street-update.html',
+        data=data,
         slug='division-street-update',
         title='Title.',
         description='Description.',
@@ -179,7 +199,10 @@ def divisionStreetUpdate():
 
 @app.route('/nonprofit/')
 def nonprofit():
+    File = open('data/moveon0630.json', 'r')
+    data = json.load(File)
     return render_template('nonprofit.html',
+        data=data,
         slug='nonprofit',
         title='Title.',
         description='Description.',
@@ -187,7 +210,10 @@ def nonprofit():
 
 @app.route('/otis-taylor/')
 def otisTaylor():
+    File = open('data/taylor0630.json', 'r')
+    data = json.load(File)
     return render_template('otis-taylor.html',
+        data=data,
         slug='otis-taylor',
         title='Title.',
         description='Description.',
@@ -195,7 +221,10 @@ def otisTaylor():
 
 @app.route('/potrero-hill/')
 def potreroHill():
+    File = open('data/homeless0701.json', 'r')
+    data = json.load(File) 
     return render_template('potrero-hill.html',
+        data=data,
         slug='potrero-hill',
         title='Title.',
         description='Description.',
@@ -203,7 +232,10 @@ def potreroHill():
 
 @app.route('/editorial/')
 def editorial():
+    File = open('data/editorial0702.json', 'r')
+    data = json.load(File) 
     return render_template('editorial.html',
+        data=data,
         slug='editorial',
         title='Title.',
         description='Description.',
