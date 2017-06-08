@@ -238,17 +238,15 @@ header {
 }
 
 #sticky-element.sticky {
-  // width: 100%;
-  // width: inherit;
   -webkit-box-shadow: 0 0 6px 0 #696969;
-    -moz-box-shadow: 0 0 6px 0 #696969;
-    box-shadow: 0 0 6px 0 #696969;
+  -moz-box-shadow: 0 0 6px 0 #696969;
+  box-shadow: 0 0 6px 0 #696969;
   z-index: 100;
   position: fixed;
   top: 0;
-  opacity: 0.95;
   margin-top: 0px;
   text-align: left;
+
   @media #{$mobile} {
     font-size: 14px;
     vertical-align: bottom;
