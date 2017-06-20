@@ -215,6 +215,8 @@
     {% endif %}
 
 		<script>
+			var pymChild = new pym.Child();
+
 			$('.mayor-lee').addClass('active');
 			$('#mayor-lee').addClass('show-text');
 
@@ -222,6 +224,7 @@
 			   var target = $(this).attr('id');
 			   $(".mayor-text").removeClass('show-text');
 			   $("#mayor-"+target).addClass('show-text');
+			   pymChild.sendHeight();
 			   $('html,body').animate({
 				   scrollTop: $(".mayors-grid").offset().top - 20
 				});
@@ -230,6 +233,7 @@
 			   var mug = $(this).attr('id');
 			   $(".mug").removeClass('active');
 			   $('#'+mug).addClass('active');
+			   pymChild.sendHeight();
 			});
 
 			$('.nextstory').on('click', function(){
@@ -238,11 +242,12 @@
 			   $(".mayor-text").removeClass('show-text');
 			   $('#'+next).addClass('active');
 			   $('#mayor-'+next).addClass('show-text');
+			   pymChild.sendHeight();
 			   $('html,body').animate({
 				   scrollTop: $(".mayors-grid").offset().top - 20
 				});
 			});
-			var pymChild = new pym.Child();
+			
 		</script>
 </body>
 </html>
