@@ -1,124 +1,248 @@
-{% extends 'base.html' %}
-
-{% block title %}{{title}}{% endblock %}
-
-{% block head %}
-{% include '_components/_social.html' %}
-{% endblock %}
-
-{% block hearst_title %}{% endblock %}
-{% block hearst_class %}article{% endblock %}
-{% block hearst_date %}2016-06-29 00:00:00{% endblock %}
-{% block author %}Lucio Villa, Emma O'Neill{% endblock %}
-
-{% block content %}
-<main class="container">
-
-	{% include '_components/_header.html' %}
-
-	<div class="title-container">
-		<div>
-			<h1 class="title long">HEADLINE</h1>
-			<div class="whatif-box">
-				Would expanding San Francisco’s shelter system and converting it to a more accessible, service-oriented model get more homeless people off the streets?
-			</div>
-
-			<p class="author">BY </p>
-			<p class="date">DATE</p>
-			<div class="full-width-img">
-			    <img src="{{ url_for('static', filename='images/shelters/01.jpg') }}">
-			    <p class="caption"><span class="year">June 1, 2016 </span> Zoila Soriano, 71, sits on her bed at the Next Door homeless shelter. Soriano, who has lived in the Bay Area 51 years, including 27 years in Daly City, says she lost everything when her husband died and she sold her house to pay for her son’s burial.<span class="byline"> Photo: Leah Millis, The Chronicle</span></p>
-			</div>
-		</div>
-	</div>
-
-	{% for text in data['text'] %}
-
-			{% if text.type == 'text' %}
-				<p>{{text.value}}</p>
-			{%- endif %}
-
-			{% if text.type == 'video' %}
-				<p>VIDEO!!</p>
-				<p>VIDEO ID:{{ text.value[0].ID }}</p>
-				<p>VIDEO CAPTION:{{ text.value[0].Caption }}</p>
-			{%- endif %}
-
-  {% endfor %}
-
-	<div class="max">
-		<hr>
-		<div class="credits">
-			{% import '_components/_credits.html' as credit %}
-			<!-- Variables are name, email slug and twitter handle -->
-			<div class="group">
-				<p>Reporter</p>
-				{{ credit.info('Heather Knight', 'hknight', 'hknightsf' ) }}
-			</div>
-
-			<div class="group">
-				<p>Contributing reporter</p>
-				{{ credit.info('Kevin Fagan', 'kfagan', 'KevinChron' ) }}
-			</div>
-
-			<div class="group">
-				<p>Interactive producers</p>
-				{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
-				{{ credit.info('Benjamin Din', 'bdin', 'benjamindin' ) }}
-				{{ credit.info("Emma O'Neill", "eoneill", "emmaruthoneill" ) }}
-			</div>
-		</div>
-		<hr>
-	</div>
-
-	{% import '_components/_related_stories.html' as related %}
-  <div>
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="__sync_contentCategory" content="free">
+    <title></title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="http://www.sfchronicle.com/favicon.ico?v=3">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}?6">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <!-- Treg & Syncronex -->
+		<script type="text/javascript" src="http://treg.hearstnp.com/treg.js"></script>
+		<script type="text/javascript" src="http://www.sfchronicle.com/js/hdn/omniture/syncronex.js"></script>
+		<script type="text/javascript" src="https://syncaccess-hst-sfc.syncronex.com/hst/sfc/api/scripts/syncwall"></script>
+		<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
     
-    <div class="related-links-title"><a href="http://projects.sfchronicle.com/sf-homeless/"><h3>Beyond Homelessness Coverage</h3></a></div>
-    <div class="dont-miss two">
+    <!-- Begin Hearst analytics -->
+    <script type="text/javascript">
+        var omni_channelPath = "News :: Special Projects :: Homeless Project";
+        var omni_paywallSite = "1";
+        var omni_title = "{{title|safe}}";
+        var omni_className = "article";
+        var omni_publicationDate = "";
+        var omni_authorName = "Lucio Villa, Emma O'Neill, Benjamin Din";
+        var omni_authorTitle = "San Francisco Chronicle staff";
+    </script>
+    <!-- End Hearst analytics -->
+    
+    <!-- Hearst analytics: Ensighten -->
+    <script type="text/javascript">
+      (function(e) {
+        var t = '//nexus.ensighten.com/hearst/news/Bootstrap.js';
+        if (e.cookie.indexOf("nsghtn") > -1) {
+          if(e.cookie.indexOf("nsghtn=test-dev") > -1) {
+          console.log("Ensighten :: Test-Dev"); t = "//nexus-test.ensighten.com/hearst/news-dev/Bootstrap.js";
+          } else if(e.cookie.indexOf("nsghtn=test") > -1) {
+          console.log("Ensighten :: Test"); t = "//nexus-test.ensighten.com/hearst/news/Bootstrap.js";
+          } else if(e.cookie.indexOf("nsghtn=dev") > -1) {
+          console.log("Ensighten :: Dev"); t = "//nexus.ensighten.com/hearst/news-dev/Bootstrap.js";
+          }
+        }
+        e.write("<scr"+"ipt src='"+e.location.protocol+t+"'></scr"+"ipt>");
+      })(document);
+    </script>
+    <!-- End Hearst analytics: Ensighten -->
+    
+  </head>
+  <body class="{% if config.DEBUG %}debug{% endif %}">
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <main class="container mayors">
 
-      {{ related.story("After Division Street: No simple path to ending tent cities", 'http://projects.sfchronicle.com/sf-homeless/division-street/', 'http://projects.sfchronicle.com/sf-homeless/static/images/division-street/thumb.jpg') }}
 
-			{{ related.story("Interactive map: 7 lives, 7 paths, little change", 'http://projects.sfchronicle.com/sf-homeless/division-street-map/', 'http://projects.sfchronicle.com/sf-homeless/static/images/division-street-map/thumb.gif') }}
+			<div class="title-container">
+				<div>
+					<h1 class="m-title">{{data.Headline}}</h1>
+					<p class="mayors-date">{{data.Date}}</p>
+					<div class="mayors-deck">
+						{{data.Deck}}
+					</div>
+					
+				</div>
+			</div>
 
-			{{ related.story("Chronicle investigation: Aging hotels, chronic problems", 'http://projects.sfchronicle.com/sf-homeless/hotels', 'http://projects.sfchronicle.com/sf-homeless/static/images/hotels/thumb.jpg') }}
+			<div class="mayors-grid">
+				<div id="lee" class="mug mayor-lee">
+					<div>
+						<img src="https://placeholdit.co//i/600x400?">
+						<p>Mayor Name</p>
+					</div>
+				</div>
+				<div id="libby" class="mug mayor-libby">
+					<div>
+						<img src="https://placeholdit.co//i/600x400?">
+						<p>Mayor Name</p>
+					</div>
+				</div>
+				<div id="liccardo" class="mug mayor-liccardo">
+					<div>
+						<img src="https://placeholdit.co//i/600x400?">
+						<p>Mayor Name</p>
+					</div>
+				</div>
+			</div>
 
-			{{ related.story("Seeking help: Federal disability aid an elusive solution", 'http://projects.sfchronicle.com/sf-homeless/benefits', 'http://projects.sfchronicle.com/sf-homeless/static/images/benefits/thumb.jpg') }}
+			<div id="mayor-lee" class="mayor-text">
+			{% for text in data['lee'] %}
 
-			{{ related.story("Long-term view: A problem that looked the same 20 years ago", 'http://projects.sfchronicle.com/sf-homeless/overview', 'http://projects.sfchronicle.com/sf-homeless/static/images/setup/01_thumb.jpg' ) }}
+					{% if text.type == 'text' %}
+						<p>{{text.value}}</p>
+					{%- endif %}
 
-			{{ related.story("Supportive housing: What would it take to solve homelessness?", 'http://projects.sfchronicle.com/sf-homeless/supportive-housing', 'http://projects.sfchronicle.com/sf-homeless/static/images/supportive/thumb.jpg') }}
+					{% if text.type == 'Headline' %}
+						<h2>{{ text.value }}</h2>
+						<div class="byline">By Ed Lee</div>
+					{%- endif %}
 
-			{{ related.story("Mental illness: Are the most destitute people treatable?", 'http://projects.sfchronicle.com/sf-homeless/mental-health', 'http://projects.sfchronicle.com/sf-homeless/static/images/mental/thumb.jpg') }}
+		  {% endfor %}
+		  	<div class="nextstory" next="libby">
+		  		<p>_______</p>
+		  		<p>Read Oakland Mayor's</p>
+		  		<img src="https://placeholdit.co//i/600x400?">
+		  	</div>
+		  </div>
 
-			{{ related.story("Law enforcement: Can stricter rules curb the crisis?", 'http://projects.sfchronicle.com/sf-homeless/encampments', 'http://projects.sfchronicle.com/sf-homeless/static/images/camping/thumb.jpg') }}
+		  <div id="mayor-libby" class="mayor-text">
+			{% for text in data['libby'] %}
 
-			{{ related.story("Data analysis: How many people live on our streets?", 'http://projects.sfchronicle.com/sf-homeless/numbers', 'http://projects.sfchronicle.com/sf-homeless/static/images/data/10_thumb.jpg' ) }}
+					{% if text.type == 'text' %}
+						<p>{{text.value}}</p>
+					{%- endif %}
 
-			{{ related.story("Photographer’s lens: Portraits of life on SF's streets", 'http://projects.sfchronicle.com/sf-homeless/faces-of-the-streets', 'http://projects.sfchronicle.com/sf-homeless/static/images/portraits/07_thumb.jpg' ) }}
+					{% if text.type == 'Headline' %}
+						<h2>{{ text.value }}</h2>
+						<div class="byline">By Libby Schaaf</div>
+					{%- endif %}
 
-			{{ related.story("Interactive guide: How to help homeless people in Bay Area", 'http://projects.sfchronicle.com/sf-homeless/how-to-help/', 'http://projects.sfchronicle.com/sf-homeless/static/images/how-to-help/thumb.jpg') }}
+		  {% endfor %}
+			  <div class="nextstory" next="liccardo">
+			  		<p>_______</p>
+			  		<p>Read San Jose Mayor's</p>
+			  		<img src="https://placeholdit.co//i/600x400?">
+			  	</div>
+			  </div>
+		  </div>
 
-			{{ related.story("Election 2016: How the candidates view homelessness", 'http://projects.sfchronicle.com/2016/candidates-homeless-survey/', 'http://projects.sfchronicle.com/2016/candidates-homeless-survey/assets/social.jpg') }}
+		  <div id="mayor-liccardo" class="mayor-text">
+			{% for text in data['liccardo'] %}
 
-			{{ related.story("In their voices: How SF's last 5 mayors tackled homelessness", 'http://projects.sfchronicle.com/sf-homeless/letters-from-the-mayors', 'http://projects.sfchronicle.com/sf-homeless/static/images/insight/thumb.jpg' ) }}
+					{% if text.type == 'text' %}
+						<p>{{text.value}}</p>
+					{%- endif %}
 
-			{{ related.story("Editorial: Homelessness remains a civic disgrace", 'http://projects.sfchronicle.com/sf-homeless/civic-disgrace', 'http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png' ) }}
+					{% if text.type == 'Headline' %}
+						<h2>{{ text.value }}</h2>
+						<div class="byline">By Sam Liccardo</div>
+					{%- endif %}
 
-			{{ related.story("Letter to the City: The time to act is now", 'http://projects.sfchronicle.com/sf-homeless/letter-to-the-city/', 'http://projects.sfchronicle.com/sf-homeless/static/images/social/letter-to-the-city.jpg') }}
+		  {% endfor %}
+			  <div class="nextstory" next="lee">
+			  		<p>_______</p>
+			  		<p>Read SF Mayor's</p>
+			  		<img src="https://placeholdit.co//i/600x400?">
+			  	</div>
+			  </div>
+		  </div>
 
-    </div>
-  </div>
+		  
 
-	{% include '_components/_footer.html' %}
+			<div class="max">
+				<hr>
+				<div class="credits">
+					{% import '_components/_credits.html' as credit %}
+					<!-- Variables are name, email slug and twitter handle -->
 
-</main>
-{% endblock %}
+					<div class="group">
+						<p>Interactive producer</p>
+						{{ credit.info('Lucio Villa', 'lvilla', 'luciovilla' ) }}
+					</div>
+				</div>
+				<hr>
+			</div>
 
-{% block javascript %}
-<script>
-	$(document).ready(function() {
-		App.init();
-	});
-</script>
-{% endblock %}
+			{% import '_components/_related_stories.html' as related %}
+		  <div>
+		    
+		    <div class="related-links-title"><a href="http://projects.sfchronicle.com/sf-homeless/"><h3>Beyond Homelessness Coverage</h3></a></div>
+		    <div class="dont-miss two">
+
+		      {{ related.story("After Division Street: No simple path to ending tent cities", 'http://projects.sfchronicle.com/sf-homeless/division-street/', 'http://projects.sfchronicle.com/sf-homeless/static/images/division-street/thumb.jpg') }}
+
+					{{ related.story("Interactive map: 7 lives, 7 paths, little change", 'http://projects.sfchronicle.com/sf-homeless/division-street-map/', 'http://projects.sfchronicle.com/sf-homeless/static/images/division-street-map/thumb.gif') }}
+
+					{{ related.story("Chronicle investigation: Aging hotels, chronic problems", 'http://projects.sfchronicle.com/sf-homeless/hotels', 'http://projects.sfchronicle.com/sf-homeless/static/images/hotels/thumb.jpg') }}
+
+					{{ related.story("Seeking help: Federal disability aid an elusive solution", 'http://projects.sfchronicle.com/sf-homeless/benefits', 'http://projects.sfchronicle.com/sf-homeless/static/images/benefits/thumb.jpg') }}
+
+					{{ related.story("Long-term view: A problem that looked the same 20 years ago", 'http://projects.sfchronicle.com/sf-homeless/overview', 'http://projects.sfchronicle.com/sf-homeless/static/images/setup/01_thumb.jpg' ) }}
+
+					{{ related.story("Supportive housing: What would it take to solve homelessness?", 'http://projects.sfchronicle.com/sf-homeless/supportive-housing', 'http://projects.sfchronicle.com/sf-homeless/static/images/supportive/thumb.jpg') }}
+
+					{{ related.story("Mental illness: Are the most destitute people treatable?", 'http://projects.sfchronicle.com/sf-homeless/mental-health', 'http://projects.sfchronicle.com/sf-homeless/static/images/mental/thumb.jpg') }}
+
+					{{ related.story("Law enforcement: Can stricter rules curb the crisis?", 'http://projects.sfchronicle.com/sf-homeless/encampments', 'http://projects.sfchronicle.com/sf-homeless/static/images/camping/thumb.jpg') }}
+
+					{{ related.story("Data analysis: How many people live on our streets?", 'http://projects.sfchronicle.com/sf-homeless/numbers', 'http://projects.sfchronicle.com/sf-homeless/static/images/data/10_thumb.jpg' ) }}
+
+					{{ related.story("Photographer’s lens: Portraits of life on SF's streets", 'http://projects.sfchronicle.com/sf-homeless/faces-of-the-streets', 'http://projects.sfchronicle.com/sf-homeless/static/images/portraits/07_thumb.jpg' ) }}
+
+					{{ related.story("Interactive guide: How to help homeless people in Bay Area", 'http://projects.sfchronicle.com/sf-homeless/how-to-help/', 'http://projects.sfchronicle.com/sf-homeless/static/images/how-to-help/thumb.jpg') }}
+
+					{{ related.story("Election 2016: How the candidates view homelessness", 'http://projects.sfchronicle.com/2016/candidates-homeless-survey/', 'http://projects.sfchronicle.com/2016/candidates-homeless-survey/assets/social.jpg') }}
+
+					{{ related.story("In their voices: How SF's last 5 mayors tackled homelessness", 'http://projects.sfchronicle.com/sf-homeless/letters-from-the-mayors', 'http://projects.sfchronicle.com/sf-homeless/static/images/insight/thumb.jpg' ) }}
+
+					{{ related.story("Editorial: Homelessness remains a civic disgrace", 'http://projects.sfchronicle.com/sf-homeless/civic-disgrace', 'http://projects.sfchronicle.com/sf-homeless/static/images/editorial/thumb.png' ) }}
+
+					{{ related.story("Letter to the City: The time to act is now", 'http://projects.sfchronicle.com/sf-homeless/letter-to-the-city/', 'http://projects.sfchronicle.com/sf-homeless/static/images/social/letter-to-the-city.jpg') }}
+
+		    </div>
+		  </div>
+
+
+		</main>
+
+
+    {% if config.DEBUG %}
+    <script>document.write('<script src="http://'
+        + location.host.split(':')[0]
+        + ':35729/livereload.js"></'
+        + 'script>')</script>
+    {% endif %}
+
+		<script>
+			$('.mayor-lee').addClass('active');
+			$('#mayor-lee').addClass('show-text');
+
+			$('.mug').on('click', function(){
+			   var target = $(this).attr('id');
+			   $(".mayor-text").removeClass('show-text');
+			   $("#mayor-"+target).addClass('show-text');
+			   $('html,body').animate({
+				   scrollTop: $(".mayors-grid").offset().top - 20
+				});
+			});
+			$('.mug').on('click', function(){
+			   var mug = $(this).attr('id');
+			   $(".mug").removeClass('active');
+			   $('#'+mug).addClass('active');
+			});
+
+			$('.nextstory').on('click', function(){
+			   var next = $(this).attr('next');
+			   $(".mug").removeClass('active');
+			   $(".mayor-text").removeClass('show-text');
+			   $('#'+next).addClass('active');
+			   $('#mayor-'+next).addClass('show-text');
+			   $('html,body').animate({
+				   scrollTop: $(".mayors-grid").offset().top - 20
+				});
+			});
+			var pymChild = new pym.Child();
+		</script>
+</body>
+</html>

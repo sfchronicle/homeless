@@ -1,0 +1,105 @@
+.mayors-grid{
+	display:flex;
+	max-width:1000px;
+	margin: 0 auto;
+  justify-content: space-around;
+}
+
+.m-title{
+	font-family: "FarnhamDisplayLight", Georgia, serif;
+  font-weight: 400;
+  font-size: 55px;
+  padding: 0 10px;
+  text-align: center;
+  margin: 10px auto;
+  max-width: 835px;
+  line-height: 1.2;
+  margin: 20px auto;
+	
+	@media #{$mobile} {
+    font-size:1.4em;
+  }
+}
+
+.mug{
+	flex:0 0 32%;
+	opacity:0.8;
+	cursor:pointer;
+
+	img{
+		width:100%;
+	}
+
+	p{
+	padding:0;
+
+	@media #{$mobile} {
+    font-size:0.6em;
+  }
+
+	}
+}
+
+.mayors-deck{
+	max-width:550px;
+	margin:0 auto;
+	text-align:center;
+	font-family:Georgia, serif;
+	line-height:1.2;
+
+	@media #{$mobile} {
+    font-size:16px;
+  }
+}
+
+.mayors-date{
+	font-size:15px;
+	margin:0 auto 10px;
+	text-align:center;
+
+	@media #{$mobile} {
+    margin-bottom:5px;
+  }
+}
+
+.mayor-text{
+	max-width:700px;
+	padding:0 10px;
+	margin:0 auto;
+	display:none;
+
+	p{
+		padding:0;
+	}
+
+	h2{
+		margin-bottom:0;
+
+		@media #{$mobile} {
+    	font-size:1em;
+  	}
+	}
+
+	.byline{
+		margin-bottom:1em;
+		font-size:17px;
+	}
+}
+
+.nextstory{
+	margin-top:3em;
+	max-width:450px;
+	cursor:pointer;
+
+	img{
+		width:100%;
+	}
+}
+
+.active{
+	opacity:1;
+}
+
+.show-text{
+	display:block;
+}

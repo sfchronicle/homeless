@@ -145,13 +145,13 @@ def letterFromTheEditor():
 @app.route('/mayors-voices/')
 def mayorsVoices():
     File = open('data/insight0625_homeless_mayors.json', 'r')
-    data = json.load(File) 
+    data = json.load(File)
     return render_template('mayors-voices.html',
         data=data,
         slug='mayors-voices',
-        title='Title.',
-        description='Description.',
-        twitter_text='Twitter Text.')
+        title=data['Seo_title'],
+        description=data['Description'],
+        twitter_text=data['Tweet'])
 
 @app.route('/overview-update/')
 def overviewUpdate():

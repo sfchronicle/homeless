@@ -7,6 +7,24 @@ App = {
     console.log('The Voice of the West. The Voice of San Francisco and the Bay Area.');
   }
 };
+
+function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top - 40;
+    if (window_top > div_top) {
+        $('#sticky-element').addClass('sticky');
+        $('.menu-navigation').addClass('sticky');
+    } else {
+        $('#sticky-element').removeClass('sticky');
+        $('.menu-navigation').removeClass('sticky');
+    }
+}
+$(function() {
+  $(window).scroll(sticky_relocate);
+  sticky_relocate();
+});
+
+
 (function() {
   if (window.__twitterIntentHandler) return;
   var intentRegex = /twitter\.com\/intent\/(\w+)/,
