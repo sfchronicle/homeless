@@ -1,14 +1,30 @@
 .mayors-grid{
 	display:flex;
-	max-width:1000px;
+	max-width:800px;
 	margin: 0 auto;
   justify-content: space-around;
+
+
+  .mayor-lede{
+  	font-size:16px;
+
+  	.city{
+	  	color:$red;
+	  	font-size:13px;
+	  	font-family:$dispatch;
+	  	text-transform:uppercase;
+  	}
+  }
 }
+
+.red{
+   color:$red;
+  }
 
 .m-title{
 	font-family: "FarnhamDisplayLight", Georgia, serif;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 50px;
   padding: 0 10px;
   text-align: center;
   margin: 10px auto;
@@ -23,7 +39,7 @@
 
 .mug{
 	flex:0 0 32%;
-	opacity:0.8;
+	opacity:0.6;
 	cursor:pointer;
 
 	img{
@@ -74,6 +90,7 @@
 
 	h2{
 		margin-bottom:0;
+		line-height:1.2;
 
 		@media #{$mobile} {
     	font-size:1em;
@@ -81,7 +98,7 @@
 	}
 
 	.byline{
-		margin-bottom:1em;
+		margin:0.5em 0 1em;
 		font-size:17px;
 	}
 }
@@ -102,4 +119,10 @@
 
 .show-text{
 	display:block;
+}
+
+.inline-img{
+	&.small{
+		max-width:500px;
+	}
 }

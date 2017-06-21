@@ -2,48 +2,16 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <meta name="__sync_contentCategory" content="free">
     <title></title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="http://www.sfchronicle.com/favicon.ico?v=3">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}?6">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
-    <!-- Treg & Syncronex -->
-		<script type="text/javascript" src="http://treg.hearstnp.com/treg.js"></script>
-		<script type="text/javascript" src="http://www.sfchronicle.com/js/hdn/omniture/syncronex.js"></script>
-		<script type="text/javascript" src="https://syncaccess-hst-sfc.syncronex.com/hst/sfc/api/scripts/syncwall"></script>
+    
 		<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
     
-    <!-- Begin Hearst analytics -->
-    <script type="text/javascript">
-        var omni_channelPath = "News :: Special Projects :: Homeless Project";
-        var omni_paywallSite = "1";
-        var omni_title = "{{title|safe}}";
-        var omni_className = "article";
-        var omni_publicationDate = "";
-        var omni_authorName = "Lucio Villa, Emma O'Neill, Benjamin Din";
-        var omni_authorTitle = "San Francisco Chronicle staff";
-    </script>
-    <!-- End Hearst analytics -->
     
-    <!-- Hearst analytics: Ensighten -->
-    <script type="text/javascript">
-      (function(e) {
-        var t = '//nexus.ensighten.com/hearst/news/Bootstrap.js';
-        if (e.cookie.indexOf("nsghtn") > -1) {
-          if(e.cookie.indexOf("nsghtn=test-dev") > -1) {
-          console.log("Ensighten :: Test-Dev"); t = "//nexus-test.ensighten.com/hearst/news-dev/Bootstrap.js";
-          } else if(e.cookie.indexOf("nsghtn=test") > -1) {
-          console.log("Ensighten :: Test"); t = "//nexus-test.ensighten.com/hearst/news/Bootstrap.js";
-          } else if(e.cookie.indexOf("nsghtn=dev") > -1) {
-          console.log("Ensighten :: Dev"); t = "//nexus.ensighten.com/hearst/news-dev/Bootstrap.js";
-          }
-        }
-        e.write("<scr"+"ipt src='"+e.location.protocol+t+"'></scr"+"ipt>");
-      })(document);
-    </script>
-    <!-- End Hearst analytics: Ensighten -->
     
   </head>
   <body class="{% if config.DEBUG %}debug{% endif %}">
@@ -66,22 +34,25 @@
 			</div>
 
 			<div class="mayors-grid">
-				<div id="lee" class="mug mayor-lee">
-					<div>
-						<img src="https://placeholdit.co//i/600x400?">
-						<p>Mayor Name</p>
-					</div>
-				</div>
+
 				<div id="libby" class="mug mayor-libby">
 					<div>
-						<img src="https://placeholdit.co//i/600x400?">
-						<p>Mayor Name</p>
+						<img src="{{data.Libby_mug}}">
+						<p class="mayor-lede">Libby Schaaf</p>
 					</div>
 				</div>
+
+				<div id="lee" class="mug mayor-lee">
+					<div>
+						<img src="{{data.Lee_mug}}">
+						<p class="mayor-lede">Ed Lee</p>
+					</div>
+				</div>
+			
 				<div id="liccardo" class="mug mayor-liccardo">
 					<div>
-						<img src="https://placeholdit.co//i/600x400?">
-						<p>Mayor Name</p>
+						<img src="{{data.Liccardo_mug}}">
+						<p class="mayor-lede">Sam Liccardo</p>
 					</div>
 				</div>
 			</div>
@@ -98,12 +69,21 @@
 						<div class="byline">By Ed Lee</div>
 					{%- endif %}
 
+					{% if text.type == 'image' %}
+						<div class="inline-img {{text.value[0].Size}}">
+							<img src="http://ww2.hdnux.com/photos/62/04/11/{{text.value[0].Image}}/3/1000x0.jpg">
+							<div class="caption">{{text.value[0].Photographer}}</div>
+						</div>
+					{%- endif %}
+
 		  {% endfor %}
-		  	<div class="nextstory" next="libby">
-		  		<p>_______</p>
-		  		<p>Read Oakland Mayor's</p>
-		  		<img src="https://placeholdit.co//i/600x400?">
-		  	</div>
+		  	<div class="nextstory" next="liccardo">
+			  		<p>_______</p>
+			  		<p><span class='red'>Next:</span> San Jose Mayor Sam Liccardo</p>
+			  		<img src="http://ww2.hdnux.com/photos/62/04/11/13124135/3/1000x0.jpg">
+			  		<p class="caption">Santiago Mejia, The Chronicle</p>
+			  	</div>
+			  </div>
 		  </div>
 
 		  <div id="mayor-libby" class="mayor-text">
@@ -118,11 +98,19 @@
 						<div class="byline">By Libby Schaaf</div>
 					{%- endif %}
 
+					{% if text.type == 'image' %}
+						<div class="inline-img {{text.value[0].Size}}">
+							<img src="http://ww2.hdnux.com/photos/62/04/11/{{text.value[0].Image}}/3/1000x0.jpg">
+							<div class="caption">{{text.value[0].Photographer}}</div>
+						</div>
+					{%- endif %}
+
 		  {% endfor %}
-			  <div class="nextstory" next="liccardo">
+			  <div class="nextstory" next="lee">
 			  		<p>_______</p>
-			  		<p>Read San Jose Mayor's</p>
-			  		<img src="https://placeholdit.co//i/600x400?">
+			  		<p><span class='red'>Next:</span> San Francisco Mayor Ed Lee</p>
+			  		<img src="http://ww2.hdnux.com/photos/62/04/11/13124149/3/1000x0.jpg">
+			  		<p class="caption">Lea Suzuki, The Chronicle</p>
 			  	</div>
 			  </div>
 		  </div>
@@ -139,13 +127,20 @@
 						<div class="byline">By Sam Liccardo</div>
 					{%- endif %}
 
+					{% if text.type == 'image' %}
+						<div class="inline-img {{text.value[0].Size}}">
+							<img src="http://ww2.hdnux.com/photos/62/04/11/{{text.value[0].Image}}/3/1000x0.jpg">
+							<div class="caption">{{text.value[0].Photographer}}</div>
+						</div>
+					{%- endif %}
+
 		  {% endfor %}
-			  <div class="nextstory" next="lee">
-			  		<p>_______</p>
-			  		<p>Read SF Mayor's</p>
-			  		<img src="https://placeholdit.co//i/600x400?">
-			  	</div>
-			  </div>
+			  <div class="nextstory" next="libby">
+		  		<p>_______</p>
+		  		<p><span class="red">Next:</span> Oakland Mayor Libby Schaaf</p>
+		  		<img src="http://ww2.hdnux.com/photos/62/04/11/13124116/3/1000x0.jpg">
+		  		<p class="caption">Scott Strazzante, The Chronicle</p>
+		  	</div>
 		  </div>
 
 		  
@@ -180,8 +175,8 @@
 		<script>
 			var pymChild = new pym.Child();
 
-			$('.mayor-lee').addClass('active');
-			$('#mayor-lee').addClass('show-text');
+			$('.mayor-libby').addClass('active');
+			$('#mayor-libby').addClass('show-text');
 
 			$('.mug').on('click', function(){
 			   var target = $(this).attr('id');
@@ -190,7 +185,7 @@
 			   pymChild.sendHeight();
 			   $('html,body').animate({
 				   scrollTop: $(".mayors-grid").offset().top - 20
-				});
+				},100);
 			});
 			$('.mug').on('click', function(){
 			   var mug = $(this).attr('id');
@@ -208,7 +203,7 @@
 			   pymChild.sendHeight();
 			   $('html,body').animate({
 				   scrollTop: $(".mayors-grid").offset().top - 20
-				});
+				},100);
 			});
 			
 		</script>

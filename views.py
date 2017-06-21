@@ -148,10 +148,7 @@ def mayorsVoices():
     data = json.load(File)
     return render_template('mayors-voices.html',
         data=data,
-        slug='mayors-voices',
-        title=data['Seo_title'],
-        description=data['Description'],
-        twitter_text=data['Tweet'])
+        slug='mayors-voices')
 
 @app.route('/overview-update/')
 def overviewUpdate():
