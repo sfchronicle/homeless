@@ -38,22 +38,19 @@
 }
 
 .header {
-    position: absolute;
-    bottom: 7.5%;
-    left: 0;
-    right: 0;
+    margin-top:1em;
     color: red;
     opacity: 0.9;
     text-align:center;
 
-    @media (max-width:860px){
-        position:relative;
-    }
-
     & h1{
-        font-family: $serif;
+        font-family: $dispatch;
+        font-weight:100;
+        text-transform:uppercase;
+        padding:0;
         color: $red;
         margin-bottom: 0;
+        font-size:40px;
 
         @media (max-width: 480px){
             margin-top:0.4em;
@@ -63,13 +60,9 @@
     & .subhead{
         padding-top:3px;
         padding-bottom:3px;
-        color:#fff;
-        text-shadow: 1px 1px 1px #000;
+        color:#333;
+        max-width:860px;
 
-        @media (max-width:860px){
-            color: #333;
-            text-shadow:none;
-        }
 
         @media #{$mobile} {
             font-size: 0.7em;
@@ -86,12 +79,7 @@
     }
 
     & #social a{
-        color: #f3f3f3;
-
-        @media (max-width:860px){
-            color: #64758e;
-        }
-
+        color: #333;
     }
 }
 
@@ -353,4 +341,14 @@
     font-family: "AntennaRegular", Helvetica, sans-serif;
     text-transform: uppercase;
 
+}
+
+.new-stories{
+  max-width:1200px;
+  margin:0 auto 3em;
+  width:100%;
+
+  img{
+      width:100%;
+  }
 }
