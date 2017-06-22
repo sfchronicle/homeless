@@ -22,16 +22,7 @@
     <main class="container mayors">
 
 
-			<div class="title-container">
-				<div>
-					<h1 class="m-title">{{data.Headline}}</h1>
-					<p class="mayors-date">{{data.Date}}</p>
-					<div class="mayors-deck">
-						{{data.Deck}}
-					</div>
-					
-				</div>
-			</div>
+			
 
 			<div class="mayors-grid">
 
@@ -61,22 +52,23 @@
 			{% for text in data['lee'] %}
 
 					{% if text.type == 'text' %}
-						<p>{{text.value}}</p>
+						<p>{{text.value|safe}}</p>
 					{%- endif %}
 
 					{% if text.type == 'Headline' %}
 						<h2>{{ text.value }}</h2>
-						<div class="byline">By Ed Lee</div>
+						<div class="mayor-byline">By Ed Lee</div>
 					{%- endif %}
 
 					{% if text.type == 'image' %}
 						<div class="inline-img {{text.value[0].Size}}">
 							<img src="http://ww2.hdnux.com/photos/62/04/11/{{text.value[0].Image}}/3/1000x0.jpg">
-							<div class="caption">{{text.value[0].Photographer}}</div>
+							<div class="caption">{{text.value[0].Caption}} <span class="byline">{{text.value[0].Photographer}}</span></div>
 						</div>
 					{%- endif %}
 
 		  {% endfor %}
+			  <i>Ed Lee is the mayor of San Francisco.</i>
 		  	<div class="nextstory" next="liccardo">
 			  		<p>_______</p>
 			  		<p><span class='red'>Next:</span> San Jose Mayor Sam Liccardo</p>
@@ -90,22 +82,22 @@
 			{% for text in data['libby'] %}
 
 					{% if text.type == 'text' %}
-						<p>{{text.value}}</p>
+						<p>{{text.value|safe}}</p>
 					{%- endif %}
 
 					{% if text.type == 'Headline' %}
 						<h2>{{ text.value }}</h2>
-						<div class="byline">By Libby Schaaf</div>
+						<div class="mayor-byline">By Libby Schaaf</div>
 					{%- endif %}
 
 					{% if text.type == 'image' %}
 						<div class="inline-img {{text.value[0].Size}}">
 							<img src="http://ww2.hdnux.com/photos/62/04/11/{{text.value[0].Image}}/3/1000x0.jpg">
-							<div class="caption">{{text.value[0].Photographer}}</div>
+							<div class="caption">{{text.value[0].Caption}} <span class="byline">{{text.value[0].Photographer}}</span></div>
 						</div>
 					{%- endif %}
-
 		  {% endfor %}
+			  <i>Libby Schaaf is the mayor of Oakland.</i>
 			  <div class="nextstory" next="lee">
 			  		<p>_______</p>
 			  		<p><span class='red'>Next:</span> San Francisco Mayor Ed Lee</p>
@@ -119,22 +111,22 @@
 			{% for text in data['liccardo'] %}
 
 					{% if text.type == 'text' %}
-						<p>{{text.value}}</p>
+						<p>{{text.value|safe}}</p>
 					{%- endif %}
 
 					{% if text.type == 'Headline' %}
 						<h2>{{ text.value }}</h2>
-						<div class="byline">By Sam Liccardo</div>
+						<div class="mayor-byline">By Sam Liccardo</div>
 					{%- endif %}
 
 					{% if text.type == 'image' %}
 						<div class="inline-img {{text.value[0].Size}}">
 							<img src="http://ww2.hdnux.com/photos/62/04/11/{{text.value[0].Image}}/3/1000x0.jpg">
-							<div class="caption">{{text.value[0].Photographer}}</div>
+							<div class="caption">{{text.value[0].Caption}} <span class="byline">{{text.value[0].Photographer}}</span></div>
 						</div>
 					{%- endif %}
-
 		  {% endfor %}
+			  <i>Sam Liccardo is the mayor of San Jose.</i>
 			  <div class="nextstory" next="libby">
 		  		<p>_______</p>
 		  		<p><span class="red">Next:</span> Oakland Mayor Libby Schaaf</p>
@@ -173,7 +165,7 @@
     {% endif %}
 
 		<script>
-			var pymChild = new pym.Child();
+			var pymChild = new pym.Child({ polling: 500 });
 
 			$('.mayor-libby').addClass('active');
 			$('#mayor-libby').addClass('show-text');
@@ -183,9 +175,7 @@
 			   $(".mayor-text").removeClass('show-text');
 			   $("#mayor-"+target).addClass('show-text');
 			   pymChild.sendHeight();
-			   $('html,body').animate({
-				   scrollTop: $(".mayors-grid").offset().top - 20
-				},100);
+			   pymChild.scrollParentTo('top');
 			});
 			$('.mug').on('click', function(){
 			   var mug = $(this).attr('id');
@@ -201,9 +191,7 @@
 			   $('#'+next).addClass('active');
 			   $('#mayor-'+next).addClass('show-text');
 			   pymChild.sendHeight();
-			   $('html,body').animate({
-				   scrollTop: $(".mayors-grid").offset().top - 20
-				},100);
+			   pymChild.scrollParentTo('top');
 			});
 			
 		</script>

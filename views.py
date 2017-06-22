@@ -237,3 +237,7 @@ def editorial():
         title='Title.',
         description='Description.',
         twitter_text='Twitter Text.')
+
+@app.route('/infobox/')
+def infobox():
+    return render_template('infobox.html')
