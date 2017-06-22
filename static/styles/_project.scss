@@ -194,9 +194,15 @@ header {
   vertical-align: top;
   cursor: pointer;
   &.special {
-      margin-top: 3px;
+      margin-top: 2px;
     a {
       color: $red;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      @media #{$mobile} {
+        font-size: 12px;
+      }
     }
     @media #{$mobile} {
       margin-top: 7px;

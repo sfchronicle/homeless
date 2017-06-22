@@ -31,9 +31,9 @@ twitter_text:
 def index():
     return render_template('index.html',
     	slug='',
-    	title="Beyond Homelessness: Tackling SF's epidemic",
-    	description="SF Homeless Project: The Chronicle joins 80 news organizations to focus attention on the seemingly intractable problem of homelessness in San Francisco.",
-    	twitter_text="Beyond Homelessness: An in-depth look at SF's homeless epidemic")
+    	title="Beyond Homelessness: Tackling the Bay Area's epidemic",
+    	description="An in-depth look at what has changed over the last year and what more could be done to ease, if not end, the suffering of thousands of people living on our streets.",
+    	twitter_text=" Beyond Homelessness: An in-depth look at the Bay Area's homeless epidemic.")
 
 @app.route('/overview/')
 def setup():
