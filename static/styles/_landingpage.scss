@@ -49,11 +49,12 @@
         text-transform:uppercase;
         padding:0;
         color: $red;
+        line-height:1.2;
         margin-bottom: 0;
         font-size:40px;
 
         @media (max-width: 480px){
-            margin-top:0.4em;
+            font-size: 19px
         }
     }
 
@@ -65,7 +66,7 @@
 
 
         @media #{$mobile} {
-            font-size: 0.7em;
+            font-size: 15px;
         }
 
     }
@@ -81,6 +82,11 @@
     & #social a{
         color: #333;
     }
+
+    @media #{$mobile} {
+        margin-top:5px;
+    }
+
 }
 
 .btn-stories {
@@ -351,4 +357,24 @@
   img{
       width:100%;
   }
+}
+
+.flex-intro{
+    display:flex;
+    flex-direction:column;
+
+    @media #{$tablet} {
+        flex-direction:column-reverse;
+    }
+}
+
+.caption{
+    
+    &.main{
+        text-align:right;
+
+        @media #{$tablet} {
+            display:none;
+        }
+    }
 }
