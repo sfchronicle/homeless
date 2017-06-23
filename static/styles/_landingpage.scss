@@ -139,11 +139,13 @@
         font-family: $georgia;
         font-weight:normal;
         font-size: 0.9em;
-        text-align: left;
         clear: left;
 
         span{
           font-weight:bold;
+          color:$red;
+          text-transform:uppercase;
+          font-size:15px;
         }
 
         @media (max-width:480px){
@@ -383,6 +385,10 @@
   img{
       width:100%;
   }
+
+  h6{
+    text-align:left;
+  }
 }
 
 .flex-intro{
@@ -401,6 +407,39 @@
 
         @media #{$tablet} {
             display:none;
+        }
+    }
+}
+
+.four-issues{
+    max-width:1200px;
+    margin:0 auto 2em;
+
+    hr{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    h6{
+        text-align:center;
+    }
+}
+
+.four-issues-headline{
+    max-width:1200px;
+    margin:0 auto;
+
+    h2{
+        margin-bottom:0;
+    }
+    p{
+        line-height:1.2;
+        max-width:590px;
+        font-size:19px;
+
+        @media #{$mobile} {
+            font-size:16px;
+            padding-top:5px;
         }
     }
 }
