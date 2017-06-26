@@ -185,14 +185,7 @@
 
         </div> 
     </div>
-    <hr class="video-hr">
-    <!-- VIDEO PLAYER -->
-    <div id="videos" class="video-embed">
-        <h2>Videos</h2>
-        <div class='embed-container'><iframe src='https://verse.com/story/private/640/' frameborder='0'     webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-    </div>
-
-    
+  
 
     <div class="max">
         <hr>
@@ -336,17 +329,6 @@
 		App.init();
 	});
     
-    $("#btn-stories").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#stories").offset().top - 50
-        }, 500);
-    });
-
-    $(".btn-videos").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#videos").offset().top - 50
-        }, 500);
-    });
 
     $(document).foundation();
 
