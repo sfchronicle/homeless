@@ -339,12 +339,11 @@
     }
 }
 
-.video-hr {
-    margin: 0 auto;
-    max-width: 900px;
-    width: 80%;
-    clear: both;
+hr{
+    display: inline-block;
+    width: 100%;
 }
+
 
 #button-links{
 	max-width: 600px;
