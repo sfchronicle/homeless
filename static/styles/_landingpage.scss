@@ -38,15 +38,18 @@
 }
 
 .header {
-    margin-top:1em;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
     color: red;
     opacity: 0.9;
     text-align:center;
+    padding:10% 0 0;
+    background:rgba(0, 0, 0, 0.8);
 
     & h1{
-        font-family: $dispatch;
-        font-weight:100;
-        text-transform:uppercase;
+        font-family: $title;
         padding:0;
         color: $red;
         line-height:1.2;
@@ -59,10 +62,11 @@
     }
 
     & .subhead{
-        padding-top:3px;
-        padding-bottom:3px;
-        color:#333;
-        max-width:860px;
+        padding:3px 0;
+        color:#fff;
+        max-width:600px;
+        text-align:left;
+        font-size:18px;
 
 
         @media #{$mobile} {
@@ -80,11 +84,15 @@
     }
 
     & #social a{
-        color: #333;
+        color: #ccc;
     }
 
     @media #{$mobile} {
         margin-top:5px;
+    }
+    @media #{$tablet} {
+        position:static;
+        padding:1em;
     }
 
 }
@@ -158,7 +166,7 @@
     & a {
         text-decoration: none;
         color: #333;
-        font-family: $title;
+        font-family: $body;
         line-height: 1.2;
     }
 
@@ -372,7 +380,7 @@ hr{
     padding: 5px 10px;
     background-color: #ec1c24;
     color: #fefefe;
-    font-family: "AntennaRegular", Helvetica, sans-serif;
+    font-family: $sans-serif;
     text-transform: uppercase;
 
 }
@@ -393,18 +401,13 @@ hr{
     text-align: left;
     margin: 10px 0 1em;
     font-weight: normal;
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1.2;
 
     span{
-      font-weight:bold;
       color:$red;
       text-transform:uppercase;
-      font-size:15px;
-
-      @media #{$mobile} {
-        font-size:14px;
-      }
+      font-family:$sans-serif;
     }
 
     @media (max-width:480px){
@@ -430,10 +433,15 @@ hr{
 
 .flex-intro{
     display:flex;
+    background: #000;
     flex-direction:column;
-
+    align-items:center;
+    position:relative;
+    max-height:600px;
+    overflow:hidden;
     @media #{$tablet} {
-        flex-direction:column-reverse;
+        max-height:none;
+        overflow:unset;
     }
 }
 
@@ -535,4 +543,9 @@ hr{
   @media #{$mobile} {
     	width:95%;
     }
+}
+
+.ad{
+    max-width: 200px;
+    margin: 0 auto;
 }
