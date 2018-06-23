@@ -243,8 +243,8 @@ module.exports = function (grunt) {
 
   // Build
   grunt.registerTask('build', [
-    'rev',
-    'usemin',
+    // 'rev',
+    // 'usemin',
     'htmlmin',
     // 'wiredep', /* enable to let grunt autopopulate (base|index).html with bower components */
     'sass',

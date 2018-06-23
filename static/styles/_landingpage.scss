@@ -45,7 +45,7 @@
     color: red;
     opacity: 0.9;
     text-align:center;
-    padding:10% 0 0;
+    padding:8% 0 0;
     background:rgba(0, 0, 0, 0.8);
 
     & h1{
@@ -53,20 +53,22 @@
         padding:0;
         color: $red;
         line-height:1.2;
-        margin-bottom: 0;
-        font-size:30px;
+        margin:0 auto;
+        max-width:750px;
+        font-size:80px;
+        text-transform:uppercase;
 
         @media (max-width: 480px){
-            font-size: 19px
+            font-size:35px
         }
     }
 
     & .subhead{
         padding:3px 0;
         color:#fff;
-        max-width:600px;
-        text-align:left;
-        font-size:18px;
+        text-align: center;
+        max-width: 550px;
+        font-size:20px;
 
 
         @media #{$mobile} {
@@ -142,20 +144,24 @@
         }
     }
 
+    span{
+      font-weight:bold;
+      color:$red;
+      font-family:$sans-serif;
+      display:block;
+      text-align:left;
+      text-transform:uppercase;
+      font-size:10px;
+      letter-spacing:1px;
+      margin-top:5px;
+    }
+
     & h5 {
-        margin-top: 0.5em;
+        margin-top: 2.5px;
         font-family: $georgia;
         font-weight:normal;
         font-size: 0.8em;
         clear: left;
-
-        span{
-          font-weight:bold;
-          color:$red;
-
-          text-transform:uppercase;
-          font-size:15px;
-        }
 
         @media (max-width:480px){
             line-height:1.3;
@@ -340,9 +346,12 @@
 
     h2{
         text-align:center;
+        margin-top:-10px;
+        font-size: 2em;
 
         @media (max-width:480px){
             font-size:1.25em;
+            margin-top:0;
         }
     }
 }
@@ -360,9 +369,13 @@ hr{
 
 .partners{
     h2{
-        margin-bottom:0.2em;
+        margin-top:-10px;
+        margin-bottom:1em;
+        font-size:2em;
+
         @media (max-width:480px){
-            font-size:0.9em;
+            font-size:1.5em;
+            margin-top:0;
         }
     }
 
@@ -397,18 +410,24 @@ hr{
       width:100%;
   }
 
+  span{
+    color:$red;
+    text-transform:uppercase;
+    font-family:$sans-serif;
+    font-weight:bold;
+    text-align:left;
+    display:block;
+    margin-top: 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
   h6{
     text-align: left;
-    margin: 10px 0 1em;
+    margin: 2.5px 0 1em;
     font-weight: normal;
     font-size: 0.8em;
     line-height: 1.2;
-
-    span{
-      color:$red;
-      text-transform:uppercase;
-      font-family:$sans-serif;
-    }
 
     @media (max-width:480px){
         line-height:1.3;
@@ -437,7 +456,7 @@ hr{
     flex-direction:column;
     align-items:center;
     position:relative;
-    max-height:600px;
+    max-height:680px;
     overflow:hidden;
     @media #{$tablet} {
         max-height:none;
@@ -468,6 +487,11 @@ hr{
 
     h6{
         text-align:left;
+        margin-top:0;
+        font-family:Georgia, serif;
+        font-weight:normal;
+        margin-top:2.5px;
+        font-size: 0.8em;
     }
 }
 
@@ -477,10 +501,17 @@ hr{
 
     h2{
         margin-bottom:0;
+        margin-top: -10px;
+        font-size: 2em;
+
+        @media (max-width:480px){
+            font-size:1.5em;
+            margin-top:0;
+        }
     }
     p{
         line-height:1.2;
-        max-width:590px;
+        max-width:450px;
         font-size:19px;
 
         @media #{$mobile} {
@@ -548,4 +579,19 @@ hr{
 .ad{
     max-width: 200px;
     margin: 0 auto;
+}
+
+#sos{
+    margin-bottom: 0;
+    padding-bottom:0;
+}
+
+.special-link{
+    font-family: 'Lora';
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color:$red;
+    text-align:center;
+    text-transform: none;
 }
