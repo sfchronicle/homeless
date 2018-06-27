@@ -4,6 +4,7 @@
 
 {% block head %}
 {% include '_components/_social.html' %}
+<script id="adPositionManagerScriptTag" src="https://aps.hearstnp.com/Scripts/loadAds.js"></script> 
 {% endblock %}
 
 {% block hearst_title %}Landing Page{% endblock %}
@@ -27,7 +28,7 @@
           {% include '_components/_social_links.html' %}
           <p class="subhead">
           In 2016, The Chronicle and more than 80 news organizations formed the SF Homeless Project, a groundbreaking initiative to focus on the city's seemingly intractable homelessness crisis. Two years later, progress has been made, but problems remain.</p>
-          <div class="ad"><a href="#" target="_blank"></a></div>
+          <div class="ad"><div class="adtext">Supported by</div><a href="https://www.salesforce.com" target="_blank"><img src="{{ url_for('static', filename='logos/salesforce.png') }}"></a></div>
         </div>
         
       </div>
@@ -58,6 +59,14 @@
 
     </div>
 
+    <!-- Begin Hearst Ad -->
+    <div class="ad">
+      <div id="AP951">
+        <script type="text/javascript">/*<![CDATA[*/hearstPlaceAd("AP951");/*]]>*/</script>
+      </div>
+    </div>    
+    <!-- End Hearst Ad -->
+
     <div id="stories">  
 
     	<div class="new-stories">
@@ -80,6 +89,20 @@
         <a href="https://projects.sfchronicle.com/sf-homeless/how-to-help/"><img class="thumbnail" src="https://projects.sfchronicle.com/sf-homeless/how-to-help/assets/social_2018_2.jpg">
           <span>Interactive guide</span> 
           <h6>How to help homeless people in Bay Area</h6>
+        </a>
+      </div>
+
+      <div class="story">
+        <a href="https://www.sfchronicle.com/bayarea/article/SF-s-homeless-navigation-centers-seem-to-be-13025012.php"><img class="thumbnail" src="https://s.hdnux.com/photos/74/05/66/15779164/5/premium_gallery_landscape.jpg">
+          <span>Navigation Centers</span> 
+          <h6>Gateways to new lives</h6>
+        </a>
+      </div>
+
+      <div class="story">
+        <a href="https://projects.sfchronicle.com/sf-homeless/division-street-2018-update/"><img class="thumbnail" src="https://projects.sfchronicle.com/sf-homeless/division-street-2018-update/assets/social2.jpg">
+          <span>Division Street</span> 
+          <h6>For some, hope after homelessness</h6>
         </a>
       </div>
       
@@ -394,6 +417,13 @@
 
        </div>
     </div>
+
+    <!-- Begin Hearst Ad -->
+      <div id="AP300">
+        <script type="text/javascript">/*<![CDATA[*/hearstPlaceAd("AP300");/*]]>*/</script>
+      </div>
+    <!-- End Hearst Ad -->
+
 
     
 
